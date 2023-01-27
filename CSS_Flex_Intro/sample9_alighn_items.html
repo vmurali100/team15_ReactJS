@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #main {
+        background: lightblue;
+        display: flex;
+        height: 400px;
+        /* align-items: center; */
+        justify-content: space-between;
+      }
+      .content-box {
+        display: flex;
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        background: rebeccapurple;
+        margin: 5px;
+      }
+      .content-box:nth-child(2) {
+        align-self: center;
+      }
+      .content-box:nth-child(3) {
+        align-self: flex-end;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <div class="content-box">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+      <div class="content-box">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+      <div class="content-box">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+    </div>
+  </body>
+</html>
