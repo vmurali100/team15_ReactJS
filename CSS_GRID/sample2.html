@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #grid-container {
+        background-color: #2196F3;
+        display: grid;
+        height: 400px;
+        /* grid-template-columns: auto auto auto auto; */
+        grid-template-columns: repeat(4,auto);
+        /* grid-template-columns: 100px 200px auto 300px; */
+        /* grid-template-rows: 100px 200px; */
+        /* justify-content: space-evenly; */
+        /* justify-content: space-between; */
+        /* justify-content: space-around; */
+        /* justify-content: center; */
+        /* justify-content: start; */
+        /* justify-content: end; */
+        /* align-items: flex-start; */
+        /* align-items: center; */
+        /* align-content:space-between ; */
+        align-content: space-around;
+        gap: 10px;
+        padding: 10px;
+
+      }
+      .box {
+        background-color: rgba(255, 255, 255, 0.8);
+        text-align: center;
+        padding: 20px 0;
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="grid-container">
+      <div class="box">item details 1</div>
+      <div class="box">item details 2</div>
+      <div class="box">item details 3</div>
+      <div class="box">item details 4</div>
+      <div class="box">item details 5</div>
+      <div class="box">item details 6</div>
+      <div class="box">item details 7</div>
+      <div class="box">item details 8</div>
+      <div class="box">item details 9</div>
+      <div class="box">item details 10</div>
+      <div class="box">item details 11</div>
+      <div class="box">item details 12</div>
+    </div>
+  </body>
+</html>
