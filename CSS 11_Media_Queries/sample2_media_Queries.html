@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #desc,#mob,#tab{
+            display: none;
+        }
+        @media screen and (min-width:320px) and (max-width:767px) {
+            #mob{
+                display: block;
+            }
+        }
+        @media screen and (min-width:768px) and (max-width:1023px) {
+            #tab{
+                display: block;
+            }
+        }
+        @media screen and (min-width:1024px) {
+            #desc{
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2 id="desc">Hello .. I am In Desktop</h2>
+    <h2 id="mob">Hello .. I am In Mobile</h2>
+    <h2 id="tab">Hello .. I am In Tab</h2>
+</body>
+</html>
