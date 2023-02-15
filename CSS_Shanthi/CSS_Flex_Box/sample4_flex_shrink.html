@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            display: flex;
+            background: lightblue;
+            height: 300px;
+        }
+        .item{
+            width: 100px;
+            background: rebeccapurple;
+            margin: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item" style="align-self: center;height: 100px;" >3</div>
+        <div class="item" style="flex-shrink: 0;">4</div>
+        <div class="item">5</div>
+        <div class="item" style="flex: 0 0 150px;">6</div>
+        <div class="item">7</div>
+        <div class="item" style="flex-basis: 200px;flex-shrink: 0;">8</div>
+        <div class="item">9</div>
+        <div class="item">10</div>
+    </div>
+</body>
+</html>
