@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function calculateNumbers(num1,num2,diplay){
+            var totalAmount = num1+num2;
+            diplay(totalAmount)
+        }
+
+        function displayResults(totalAmount){
+            document.write(totalAmount)
+        }
+        calculateNumbers(40,50,displayResults)
+
+    </script>
+</body>
+</html>
