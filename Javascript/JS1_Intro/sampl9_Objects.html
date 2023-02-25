@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Different Ways Of Creating Objects
+      // 1. Literal Way
+
+      var person = {
+        fname: "Jaya",
+        lname: "Krishna",
+      };
+      console.log(person)
+      // 2. Constructor Function
+
+      function Student(fname, lname) {
+        this.fname = fname;
+        this.lname = lname;
+      }
+
+      var std1 = new Student("Ajay", "Kumar");
+      console.log(std1);
+
+      class Employee {
+        constructor(fname, email) {
+          this.fname = fname;
+          this.email = email;
+        }
+      }
+
+      var emp1 = new Employee("Kiran","Kumar");
+      console.log(emp1)
+
+
+    //   4. Object.create
+    var newUser = Object.create(null)
+    newUser.fname="Suresh";
+    newUser.lname="Kumar"
+
+    console.log(newUser)
+    </script>
+  </body>
+</html>

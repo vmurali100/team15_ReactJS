@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1. Literl Way Of Creating
+      var personDetails = {
+        fname: "Murali",
+        lname: "Krihsna",
+      };
+      // 2. Constructor Function
+
+      function Person(fname, lname) {
+        this.fname = fname;
+        this.lname = lname;
+      }
+
+      var person1 = new Person("Dilli", "Babu");
+
+      // 3. With ES6 Class
+
+      class Student {
+        constructor(fname, lname, email) {
+          this.fname = fname;
+          this.lname = lname;
+          this.email = email;
+        }
+      }
+      var person2 = new Student("Ram", "Krishna", "ram@gmail.com");
+      // 4. Object.create();
+
+      var person3 = Object.create(null);
+      person3.fname="Murali";
+      person3.lname="Ram Krishna"
+
+      console.log(personDetails)
+      console.log(person1)
+      console.log(person2)
+      console.log(person3)
+    </script>
+  </body>
+</html>
