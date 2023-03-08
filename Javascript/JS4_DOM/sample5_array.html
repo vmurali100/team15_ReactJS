@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="showStudents()">Show Students</button>
+
+    <ul></ul>
+    <script>
+      var students = [{ name: "Dilli" }, { name: "Guna" }, { name: "Jaga" }];
+
+      function showStudents() {
+        document.querySelector("ul").innerHTML = "";
+
+        students.forEach((student, i) => {
+          var myLi = document.createElement("li");
+          var deleteBtn = document.createElement("button");
+          deleteBtn.innerHTML = "Delete Student";
+          deleteBtn.setAttribute("onclick", "deleteStudent(" + i + ")");
+          myLi.innerHTML = student.name + "  ";
+          myLi.appendChild(deleteBtn);
+          document.querySelector("ul").appendChild(myLi);
+        });
+      }
+
+      function deleteStudent(i) {
+        students = students.filter((std, index) => i !== index);
+        showStudents();
+      }
+      //   document.querySelector("ul").onclick=function(event){
+      //     console.log(event.target)
+      //     var elementToDelete = event.target
+      //     var parentElement = elementToDelete.parentNode;
+      //     parentElement.removeChild(elementToDelete)
+      //   }
+    </script>
+  </body>
+</html>
