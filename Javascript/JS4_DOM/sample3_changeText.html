@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="changeText()">Click</button>
+    <h2 id="myHeading" class="myElement">Hello From HTML</h2>
+    <script>
+        function changeText(){
+            // document.querySelector("h2").innerHTML = "Hello from Javascript !!"
+            // document.getElementsByTagName("h2")[0].innerHTML = "Hello from getElementsByTagName !!"
+            // document.querySelectorAll("h2")[0].innerHTML = "Hello from querySelectorAll !!"
+            // document.getElementById('myHeading').innerHTML = "Hello from getElementById"
+            // document.querySelector("#myHeading").innerHTML="Hello from querySelector"
+            // document.querySelectorAll("#myHeading")[0].innerHTML="Hello from querySelectorAll"
+            // document.getElementsByClassName("myElement")[0].innerHTML = "Hello from getElementsByClassName !!"
+            // document.querySelector(".myElement").innerHTML = "Hello From querySelector"
+            document.querySelectorAll(".myElement")[0].innerHTML = "Hello from querySelectorAll !!"
+        }
+    </script>
+</body>
+</html>
