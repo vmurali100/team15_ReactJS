@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul></ul>
+    <script>
+      var students = [
+        {
+          name: "Guna",
+          email: "Guna@gmail.com",
+        },
+        {
+          name: "Dilli",
+          email: "dilli@gmail.com",
+        },
+        {
+          name: "Jaga",
+          email: "JAGA@gmail.com",
+        },
+      ];
+
+      function displayUsers(students) {
+        document.querySelector("ul").innerHTML = "";
+        students.forEach((user, i) => {
+          var myLi = document.createElement("li");
+          var myBtn = document.createElement("button");
+          myBtn.setAttribute("onclick", "deleteUser(" + i + ")");
+          myLi.innerHTML = user.name + " ";
+          myLi.appendChild(myBtn);
+          myBtn.innerHTML = "Delete User";
+          document.querySelector("ul").appendChild(myLi);
+        });
+      }
+      displayUsers(students);
+      function deleteUser(i) {
+        students = students.filter((usr, index) => index !== i);
+        displayUsers(students);
+      }
+    </script>
+  </body>
+</html>

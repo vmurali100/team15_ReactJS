@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table border="1">
+        <thead>
+            <th>Name</th>
+            <th>Email</th>
+            <th>City</th>
+        </thead>
+        <tbody>
+          
+           
+        </tbody>
+    </table>
+    <script>
+      var students = [
+        {
+          name: "Guna",
+          email: "Guna@gmail.com",
+          city: "Bangalore",
+        },
+        {
+          name: "Dilli",
+          email: "dilli@gmail.com",
+          city: "Chittoor",
+        },
+        {
+          name: "Jaga",
+          email: "JAGA@gmail.com",
+          city: "Tirupathi",
+        },
+      ];
+
+      function displayUsers(students){
+        students.forEach(std => {
+            var myTr = document.createElement("tr");
+            for(a in std){
+                var myTd= document.createElement("td");
+                myTd.innerHTML = std[a];
+                myTr.appendChild(myTd)
+            }
+            document.querySelector("tbody").appendChild(myTr)
+        });
+      }
+      displayUsers(students)
+    </script>
+  </body>
+</html>
