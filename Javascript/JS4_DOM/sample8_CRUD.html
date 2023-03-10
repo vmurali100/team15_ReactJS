@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <table border="1" style="width: 100%;">
+        <thead>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Price</th>
+            <th>Description</th>
+            <th>Category</th>
+            <th>Image</th>
+            <th>Rating</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script src="./products.js"></script>
+    <script>    
+        console.log(products)
+        // 1. Display Data 
+        function displayProducts(products){
+            products.forEach((product)=>{
+                var myTr = document.createElement("tr");
+                for(a in product){
+                    if(a != "image" && a != "rating"){
+                        var myTd = document.createElement("td");
+                        myTd.innerHTML = product[a]
+                        myTr.appendChild(myTd)
+                    }else if(a == "image"){
+                        var imgTd = document.createElement("id")
+                        var myImage = document.createElement("img")
+                        myImage.setAttribute("src",product[a])
+                        imgTd.appendChild(myImage)
+                        myTr.appendChild(imgTd)
+                    }else if (a == "rating"){
+                        var ratingTd = document.createElement("td")
+                        var result = ""
+                        for(b in product[a]){
+                            result= result+b + " : "+product[a][b]+"<br>"
+                        }
+                        ratingTd.innerHTML=result
+                        myTr.appendChild(ratingTd)
+                    }
+                }
+
+
+                document.querySelector("tbody").appendChild(myTr)
+            })
+        }
+        displayProducts(products)
+        // 2. Delete Data 
+        // 3. Edit Data 
+        // 4. Create A Product
+    </script>
+</body>
+</html>
