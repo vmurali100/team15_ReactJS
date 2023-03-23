@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td><label for="fname">First Name :</label></td>
+        <td><input type="text" name="" id="fname" /></td>
+      </tr>
+      <tr>
+        <td><label for="lname">Last Name : </label></td>
+        <td><input type="text" name="" id="lname" /></td>
+      </tr>
+      <tr>
+        <td><label for="email">Eamil : </label></td>
+        <td><input type="email" name="" id="email" /></td>
+      </tr>
+      <tr>
+        <td><label for="password">Password : </label></td>
+        <td><input type="password" name="" id="password" /></td>
+      </tr>
+      <tr>
+        <td><label for="confirmpass">Confirm Pass : </label></td>
+        <td><input type="password" name="" id="confirmpass" /></td>
+      </tr>
+      <tr>
+        <td><label for="dob">DOB : </label></td>
+        <td><input type="date" name="" id="dob" /></td>
+      </tr>
+      <tr>
+        <td colspan="2" style="text-align: center">
+          <button type="button" onclick="addUser()">ADD USER</button>
+        </td>
+      </tr>
+    </table>
+    <script>
+        var users = []
+      function addUser() {
+
+
+        var person={
+            fname:"",
+            lname:"",
+            email:"",
+            password:"",
+            confirmpass:"",
+            dob:""
+        }
+
+        for (a in person){
+            person[a]=document.getElementById(a).value
+        }
+        console.log(person)
+        users.push(person)
+        // var fname = document.getElementById("fname").value;
+        // var lname = document.getElementById("lname").value;
+        // var email = document.getElementById("email").value;
+        // var password = document.getElementById("password").value;
+        // var confirmpass = document.getElementById("confirmpass").value;
+        // var dob = document.getElementById("dob").value;
+
+        // var person = {
+        //   fname,
+        //   lname,
+        //   email,
+        //   password,
+        //   confirmpass,
+        //   dob,
+        // };
+        // console.log(person);
+      }
+    </script>
+  </body>
+</html>
