@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #updateUserBtn{
+            display: none;
+        }
+        #addUserBtn{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Email</th>
+                <th>Username</th>
+                <th>Password</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+<br><br>
+    <form>
+        <label for="">ID : </label>
+        <input type="text" name="" id="id"> <br>
+        <label for="email">Email : </label>
+        <input type="text" name="" id="email"> <br>
+        <label for="email">Username : </label>
+        <input type="text" name="" id="username"> <br>
+        <label for="email">Password : </label>
+        <input type="password" name="" id="password"> <br>
+        <button onclick="addUser()" type="button" id="addUserBtn">Add User</button>
+        <button onclick="updateUser()" type="button" id="updateUserBtn">Update User</button>
+    </form>
+    <script src="./users.js"></script>
+    <script>
+    //     console.log(users)
+    //     1. Get All users And display in a Table 
+    //     2. create a User and Display In the Table 
+    //     3. Edit a User and Update the same User 
+    //     4. Delete a User 
+
+    function displayUsers(users){
+        document.querySelector("tbody").innerHTML = ""
+        users.forEach((user,i)=>{
+            var myTr = document.createElement("tr");
+            for(a in user){
+                var myTd = document.createElement("td")
+                myTd.innerHTML = user[a]
+                myTr.appendChild(myTd)
+            }
+
+            var editTd = document.createElement("td");
+            var editBtn = document.createElement("button");
+            editBtn.setAttribute("onclick","editUser("+i+")")
+            editBtn.innerHTML="Edit User"
+            editTd.appendChild(editBtn) 
+            myTr.appendChild(editTd) 
+
+            var deleteTd = document.createElement("td");
+            var deleteBtn = document.createElement("button");
+            deleteBtn.innerHTML = "Delete User ";
+            deleteBtn.setAttribute("onclick","deleteUser("+i+")")
+            deleteTd.appendChild(deleteBtn);
+            myTr.appendChild(deleteTd);
+            document.querySelector("tbody").appendChild(myTr)
+        })
+    }
+
+    displayUsers(users)
+
+    function editUser(i){
+        index = i;
+        var editUser = users[i]
+        for(a in editUser){
+            document.getElementById(a).value = editUser[a]
+        }
+        console.log("editUser called !!")
+        document.getElementById("addUserBtn").style.display="none"
+        document.getElementById("updateUserBtn").style.display="block"
+
+    }
+    function deleteUser(i){
+        users = users.filter((usr,index)=> i !== index )
+        displayUsers(users)
+        console.log("Delete User Called !!")
+    }
+
+    function addUser(){
+        var user = {
+            id:"",
+            email:"",
+            username:"",
+            password:""
+        }
+        for(a in user){
+            user[a]=document.getElementById(a).value
+        }
+        users.push(user)
+        displayUsers(users)
+        clearForm()
+
+    }
+
+    function clearForm(){
+        var user = {
+            id:"",
+            email:"",
+            username:"",
+            password:""
+        }
+        for(a in user){
+            document.getElementById(a).value = ""
+        }
+    }
+
+    function updateUser(){
+        document.getElementById("addUserBtn").style.display="block"
+        document.getElementById("updateUserBtn").style.display="none"
+        var user = {
+            id:"",
+            email:"",
+            username:"",
+            password:""
+        }
+        for(a in user){
+            user[a]=document.getElementById(a).value
+        }
+        users[index]= user
+        displayUsers(users);
+        clearForm()
+    }
+    </script>
+</body>
+</html>
