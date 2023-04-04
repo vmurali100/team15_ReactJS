@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="getData()">Get Data</button>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Username</th>
+          <th>Email</th>
+          <th>Address</th>
+          <th>Phone</th>
+          <th>Website</th>
+          <th>Company</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <script>
+      function getData() {
+        var getUserDetails = new XMLHttpRequest();
+        getUserDetails.onreadystatechange = function () {
+          if (getUserDetails.readyState == 4 && getUserDetails.status == 200) {
+            console.log(JSON.parse(getUserDetails.response));
+            console.log(getUserDetails.response);
+            var allUsers = JSON.parse(getUserDetails.response);
+            displayData(allUsers);
+          }
+        };
+        getUserDetails.open(
+          "GET",
+          "https://jsonplaceholder.typicode.com/users"
+        );
+        getUserDetails.send();
+      }
+
+      function displayData(allUsers) {
+        allUsers.forEach((user) => {
+          // console.log(user)
+          var myTr = document.createElement("tr");
+          for (a in user) {
+            if (a !== "company" && a !== "address") {
+              console.log(user[a]);
+              var myTd = document.createElement("td");
+              myTd.innerHTML = user[a];
+              myTr.appendChild(myTd);
+            } else if (a == "address") {
+              var myTd = document.createElement("td");
+
+              var results = "";
+              for (b in user[a]) {
+                if (b !== "geo") {
+                  results = results + user[a][b] + "<br>";
+                }
+              }
+              myTd.innerHTML = results;
+              myTr.appendChild(myTd);
+            } else {
+              var myTd = document.createElement("td");
+              var results = "";
+              for (b in user[a]) {
+                results = results + user[a][b] + "<br>";
+              }
+              myTd.innerHTML = results;
+              myTr.appendChild(myTd);
+            }
+          }
+          document.querySelector("tbody").appendChild(myTr);
+        });
+      }
+    </script>
+  </body>
+</html>
