@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Welcome to Edit Page </h2>
+    <form>
+        <label for="fname">First Name : </label>
+        <input type="text" name="" id="fname"> <br>
+        <label for="lname">Last Name : </label>
+        <input type="text" name="" id="lname"> <br>
+        <label for="email">Email : </label>
+        <input type="text" name="" id="email"> <br>
+        <button type="button" onclick="updateUser()">UPDATER User</button>
+        <button type="button" onclick="backtomain()">Back to Mainpage</button>
+    </form>
+    <script>
+        const users = JSON.parse(localStorage.getItem("users"))
+        var url = window.location.href
+
+        //http://127.0.0.1:5503/Javascript/JS7_CRUD_BOM/edit.html?0
+
+        var id = url.substring(url.indexOf("?")+1)
+        var user={
+                fname:"",
+                lname:"",
+                email:""
+            }
+            for(a in users[id]){
+                document.getElementById(a).value =  users[id][a]
+            }
+
+        function backtomain(){
+            window.location.href = "index.html"
+        }
+
+        function updateUser(){
+            for(a in user){
+                user[a] =  document.getElementById(a).value
+            }
+            users[id] = user
+            localStorage.setItem("users",JSON.stringify(users))
+
+            window.location.href = "index.html"
+        }
+    </script>
+</body>
+</html>

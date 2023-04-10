@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <td>First Name</td>
+                <td>Last Name</td>
+                <td>Email</td>
+                <td>Edit</td>
+                <td>Delete</td>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <script>
+        var users = JSON.parse(localStorage.getItem("users"))
+
+        function displayUsers(users){
+            document.querySelector("tbody").innerHTML = ""
+            users.forEach((user,i) => {
+                var myTr = document.createElement("tr")
+                for(a in user){
+                    var myTd =document.createElement("td")
+                    myTd.innerHTML = user[a]
+                    myTr.appendChild(myTd)
+                }
+                var edittd=document.createElement("td")
+                var editbtn=document.createElement("button")
+
+                editbtn.innerHTML="Edit"
+                editbtn.setAttribute("onclick","editUser("+i+")")
+                edittd.appendChild(editbtn)
+                myTr.appendChild(edittd)
+
+
+                var deleteTd=document.createElement("td")
+                var deteleBtn=document.createElement("button")
+
+                deteleBtn.innerHTML="Delete"
+                deteleBtn.setAttribute("onclick","deleteUser("+i+")")
+                deleteTd.appendChild(deteleBtn)
+                myTr.appendChild(deleteTd)
+                document.querySelector("tbody").appendChild(myTr)
+            });
+        }
+
+        function editUser(i){
+            window.location.href = "edit.html?"+i
+        }
+
+        function deleteUser(i){
+            var users = JSON.parse(localStorage.getItem("users"))
+            const newUsers = users.filter((usr,index)=> index !== i)
+            localStorage.setItem("users",JSON.stringify(newUsers))
+            displayUsers(newUsers)
+        }
+        displayUsers(users)
+    </script>
+</body>
+</html>

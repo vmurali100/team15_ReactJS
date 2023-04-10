@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Welcome to Main page !!</h2>
+    <form>
+        <label for="fname">First Name : </label>
+        <input type="text" name="" id="fname"> <br>
+        <label for="lname">Last Name : </label>
+        <input type="text" name="" id="lname"> <br>
+        <label for="email">Email : </label>
+        <input type="text" name="" id="email"> <br>
+        <button type="button" onclick="addUser()">Add User</button>
+    </form>
+    <script>
+        var users = JSON.parse(localStorage.getItem("users"))
+        function addUser(){
+            var user={
+                fname:"",
+                lname:"",
+                email:""
+            }
+            for(a in user){
+                user[a]=document.getElementById(a).value
+            }
+            users.push(user)
+            localStorage.setItem("users",JSON.stringify(users))
+            window.location.href = "display.html"
+        }
+        
+    </script>
+</body>
+</html>
