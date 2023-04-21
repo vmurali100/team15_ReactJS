@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="fname">First Name : </label>
+        <input type="text" name="" id="fname"> <br>
+        <label for="lname">Last Name : </label>
+        <input type="text" name="" id="lname"> <br>
+        <button type="button" onclick="addUser()">Add User</button>
+    </form>
+    <table border="1">
+        <thead>
+            <tr>
+                <td>First Name</td>
+                <td>Last Name</td>
+                <td>ID</td>
+                <td>Edit</td>
+                <td>Delete</td>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script>
+        var users = []
+        function addUser (){
+            var user = {
+                fname:document.getElementById("fname").value,
+                lname:document.getElementById("lname").value
+
+            }
+            var postUser = new XMLHttpRequest();
+            postUser.onreadystatechange = function(){
+                if(postUser.readyState == 4 && postUser.status == 201){
+                    console.log("User Created SuccessFully")
+                }
+            }
+            postUser.open("POST","http://localhost:3000/users")
+            postUser.setRequestHeader("Content-Type","application/json")
+            postUser.send(JSON.stringify(user))
+        }
+
+        function getLatestUsers(){
+            var postUser = new XMLHttpRequest();
+            postUser.onreadystatechange = function(){
+                if(postUser.readyState == 4 && postUser.status == 200){
+                    users = JSON.parse(postUser.response)
+                    displayUsers(users)
+                }
+            }
+            postUser.open("GET","http://localhost:3000/users")
+            postUser.send()
+        }
+        function displayUsers(users){
+            users.forEach((user,i)=>{
+                var myTr = document.createElement("tr");
+                for(a in user){
+                    var myTd = document.createElement("td")
+                    myTd.innerHTML = user[a]
+                    myTr.appendChild(myTd)
+                }
+                var edittd=document.createElement("td")
+                var editbtn=document.createElement("button")
+
+                editbtn.innerHTML="Edit"
+                editbtn.setAttribute("onclick","editUser("+i+")")
+                edittd.appendChild(editbtn)
+                myTr.appendChild(edittd)
+
+
+                var deleteTd=document.createElement("td")
+                var deteleBtn=document.createElement("button")
+
+                deteleBtn.innerHTML="Delete"
+                deteleBtn.setAttribute("onclick","deleteUser("+i+")")
+                deleteTd.appendChild(deteleBtn)
+                myTr.appendChild(deleteTd)
+
+                document.querySelector("tbody").appendChild(myTr)
+            })
+        }
+
+        function editUser(i){
+            for(a in users[i]){
+                if(a !== "id"){
+                    document.getElementById(a).value = users[i][a]
+                }
+            }
+        }
+
+        function deleteUser(i){
+            var postUser = new XMLHttpRequest();
+            postUser.onreadystatechange = function(){
+                if(postUser.readyState == 4 && postUser.status == 200){
+                    users = JSON.parse(postUser.response)
+                    displayUsers(users)
+                }
+            }
+            postUser.open("DELETE","http://localhost:3000/users/"+users[i].id)
+            postUser.send()
+        }
+
+        getLatestUsers()
+    </script>
+</body>
+</html>
