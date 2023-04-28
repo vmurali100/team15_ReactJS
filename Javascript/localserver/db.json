@@ -11,6 +11,12 @@
       "lname": "infotech",
       "email": "vmrinfotech25@gmail.com",
       "id": 2
+    },
+    {
+      "fname": "Ravi",
+      "lname": "Kumar",
+      "email": "ravi@gmail.com",
+      "id": 3
     }
   ]
 }

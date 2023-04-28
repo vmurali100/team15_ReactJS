@@ -12,6 +12,7 @@
     </style>
   </head>
   <body>
+
     <form>
       <label for="fname">First Name : </label>
       <input type="text" name="" id="fname" /> <br />
@@ -24,6 +25,9 @@
       <button onclick="updateUser()" type="button" id="updateUserBtn">Update User</button>
     </form>
 <hr>
+<label for="">Search Users </label>
+<input type="text" name="" id="userSearch" onkeyup="searchUsers()">
+<br><br>
 <table border="1">
     <thead>
         <tr>
@@ -151,6 +155,30 @@
         // When we do Post Request Following points to be Considered 
         // method :POST 
         // payload has to added 
+
+        function searchUsers(){
+            var userEnteredValues = document.getElementById("userSearch").value 
+            console.log(userEnteredValues)
+            var filteredUsers = allUsers.filter((usr)=>{
+                var check = false;
+                for (a in usr){
+                    if( a != "id"){
+                        if(usr[a].toLocaleLowerCase().indexOf(userEnteredValues.toLocaleLowerCase())>-1){
+                        check = true;
+                    }
+                    }
+                }
+                
+                if(check){
+                    return usr
+                }
+                // return usr.fname.toLocaleLowerCase().indexOf(userEnteredValues.toLocaleLowerCase()) > -1
+
+                // return usr.fname.toLocaleLowerCase().indexOf(userEnteredValues.toLocaleLowerCase()) > -1
+            })
+            console.log(filteredUsers)
+            displayUsers(filteredUsers)
+        }
     </script>
   </body>
 </html>
