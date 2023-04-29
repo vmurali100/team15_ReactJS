@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div#main {
+        width: 300px;
+        background: lightgray;
+        margin: 0 auto;
+      }
+      div#screen {
+        width: 300px;
+        margin: 0 auto;
+      }
+      input {
+        width: 80.5%;
+      }
+
+      div#main > div {
+        width: 75px;
+        height: 18px;
+        float: left;
+        background: grey;
+        color: white;
+        text-align: center;
+        margin: 1px;
+        padding: 3px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="screen">
+      <input type="text" name="" id="display" />
+    </div>
+    <div id="main">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>0</div>
+      <div>.</div>
+      <div>+</div>
+      <div>-</div>
+      <div>*</div>
+      <div>/</div>
+      <div>%</div>
+      <div>D</div>
+      <div>=</div>
+      <div>Cl</div>
+    </div>
+
+    <script>
+      var isTotal = false;
+      document.getElementById("main").onclick = function (event) {
+        console.log(event.target.innerHTML);
+        var existingValue = document.querySelector("#display").value;
+        if (isTotal) {
+          existingValue = "";
+          isTotal = false;
+        }
+        if (
+          event.target.innerHTML != "=" &&
+          event.target.innerHTML != "D" &&
+          event.target.innerHTML != "Cl"
+        ) {
+          document.querySelector("#display").value =
+            existingValue + event.target.innerHTML;
+        } else if (event.target.innerHTML == "D") {
+          document.querySelector("#display").value = existingValue.substr(
+            0,
+            existingValue.length - 1
+          );
+        } else if (event.target.innerHTML == "Cl") {
+          document.querySelector("#display").value = "";
+          isTotal = true;
+        } else {
+          isTotal = true;
+          document.querySelector("#display").value = eval(existingValue);
+        }
+      };
+    </script>
+  </body>
+</html>
