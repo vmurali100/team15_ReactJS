@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var person = {
+            city:"bangalore",
+            role:"Developer",
+            pin:517402,
+            fname:"Ram",
+            lname:"Krishna",
+            fullName:function(){
+                console.log(this.fname +" "+  this.lname)
+            }
+        }
+
+        var person2={
+            city:"bangalore",
+            role:"Developer",
+            company:"VMR InfoTech",
+            pin:517402,
+            fname:"Venkat",
+            lname:"Krishna",
+            fullName:function(){
+                console.log(this.fname +" "+  this.lname)
+            }
+        }
+        person.email="Ram@gmail.com"
+
+        // person.fullName(fname,lname,salary)
+    
+        class PersonClass {
+            constructor(fname,lname,salary){
+                this.city="Bangalore";
+                this.role="Developer"
+                this.company="VMR InfoTech"
+                this.fname=fname;
+                this.lname=lname;
+                this.salary=salary
+            }
+        }
+        PersonClass.prototype.state = "Karnataka"
+        var person1= new PersonClass("Kiran","Kumar",50000)
+        var person2= new PersonClass("RAM","Kumar",50000)
+        var person3= new PersonClass("RAVI","Kumar",50000)
+        var person4= new PersonClass("SAM","Kumar",50000)
+        console.log(person1.state)
+        console.log(person2)
+        console.log(person3)
+    </script>
+</body>
+</html>

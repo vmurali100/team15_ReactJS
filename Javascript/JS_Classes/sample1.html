@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class User {
+        constructor(fname, lname) {
+          this.fname = fname;
+          this.lname = lname;
+        }
+      }
+
+      class NewUser extends User{
+        constructor(fname,lname,email){
+            super(fname,lname)
+            this.email = email
+        }
+      }
+      var usr1 = new User("Raghu","Ram");
+
+      var newUsr1 = new NewUser("Ram","Kumar","ram@gmail.com")
+
+      console.log(usr1)
+      console.log(newUsr1)
+      //   var person = {}; // Literal Way Of Creating Objects
+      //   function Student(fname, lname) { // Creating An Objet With Cunstructor Function
+      //     this.fname = fname;
+      //     this.lname = lname;
+      //   }
+
+      //   var emp = new Object({fname:"Sam",lname:"Sundar"})
+
+      //   var std1 = new Student("Ram","Krishna")
+      //   console.log(emp)
+      //   console.log(std1)
+    </script>
+  </body>
+</html>
