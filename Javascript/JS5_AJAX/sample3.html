@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+      <li class="element" name="some">HTML5</li>
+      <li class="element">CSS3</li>
+      <li class="element">JS</li>
+      <li class="element">AJAX</li>
+      <li class="element">ReactJS</li>
+    </ul>
+    <h2>You Clicked On  : <span></span> </h2>
+    <script>
+        document.querySelector("ul").onclick= function(event){
+            console.log(event)
+            document.querySelector("span").innerHTML = event.target.innerHTML
+        }
+    </script>
+  </body>
+</html>
