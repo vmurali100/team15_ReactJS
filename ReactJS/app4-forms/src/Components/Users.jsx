@@ -11,7 +11,7 @@ export default class Users extends Component {
       },
       isEdit: false,
       allUsers: [],
-      gIndex:0
+      gIndex: 0,
     };
   }
 
@@ -45,15 +45,15 @@ export default class Users extends Component {
     this.setState({ allUsers: deletedUsers });
   };
 
-  handleEdit = (usr,i) => {
-    this.setState({ user: usr, isEdit: true,gIndex:i });
+  handleEdit = (usr, i) => {
+    this.setState({ user: usr, isEdit: true, gIndex: i });
   };
-  handleUpdate=()=>{
+  handleUpdate = () => {
     var allUsersCopy = [...this.state.allUsers];
-    allUsersCopy[this.state.gIndex] = this.state.user
-    this.setState({allUsers:allUsersCopy,isEdit:false})
-    this.clearForm()
-  }
+    allUsersCopy[this.state.gIndex] = this.state.user;
+    this.setState({ allUsers: allUsersCopy, isEdit: false });
+    this.clearForm();
+  };
   render() {
     return (
       <div>
@@ -107,7 +107,7 @@ export default class Users extends Component {
                   <td>
                     <button
                       onClick={() => {
-                        this.handleEdit(usr,i);
+                        this.handleEdit(usr, i);
                       }}
                     >
                       Edit
