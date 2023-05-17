@@ -11,6 +11,7 @@ export default class LifeCycleChild extends Component {
     };
   }
 
+
   static getDerivedStateFromProps(props, state) {
     console.log(props);
     // if(props.myName == "Murali"){
