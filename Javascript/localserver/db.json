@@ -4,18 +4,33 @@
       "fname": "Murali",
       "lname": "V",
       "email": "vmurali100@gmail.com",
+      "gender": "male",
+      "subjects": [
+        "math",
+        "science"
+      ],
       "id": 1
     },
     {
-      "fname": "vmr Info",
-      "lname": "infotech",
-      "email": "vmrinfotech25@gmail.com",
+      "fname": "Sam Sundar",
+      "lname": "VMR",
+      "email": "vmurali100@gmail.com",
+      "gender": "male",
+      "subjects": [
+        "science",
+        "history"
+      ],
       "id": 2
     },
     {
-      "fname": "Ravi",
-      "lname": "Kumar",
-      "email": "ravi@gmail.com",
+      "fname": "Ram VV",
+      "lname": "Krishna",
+      "email": "ram@gmail.com",
+      "gender": "male",
+      "subjects": [
+        "history",
+        "english"
+      ],
       "id": 3
     }
   ]
