@@ -1,12 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
-import User from './Components/User';
-import { Student } from './Components/Student';
+import Dilli from './Components/Dilli';
+
 
 function App() {
   return (
     <div className="App">
-    <Student/>
+  <Dilli/>
     </div>
   );
 }
