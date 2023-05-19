@@ -1,3 +1,5 @@
+/* eslint-disable no-dupe-class-members */
+/* eslint-disable eqeqeq */
 import React, { Component } from "react";
 import axios from "axios";
 export default class Dilli extends Component {
