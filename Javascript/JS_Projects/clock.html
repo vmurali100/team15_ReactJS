@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analog Clock</title>
+    <style>
+    #clock {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      background-image: url(./th\ \(1\).jpg);
+      background-size: cover;
+      margin: auto;
+    }
+    #hour-hand, #minute-hand, #second-hand {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform-origin: bottom center;
+    }
+    #hour-hand {
+      width: 6px;
+      height: 90px;
+      background-color: #000;
+      z-index: 3;
+    }
+    #minute-hand {
+      width: 4px;
+      height: 120px;
+      background-color: #000;
+      z-index: 2;
+    }
+    #second-hand {
+      width: 2px;
+      height: 140px;
+      background-color: red;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+     <div id="clock">
+    <div id="hour-hand"></div>
+    <div id="minute-hand"></div>
+    <div id="second-hand"></div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    function rotateClockHands() {
+  var now = new Date();
+  var hours = now.getHours();
+  var minutes = now.getMinutes();
+  var seconds = now.getSeconds();
+
+  var hourHand = document.getElementById("hour-hand");
+  var minuteHand = document.getElementById("minute-hand");
+  var secondHand = document.getElementById("second-hand");
+
+  // Calculate the rotation angles
+  var hourRotation = 30 * hours + minutes / 2;
+  var minuteRotation = 6 * minutes + seconds / 10;
+  var secondRotation = 6 * seconds;
+
+  // Apply the rotations
+  hourHand.style.transform = "translate(-50%, -100%) rotate(" + hourRotation + "deg)";
+  minuteHand.style.transform = "translate(-50%, -100%) rotate(" + minuteRotation + "deg)";
+  secondHand.style.transform = "translate(-50%, -100%) rotate(" + secondRotation + "deg)";
+}
+
+setInterval(rotateClockHands, 1000); // Update clock hands every second
+
+  </script>
+</body>
+</html>
