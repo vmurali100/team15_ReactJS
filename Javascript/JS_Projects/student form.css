@@ -1,0 +1,58 @@
+div {
+    background: url(./wallpapersden.com_close-planet_1440x900.jpg);
+    background-size: cover;
+    width: 1522px;
+    height: 700px;
+    margin: auto;
+}
+
+form#myForm {
+    /* margin: auto; */
+    position: relative;
+    top: 83px;
+    /* left: 650px; */
+    text-align: center;
+}
+
+table#myTable {
+    position: relative;
+    top: 116px;
+    /* right: -96px; */
+    left: 559px;
+}
+
+input#name {
+    width: 249px;
+    opacity: .4;
+    background: aqua;
+    color: #912bc9;
+    border-radius: 17px;
+    height: 33px;
+}
+
+input#age {
+    width: 249px;
+    opacity: .4;
+    background: aqua;
+    color: #912bc9;
+    border-radius: 17px;
+    height: 33px;
+}
+
+input#email {
+    width: 249px;
+    opacity: .4;
+    background: aqua;
+    color: #912bc9;
+    border-radius: 17px;
+    height: 33px;
+}
+
+input#phone {
+    width: 249px;
+    opacity: .4;
+    background: aqua;
+    color: #912bc9;
+    border-radius: 17px;
+    height: 33px;
+}

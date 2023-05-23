@@ -59,18 +59,18 @@
   var minuteHand = document.getElementById("minute-hand");
   var secondHand = document.getElementById("second-hand");
 
-  // Calculate the rotation angles
+ 
   var hourRotation = 30 * hours + minutes / 2;
   var minuteRotation = 6 * minutes + seconds / 10;
   var secondRotation = 6 * seconds;
 
-  // Apply the rotations
+  
   hourHand.style.transform = "translate(-50%, -100%) rotate(" + hourRotation + "deg)";
   minuteHand.style.transform = "translate(-50%, -100%) rotate(" + minuteRotation + "deg)";
   secondHand.style.transform = "translate(-50%, -100%) rotate(" + secondRotation + "deg)";
 }
 
-setInterval(rotateClockHands, 1000); // Update clock hands every second
+setInterval(rotateClockHands, 1000); 
 
   </script>
 </body>

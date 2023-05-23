@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./student form.css">
+</head>
+<body>
+  <div>
+   
+      
+      <form id="myForm">
+        <label for="name"></label>
+        <input type="text" id="name" name="name" placeholder="Name" ><br><br>
+        <label for="age"></label>
+        <input type="text" id="email" name="email" placeholder="Email"><br><br>
+         <input type="text" id="phone" name="phone" placeholder="phone"><br><br>
+         <input type="text" id="age" name="age" placeholder="Gge"><br><br>
+        <button type="submit">Add</button>
+      </form>
+
+      
+      
+       <table id="myTable" border="1">
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>phone</th>
+          <th>Age</th>
+          <th>Action</th>
+        </tr>
+        <tr>
+          <td>John</td>
+          <td>dilli@gmail.com</td>
+          <td>7989580427</td>
+          <td>30</td>
+          <td>
+            <button onclick="editRow(this)">Edit</button>
+            <button onclick="deleteRow(this)">Delete</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Jane</td>
+           <td>dilli@gmail.com</td>
+          <td>7989580427</td>
+          <td>25</td>
+          <td>
+            <button onclick="editRow(this)">Edit</button>
+            <button onclick="deleteRow(this)">Delete</button>
+          </td>
+        </tr>
+      </table>
+      
+<script>
+    
+function addRow() {
+  var name = document.getElementById("name").value;
+  var email = document.getElementById("email").value;
+  var phone = document.getElementById("phone").value;
+  var age = document.getElementById("age").value;
+  
+  var table = document.getElementById("myTable");
+  var newRow = table.insertRow(-1);
+  var nameCell = newRow.insertCell(0);
+  var emailCell = newRow.insertCell(1);
+  var phoneCell = newRow.insertCell(2);
+  var ageCell = newRow.insertCell(3);
+  var actionCell = newRow.insertCell(4);
+  nameCell.innerHTML = name;
+  emailCell.innerHTML =email;
+  phoneCell.innerHTML = phone
+  ageCell.innerHTML = age;
+  actionCell.innerHTML = '<button onclick="editRow(this)">Edit</button><button onclick="deleteRow(this)">Delete</button>';
+  
+  
+  document.getElementById("myForm").reset();
+}
+
+
+function editRow(button) {
+  var row = button.parentNode.parentNode;
+  var name = row.cells[0].innerHTML;
+  var email = row.cells[1].innerHTML;
+  var phone = row.cells[2].innerHTML
+  var age = row.cells[3].innerHTML;
+  document.getElementById("name").value = name;
+  document.getElementById("email").value=email;
+  document.getElementById("phone").value = phone;
+  document.getElementById("age").value = age;
+  row.remove();
+}
+
+
+function deleteRow(button) {
+  var row = button.parentNode.parentNode;
+  row.remove();
+}
+
+
+document.getElementById("myForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+  addRow();
+});
+
+</script> 
+</div>     
+</body>
+</html>
