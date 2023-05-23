@@ -1,0 +1,25 @@
+{
+  "users": [
+    {
+      "fname": "M.",
+      "lname": "Jagadeesh",
+      "email": "mallelajagadeesh7524@gmail.com",
+      "gender": "male",
+      "subjects": [
+        "english",
+        "science"
+      ],
+      "id": 1
+    },
+    {
+      "fname": "M.",
+      "lname": "Jagadeesh",
+      "email": "mallelajagadeesh7524@gmail.com",
+      "gender": "male",
+      "subjects": [
+        "history"
+      ],
+      "id": 2
+    }
+  ]
+}
