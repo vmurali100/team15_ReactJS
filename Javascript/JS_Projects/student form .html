@@ -6,6 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./student form.css">
+     <style>
+    :root {
+      --animation-duration: 5s;
+    }
+    
+    @keyframes wheelHueColor {
+      from, to { background-color: rgb(236,100,75); }
+      10% { background-color: rgb(219,10,91); }
+      20% { background-color: rgb(174,168,211); }
+      30% { background-color: rgb(89,171,227); }
+      40% { background-color: rgb(37,116,169); }
+      50% { background-color: rgb(3,201,169); }
+      60% { background-color: rgb(22,160,133); }
+      70% { background-color: rgb(233,212,96); }
+      80% { background-color: rgb(243,156,18); }
+      90% { background-color: rgb(236,240,241); }
+    }
+    
+    body {
+      animation-name: wheelHueColor;
+      animation-duration: var(--animation-duration);
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+  </style>
 </head>
 <body>
   <div>
