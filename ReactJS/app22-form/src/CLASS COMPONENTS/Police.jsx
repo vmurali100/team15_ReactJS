@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import "./Police.css"
 
 export default class Police extends Component {
   constructor(props) {
@@ -82,8 +83,10 @@ export default class Police extends Component {
     var { allusers, isedit } = this.state;
     var { handlechange, adduser, handledelete, handleedit, updateuser } = this;
     return (
-      <div>
+      <div >
+        <h1>Police Detalies</h1>
         <form>
+          
           <label htmlFor="name">Name:</label>
           <input type="text" name="name" value={name} onChange={handlechange} />
           <br />
