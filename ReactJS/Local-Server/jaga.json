@@ -13,10 +13,12 @@
     },
     {
       "name": "jaga",
-      "age": "",
-      "email": "",
-      "gender": "",
-      "qualification": [],
+      "age": "22",
+      "email": "luhp9y",
+      "gender": "male",
+      "qualification": [
+        "graduation"
+      ],
       "id": 2
     },
     {
@@ -28,6 +30,35 @@
         "inter"
       ],
       "id": 3
+    },
+    {
+      "name": "",
+      "age": "",
+      "email": "",
+      "gender": "",
+      "qualification": [
+        "postgraduation"
+      ],
+      "id": 4
+    },
+    {
+      "name": "njo;uhn qcbso8f",
+      "age": "fvljfe",
+      "email": "dfs",
+      "gender": "male",
+      "qualification": [
+        "postgraduation",
+        "graduation"
+      ],
+      "id": 5
+    },
+    {
+      "name": "",
+      "age": "",
+      "email": "",
+      "gender": "",
+      "qualification": [],
+      "id": 6
     }
   ]
 }
