@@ -1,12 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
-import Dilli from './Components/Dilli';
+import Police from './Components/Student form';
+
 
 
 function App() {
   return (
     <div className="App">
-  <Dilli/>
+    <Police/>
     </div>
   );
 }
