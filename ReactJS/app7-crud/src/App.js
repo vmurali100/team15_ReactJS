@@ -1,24 +1,39 @@
 import logo from './logo.svg';
 import './App.css';
+import { Color1 } from './COMPONENTS/Color1';
+import { Color3 } from './COMPONENTS/Color3';
+import { Color2 } from './COMPONENTS/Color2';
+import { Color4 } from './COMPONENTS/Color4';
+import { Color5 } from './COMPONENTS/Color5';
+import { Course2 } from './COMPONENTS/Course2';
+import { Course1 } from './COMPONENTS/Course1';
+import { Fruits } from './COMPONENTS/Fruits';
+import { Fruits1 } from './COMPONENTS/Fruits1';
+import { Vegetables } from './COMPONENTS/Vegetables';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+     <Color1/> 
+     <hr/>
+     <Color2/>
+     <hr/>
+     <Color3/>
+     <hr/>
+     <Color4/>
+     <hr/>
+     <Color5/>
+     <hr/>
+     <Course1/>
+     <hr/>
+     <Course2/>
+     <hr/>
+     <Fruits/>
+     <hr/>
+     <Fruits1/>
+     <hr/> 
+     <Vegetables/>
+    </div> 
   );
 }
 
