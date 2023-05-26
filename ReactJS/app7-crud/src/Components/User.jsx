@@ -17,11 +17,19 @@ import { useState } from "react";
 
 // }
 
-// Functional Components are called as Stateless Components 
+// Functional Components are called as Stateless Components
 export function User() {
-   const [userName,setUserName] = useState("Ravi")
-  return <div>
-    <h2>User Name is : {userName}</h2>
-    <button onClick={()=>{setUserName("Ravi Kumar !!")}}>Set User</button>
-  </div>;
+  const [userName, setUserName] = useState("Ravi");
+  return (
+    <div>
+      <h2>User Name is : {userName}</h2>
+      <button
+        onClick={() => {
+          setUserName("Ravi Kumar !!");
+        }}
+      >
+        Set User
+      </button>
+    </div>
+  );
 }
