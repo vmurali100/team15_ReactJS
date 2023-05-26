@@ -8,6 +8,7 @@ import Raja from './Functional Components/Raja';
 import Gopi from './Functional Components/Gopi';
 import Ammu from './Functional Components/Ammu';
 import Pandu from './Functional Components/Pandu';
+import Sky from './Functional Components/Sky';
 // import Vanitha from './Functional Components/Vanitha.Jsx';
 
 
@@ -34,7 +35,7 @@ function App() {
   <hr/>
 <Pandu/>
   <hr/>
-    
+    <Sky/>
     </div>
   );
 }
