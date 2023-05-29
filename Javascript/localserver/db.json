@@ -1,9 +1,9 @@
 {
   "users": [
     {
-      "fname": "Murali",
-      "lname": "V",
-      "email": "vmurali100@gmail.com",
+      "fname": "dilli",
+      "lname": "t",
+      "email": "dilli@gmail.com",
       "gender": "male",
       "subjects": [
         "math",
@@ -12,9 +12,9 @@
       "id": 1
     },
     {
-      "fname": "Sam Sundar",
-      "lname": "VMR",
-      "email": "vmurali100@gmail.com",
+      "fname": "guna",
+      "lname": "p",
+      "email": "guna@gmail.com",
       "gender": "male",
       "subjects": [
         "science",
@@ -23,9 +23,9 @@
       "id": 2
     },
     {
-      "fname": "Ram VV",
-      "lname": "Krishna",
-      "email": "ram@gmail.com",
+      "fname": "jyothi",
+      "lname": "p",
+      "email": "iyothi@gmail.com",
       "gender": "male",
       "subjects": [
         "history",
