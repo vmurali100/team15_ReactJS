@@ -10,17 +10,6 @@
         "science"
       ],
       "id": 1
-    },
-    {
-      "fname": "Sam Sundar",
-      "lname": "VMR",
-      "email": "vmurali100@gmail.com",
-      "gender": "male",
-      "subjects": [
-        "science",
-        "history"
-      ],
-      "id": 2
     }
   ]
 }

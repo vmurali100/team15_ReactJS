@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import StudentTabel from "./StudentTabel";
 
+
 export function Student() {
   // const[Studentname,setStudentname]=useState("Mahesh")
   const [Alluser, setAlluser] = useState([]);
@@ -12,12 +13,12 @@ export function Student() {
     },
     []);
     const Server=()=>{
-        axios.get("http://localhost:3001/users").then((res) => {
+        axios.get("http://localhost:3000/users").then((res) => {
             setAlluser(res.data);
           });
     }
      const handledelete=(usr)=>{
-        axios.delete("http://localhost:3001/users/"+usr.id).then(()=>{
+        axios.delete("http://localhost:3000/users/"+usr.id).then(()=>{
             Server()
         })
     }
