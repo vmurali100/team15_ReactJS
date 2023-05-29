@@ -1,0 +1,83 @@
+.container {
+    background: antiquewhite;
+    width: 250px;
+    height: 400px;
+    margin: auto;
+    /* border-radius: 25px; */
+}
+.first {
+    /* width: 225px; */
+    /* height: 200px; */
+    /* position: relative; */
+    /* left: 80px; */
+    width: 250px;
+    height: 100px;
+    background: aqua;
+}
+.img img {
+    border: 2px solid;
+    border-radius: 50px;
+    position: relative;
+    left: 90px;
+    width: 70px;
+}
+.img {
+    position: relative;
+    width: 250px;
+    bottom: 25px;
+}
+.subchild {
+    width: 250px;
+    /* position: relative; */
+    left: 60px;
+}
+.subchild h2 {
+    position: relative;
+    left: 60px;
+    bottom: 20px;
+}
+.subchild p {
+    position: relative;
+    bottom: 60px;
+    left: 196px;
+}
+p {
+    left: 100px;
+    position: relative;
+    bottom: 65px;
+}
+div#third {
+    width: 250px;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    bottom: 50px;
+}
+hr {
+    position: relative;
+    bottom: 45px;
+}
+div#third {
+    width: 250px;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    bottom: 50px;
+}
+.one h6 {
+    position: relative;
+    right: 6px;
+    bottom: 20px;
+}
+
+.two h6 {
+    left: 8px;
+    position: relative;
+    bottom: 18px;
+}
+  
+.three h6 {
+    position: relative;
+    bottom: 17px;
+    left: 2px;
+}
