@@ -1,23 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import Jaga from "./Components/Jaga";
+import JagaCounter from "./Components/JagaCounter";
+import JagaHoverCounter from "./Components/JagaHoverCounter";
+import ViharikaCounter from "./Components/ViharikaCounter";
+import ViharikaHoverCounter from "./Components/ViharikaHoverCounter";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <Jaga/> */}
+      {/* <JagaCounter/> */}
+      <ViharikaCounter
+        render={(count, increment, decrement) => (
+          <JagaCounter
+            count={count}
+            increment={increment}
+            decrement={decrement}
+          />
+        )}
+      />
+      <hr />
+      {/* <JagaHoverCounter/> */}
+      <ViharikaHoverCounter
+        render={(count, increment, decrement) => (
+          <JagaHoverCounter
+            count={count}
+            increment={increment}
+            decrement={decrement}
+          />
+        )}
+      />
     </div>
   );
 }
