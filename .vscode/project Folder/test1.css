@@ -1,0 +1,165 @@
+.container {
+    width: 354px;
+    height: 211px;
+    display: flex;
+    margin: auto;
+    background: beige;
+    justify-content: space-around;
+    border-radius: 10px;
+}
+div#first {
+    width: 155px;
+    height: 215px;
+    background: blue;
+    border-radius: 9px;
+}
+.child1 h3 {
+    margin-left: 30px;
+}
+.img {
+    margin-left: 32px;
+    background: aqua;
+    width: 80px;
+    border-radius: 91px;
+}
+h2 {
+margin-top: 0px;
+ margin-left: 40px;}
+.img p {
+    font-size: 10px;
+    margin-left: 25px;
+     position: relative;
+     bottom: 15px;
+     }
+ .second {
+    width: 197px;
+    background: cyan;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.second {
+    width: 197px;
+    background: cyan;
+}
+.child2 {
+    width: 86px;
+}
+.child2 h4 {
+    margin-left: 65px;
+    font-size: 13px;
+}
+div#child3 {
+    width: 200px;
+}
+.one {
+    display: flex;
+    justify-content: space-evenly;
+}
+#img1 img {
+    width: 20px;
+}
+.one h4 {
+    margin-top: 0px;
+    margin-left: 15px;
+}
+.one p {
+    margin-top: 19px;
+    color: red;
+}
+.two {
+    display: flex;
+    justify-content: space-evenly;
+}
+#img2 img {
+    width: 20px;
+}
+.two h4 {
+    margin-top: 0px;
+    margin-left: 10px;
+}
+.two p {
+    margin-top: 20px;
+    color: red;
+}
+.three {
+    display: flex;
+    justify-content: space-evenly;
+}
+#img3 img {
+    width: 20px;
+}
+.three h4 {
+    margin-left: 15px;
+    margin-top: 0px;
+}
+.three p {
+    margin-top: 20px;
+    color: red;
+}
+.four {
+    display: flex;
+    justify-content: space-evenly;
+}
+#img4 img {
+    width: 20px;
+}
+.four h4 {
+    margin-left: 20px;
+    margin-top: 0px;
+}
+.four p {
+    margin-top: 20px;
+    color: red;
+}
+h1 {
+    position: relative;
+    left: 20px;
+}
+p {
+    position: relative;
+    bottom: 16px;
+    font-size: 11px;
+    left: 8px;
+}
+.one{
+    height: 30px
+}
+.two{
+    height: 30px
+}.three{
+    height: 30px
+}
+.four{
+    height: 30px
+}
+button {
+    margin-left: 60px;
+    border-radius: 10px;
+    background: black;
+    color: white;
+}
+
+.main, html {
+    width: 100%;
+    height: 100%;
+    background-color: lightcoral;
+    display: grid;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+@media screen and (min-width:360px) and (max-width:750px){
+    .main, html{
+        background-color: rgb(216, 110, 44); 
+    }
+}
+/* @media screen and (min-width:360px) and (max-width:750px){
+    div#first {
+        width: 155px;
+        height: 215px;
+        background:rgb(233, 233, 15);
+        border-radius: 9px;
+    }
+} */
+ 
+    
