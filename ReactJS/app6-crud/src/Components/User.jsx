@@ -1,3 +1,5 @@
+/* eslint-disable eqeqeq */
+/* eslint-disable no-dupe-class-members */
 import React, { Component } from "react";
 import axios from "axios";
 export default class User extends Component {

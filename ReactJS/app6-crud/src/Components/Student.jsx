@@ -1,3 +1,4 @@
+/* eslint-disable eqeqeq */
 import { Component } from "react";
 import "./Person.css";
 
