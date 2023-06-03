@@ -1,0 +1,44 @@
+{
+  "users": [
+    {
+      "sname": "Nagendra reddy p",
+      "fname": "Vekat Reddy",
+      "mname": "rajamma",
+      "phonenumber": "8123951489",
+      "email": "sulochanac83@gmail.com",
+      "gender": "male",
+      "subjects": [
+        "science",
+        "math",
+        "english"
+      ],
+      "id": 27
+    },
+    {
+      "sname": "Jayaprada",
+      "fname": "Reddy",
+      "mname": "rajamma",
+      "phonenumber": "97864554",
+      "email": "jayapradra@gmail.com",
+      "gender": "female",
+      "subjects": [
+        "history"
+      ],
+      "id": 30
+    },
+    {
+      "sname": "Sulochana reddy",
+      "fname": "Vekat Reddy",
+      "mname": "rajamma",
+      "phonenumber": "1223",
+      "email": "cheluri.sulochana@gmail.com",
+      "gender": "female",
+      "subjects": [
+        "science",
+        "history",
+        "english"
+      ],
+      "id": 31
+    }
+  ]
+}

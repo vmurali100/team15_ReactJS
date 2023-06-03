@@ -12,13 +12,15 @@ import { Serial2 } from './Functional Componenets/Serial2';
 import { Webseries } from './Functional Componenets/Webseries';
 import { Webseries1 } from './Functional Componenets/Webseries1';
 import { Webseries2 } from './Functional Componenets/Webseries2';
+import { Student } from './Forms/Student';
 
 
 
 function App() {
   return (
     <div className="App">
-      <Month/>
+      <Student/>
+      {/* <Month/>
       <hr/>
       <Month1/>
       <hr/>
@@ -40,7 +42,7 @@ function App() {
       <hr/>
       <Webseries1/>
       <hr/>
-      <Webseries2/>
+      <Webseries2/> */}
       
     </div>
   );
