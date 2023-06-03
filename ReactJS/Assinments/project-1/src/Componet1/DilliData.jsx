@@ -1,9 +1,10 @@
-import { DilliTable } from "./DilliTable"
+import React from 'react'
+import { DilliTable } from './DilliTable'
 
 export const DilliData = () => {
-    return (
-        <div>
-            <DilliTable/>
-        </div>
-    )
+  return (
+    <div>
+      <DilliTable/>
+    </div>
+  )
 }

@@ -1,18 +1,12 @@
 
 import './App.css';
-import Dilli from './Componet1/Dilli';
-
-
-
-
-
-
+import Dilli from './Componets/Users';
 
 
 function App() {
   return (
     <div className="App">
-   <Dilli/>
+    <Dilli/>
     </div>
   );
 }

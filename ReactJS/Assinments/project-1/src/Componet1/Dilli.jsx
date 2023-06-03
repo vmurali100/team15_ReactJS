@@ -1,57 +1,48 @@
-import { Component } from "react";
-import axios from "axios";
-import { DilliContextProvider } from "./DilliContext";
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
+import React, { Component } from "react";
+import axios, { Axios } from "axios";
 import { DilliData } from "./DilliData";
+import { DilliContextProvider } from "./DilliContext";
 
 export default class Dilli extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      user: {
-        id: "",
-        email: "",
-        username: "",
-        password: "",
-      },
       users: [],
     };
   }
-  handleChange = (e) => {
-    var newuser = { ...this.state.user };
-    newuser[e.target.name] = e.target.value;
-    this.setState({ user: newuser });
+  handeledit = (usr,i) => {
+    console.log(usr)
   };
-  handleEdit = (usr, i) => {
-    console.log(usr);
-  };
-  handleDelete = (usr, i) => {
-    var newusers = this.state.users.filter((usr, index) => i !== index);
-    this.setState({ users: newusers });
-  };
-  handleUpdate = () => {};
-  handleAdd = () => {};
+  handeldelete = (usr,i) => {
+     var newusers = this.state.users.filter((usr, index) => i !== index);
+     this.setState({ users: newusers });
+       
 
+  };
+  handelupdate = () => {};
+  handeladd = () => {};
   render() {
     return (
       <div>
         <DilliContextProvider
           value={{
             data: this.state.users,
-            handleEdit:this.handleEdit,
-           handleDelete:this.handleDelete,
+            handeledit: this.handeledit,
+            handeldelete: this.handeldelete,
           }}
-        />
-            <DilliData/>
-            
-        <DilliContextProvider />
+        >
+          <DilliData />
+        </DilliContextProvider>
       </div>
     );
   }
   componentDidMount() {
     axios.get("https://fakestoreapi.com/users").then((res) => {
+      console.log(res.data);
       this.setState({ users: res.data });
-      console.log(res)
     });
   }
 }

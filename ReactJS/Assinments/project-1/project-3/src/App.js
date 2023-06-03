@@ -1,18 +1,12 @@
 
 import './App.css';
-import Dilli from './Componet1/Dilli';
-
-
-
-
-
-
+import Yoga from './Users/Yoga';
 
 
 function App() {
   return (
     <div className="App">
-   <Dilli/>
+  <Yoga/>
     </div>
   );
 }

@@ -1,9 +1,4 @@
-
-import './App.css';
-import Dilli from './Componet1/Dilli';
-
-
-
+import Dilli from './Componets/Users';
 
 
 
