@@ -4,6 +4,7 @@ import React, { Component } from "react";
 import axios, { Axios } from "axios";
 import { DilliData } from "./DilliData";
 import { DilliContextProvider } from "./DilliContext";
+import { DilliTable } from "./DilliTable";
 
 export default class Dilli extends Component {
   constructor(props) {
@@ -34,7 +35,7 @@ export default class Dilli extends Component {
             handeldelete: this.handeldelete,
           }}
         >
-          <DilliData />
+      <DilliData/>
         </DilliContextProvider>
       </div>
     );
