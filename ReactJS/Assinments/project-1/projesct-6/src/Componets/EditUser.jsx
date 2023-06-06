@@ -115,6 +115,7 @@ const EditUser = () => {
               <input
                 type="text"
                 name="company.name"
+
                 value={value.user.company.name}
                 onChange={(e) => {
                   value.hanldeChange(e);
