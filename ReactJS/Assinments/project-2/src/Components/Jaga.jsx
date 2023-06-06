@@ -67,7 +67,7 @@ export default class Jaga extends Component {
             handleChange: this.handleChange,
             Adduser: this.Adduser,
             Updateuser: this.Updateuser,
-            isEdit: this.state.users,
+            isEdit: this.state.isEdit,
           }}
         >
           <JagaForm />
