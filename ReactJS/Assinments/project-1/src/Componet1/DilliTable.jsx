@@ -13,11 +13,11 @@ export const DilliTable = () => {
               <table border={1}>
                 <thead>
                   <tr>
+                    <td>UserId</td>
                     <td>Id</td>
-                    <td>Email</td>
-                    <td>Password</td>
-                    <td>Phone</td>
-                    <td>Username</td>
+                    <td>Title</td>
+                    <td>Body</td>
+                   
                     <td>Edit</td>
                     <td>Delete</td>
                   </tr>
@@ -25,16 +25,16 @@ export const DilliTable = () => {
                 <tbody>
                   {value.data.map((usr, i) => (
                     <tr key={i}>
+                      <td>{usr.userId}</td>
                       <td>{usr.id}</td>
-                      <td>{usr.email}</td>
-                      <td>{usr.password}</td>
-                      <td>{usr.phone}</td>
+                      <td>{usr.title}</td>
+                      <td>{usr.body}</td>
                       <td>{usr.username}</td>
                       <td>
-                        <button onClick={()=>{value.handeledit(usr,i)}}>Edit</button>
+                        <button onClick={()=>{value.handleEdit(usr, i);}}>Edit</button>
                       </td>
                       <td>
-                        <button onClick={()=>{value.handeldelete(usr,i)}}>Delete</button>
+                        <button onClick={()=>{value.handleDelete(usr, i);}}>Delete</button>
                       </td>
                     </tr>
                   ))}

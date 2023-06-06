@@ -1,49 +1,85 @@
-/* eslint-disable no-undef */
-/* eslint-disable no-unused-vars */
 import React, { Component } from "react";
-import axios, { Axios } from "axios";
-import { DilliData } from "./DilliData";
+import axios from "axios";
+
 import { DilliContextProvider } from "./DilliContext";
-import { DilliTable } from "./DilliTable";
+import { DilliForm } from "./EditForm";
+import { DilliData } from "./DilliData";
 
 export default class Dilli extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      users: [],
+      users: {
+        userId: "",
+        id: "",
+        title: "",
+        body: "",
+      },
+      isEdit: false,
+      gIndex: 0,
+      user: [],
     };
   }
-  handeledit = (usr,i) => {
-    console.log(usr)
+  handleEdit = (usr, i) => {
+    this.setState({ users: usr, isEdit: true, gIndex: i });
   };
-  handeldelete = (usr,i) => {
-     var newusers = this.state.users.filter((usr, index) => i !== index);
-     this.setState({ users: newusers });
-       
+  handleDelete = (usr, i) => {
+    var newUsers = this.state.user.filter((usr, index) => i !== index);
+    this.setState({ user: newUsers });
+  };
+  handleChange = (e) => {
+    var newUser = { ...this.state.users };
+    newUser[e.target.name] = e.target.value;
+    this.setState({ users: newUser });
+  };
+  Adduser = () => {
+    var newUsers = [...this.state.user];
+    newUsers.push({ ...this.state.users });
+    this.setState({ user: newUsers });
+    this.ClearForm();
+  };
+  ClearForm = () => {
+    var EmptyUsers = {
+      userId: "",
+      id: "",
+      title: "",
+      body: "",
+    };
 
+    this.setState({ users: EmptyUsers });
   };
-  handelupdate = () => {};
-  handeladd = () => {};
+  Updateuser = () => {
+    var newUsers = [...this.state.user];
+    newUsers[this.state.gIndex] = this.state.users;
+    this.setState({ user: newUsers, isEdit: false });
+    this.ClearForm();
+  };
+
   render() {
     return (
       <div>
         <DilliContextProvider
           value={{
-            data: this.state.users,
-            handeledit: this.handeledit,
-            handeldelete: this.handeldelete,
+            data: this.state.user,
+            handleEdit: this.handleEdit,
+            handleDelete: this.handleDelete,
+            users: this.state.users,
+            handleChange: this.handleChange,
+            Adduser: this.Adduser,
+            Updateuser: this.Updateuser,
+            isEdit: this.state.isEdit,
           }}
         >
-      <DilliData/>
+          <DilliForm />
+          <DilliData />
         </DilliContextProvider>
       </div>
     );
   }
   componentDidMount() {
-    axios.get("https://fakestoreapi.com/users").then((res) => {
-      console.log(res.data);
-      this.setState({ users: res.data });
+    axios.get("https://jsonplaceholder.typicode.com/posts").then((res) => {
+      this.setState({ user: res.data });
     });
   }
 }
