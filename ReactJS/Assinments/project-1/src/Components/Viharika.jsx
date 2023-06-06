@@ -17,7 +17,7 @@ export default class Viharika extends Component {
       },
       users: [],
       isEdit: false,
-      gindex: 0,
+      gIndex: 0,
     };
   }
   handleChange = (e) => {
@@ -26,7 +26,7 @@ export default class Viharika extends Component {
     this.setState({ user: newuser });
   };
   handleEdit = (usr, i) => {
-    this.setState({ user: usr, isEdit: true ,gindex:i});
+    this.setState({ user: usr, isEdit: true, gIndex: i });
   };
   handleDelete = (usr, i) => {
     var newusers = this.state.users.filter((usr, index) => i != index);
@@ -34,8 +34,8 @@ export default class Viharika extends Component {
   };
   handleUpdate = () => {
     var alluserscopy = [...this.state.users];
-    alluserscopy[this.state.gindex] = this.state.user;
-    this.setState({ users: alluserscopy });
+    alluserscopy[this.state.gIndex] = this.state.user;
+    this.setState({ users: alluserscopy,isEdit:false });
     this.clearForm();
   };
   handleAdd = () => {
@@ -43,9 +43,6 @@ export default class Viharika extends Component {
     alluserscopy.push({ ...this.state.user });
     this.setState({ users: alluserscopy });
     this.clearForm();
-
-
-
   };
 
   clearForm = () => {
@@ -66,16 +63,15 @@ export default class Viharika extends Component {
             data: this.state.users,
             handleEdit: this.handleEdit,
             handleDelete: this.handleDelete,
+            handleChange: this.handleChange,
+            handleAdd: this.handleAdd,
+            handleUpdate: this.handleUpdate,
+            user: this.state.user,
+            isEdit: this.state.isEdit,
           }}
         >
           <ViharikaData />
-          <ViharikaForm
-           
-            handleChange={this.handleChange}
-            handleAdd={this.handleAdd}
-            handleUpdate={this.handleUpdate}
-
-          />
+          <ViharikaForm />
         </VihaContextProvider>
       </div>
     );
