@@ -1,21 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
-import { Jaga } from './Components/Jaga';
-
-
-
-
-
-
+import { Geetha } from './Components/Geetha';
 
 function App() {
   return (
     <div className="App">
-     <Jaga/>
+      <Geetha/>
     </div>
   );
 }
 
 export default App;
-
-
