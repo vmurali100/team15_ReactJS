@@ -1,0 +1,118 @@
+.container {
+    width: 400px;
+    height: 400px;
+    background: cadetblue;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: auto;
+}
+div#main {
+    border: 1px solid white;
+    border-radius: 5px;
+    height: 295px;
+}
+.section1 {
+    width: 200px;
+}
+.section1 img {
+    width: 200px;
+    border-radius: 4px;
+}
+.section2 {
+    width: 200px;
+    height: 198px;
+    background: white;
+    position: relative;
+    bottom: 27px;
+    /* margin-top: 10px; */
+}
+.section2 h4 {
+    padding-top: 20px;
+    margin-left: 48px;
+    font-size: 15px;
+}
+.section2 p {
+    font-size: 10px;
+    margin-left: 22px;
+    position: relative;
+    bottom: 20px;
+}
+.section3 {
+    background: white;
+    position: relative;
+    bottom: 134px;
+    /* display: flex; */
+    /* justify-content: space-evenly; */
+    margin-left: 19px;
+    width: 163px;
+}
+.section4 {
+    margin-left: 20px;
+    background: blue;
+    border-radius: 10px;
+    width: 122px;
+}
+.section4 h5 {
+    margin-left: 5px;
+}
+.section5 {
+    margin-left: 32px;
+    font-size: 15px;
+}
+.section5 h4 {
+    position: relative;
+    bottom: 10px;
+}
+div#image {
+    background: beige;
+    width: 18px;
+    height: 23px;
+    margin-left: 12px;
+}
+#image img {
+    background: darkorchid;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+.para {
+    margin-left: 25px;
+    width: 77px;
+    height: 37px;
+    position: relative;
+    bottom: 25px;
+}
+.para h6 {
+    margin-top: 3px;
+    font-size: 12px;
+}
+.para p {
+    padding: 0px;
+    position: relative;
+    bottom: 31px;
+    font-size: 10px;
+}
+div#matter {
+    margin-top: 4px;
+    font-size: 11px;
+    margin-right: 13px;
+}
+#matter a {
+    font-size: 11px;
+}
+
+.section4 {
+    margin-left: 20px;
+    background: blue;
+    border-radius: 5px;
+    width: 122px;
+}
+div#color {
+    width: 163px;
+    height: 27px;
+    display: flex;
+    justify-content: space-between;
+}
+span {
+    margin-left: 24px;
+}
