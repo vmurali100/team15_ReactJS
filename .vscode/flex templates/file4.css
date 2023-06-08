@@ -1,0 +1,212 @@
+.container {
+    width: 500px;
+    height: 400px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: auto;
+}
+.header {
+    width: 500px;
+    height: 300px;
+    display: flex;
+    justify-content: space-evenly;
+    background-image: url(./lightpink\ background\ image.jpg);
+}
+.firstdiv {
+    width: 130px;
+    height: 245px;
+    background-image: url(./blue\ background.jpg);
+    margin-top: 22px;
+}
+.section1 {
+    justify-content: space-evenly;
+    width: 110px;
+    height: 37px;
+    color: white;
+    display: flex;
+}
+div#para1 {
+    width: 10px;
+    height: 20px;
+}
+#para1 p {
+    border: 2px solid;
+    border-radius: 10px;
+    width: 9px;
+    height: 12px;
+    background: blue;
+    padding-left: 3px;
+    font-size: 11px;
+    margin-top: 18px;
+}
+.head1 {
+    padding: 0px;
+    /* margin: 0px; */
+    width: 50px;
+    height: 40px;
+    margin-top: 10px;
+}
+.head1 p {
+    position: relative;
+    font-size: 8px;
+    top: 0px;
+}
+.head1 h6 {
+    width: 50px;
+    font-size: 8px;
+    padding: 0px;
+    position: relative;
+    bottom: 19px;
+}
+.section2 {
+    width: 117px;
+    height: 37px;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+}
+div.para2 {
+    width: 10px;
+    height: 20px;
+}
+.para2 p {
+    border: 2px solid;
+    border-radius: 10px;
+    width: 9px;
+    height: 12px;
+    background: blue;
+    padding-left: 3px;
+    font-size: 11px;
+    margin-top: 18px;
+}
+.head2 {
+    padding: 0px;
+    /* margin: 0px; */
+    width: 55px;
+    height: 40px;
+    margin-top: 10px;
+}
+
+.head2 p {
+    position: relative;
+    font-size: 8px;
+    top: 0px;
+}
+.head2 h6 {
+    width: 56px;
+    font-size: 8px;
+    padding: 0px;
+    position: relative;
+    bottom: 19px;
+}
+.section3 {
+    width: 117px;
+    height: 37px;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+}
+div.para3 {
+    width: 10px;
+    height: 20px;
+}
+.para3 p {
+    border: 2px solid;
+    border-radius: 10px;
+    width: 9px;
+    height: 12px;
+    background: blue;
+    padding-left: 3px;
+    font-size: 11px;
+    margin-top: 18px;
+}
+.head3 {
+    padding: 0px;
+    /* margin: 0px; */
+    width: 54px;
+    height: 25px;
+    margin-top: 10px;
+}
+
+.head3 p {
+    position: relative;
+    font-size: 8px;
+    top: 0px;
+}
+.head3 h6 {
+    width: 56px;
+    font-size: 8px;
+    padding: 0px;
+    position: relative;
+    bottom: 19px;
+}
+.section4 {
+    width: 117px;
+    height: 37px;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+}
+div.para4 {
+    width: 10px;
+    height: 20px;
+}
+.para4 p {
+    border: 2px solid;
+    border-radius: 10px;
+    width: 9px;
+    height: 12px;
+    background: blue;
+    padding-left: 3px;
+    font-size: 11px;
+    margin-top: 18px;
+}
+.head4 {
+    padding: 0px;
+    /* margin: 0px; */
+    width: 54px;
+    height: 25px;
+    margin-top: 10px;
+}
+
+.head4 p {
+    position: relative;
+    font-size: 8px;
+    top: 0px;
+}
+.head4 h6 {
+    width: 56px;
+    font-size: 8px;
+    padding: 0px;
+    position: relative;
+    bottom: 19px;
+}
+.seconddiv {
+    width: 250px;
+    height: 230px;
+}
+.heading {
+    margin: 0px;
+    padding: 0px;
+}
+.paragraph {
+    position: relative;
+    bottom: 18px;
+    font-size: 9px;
+}
+label {
+    font-size: 11px;
+}
+.label1 {
+    position: relative;
+    bottom: 30px;
+}
+.lanel2 {
+    position: relative;
+    bottom: 46px;
+}
+.label3 {
+    position: relative;
+    bottom: 62px;
+}
