@@ -1,0 +1,37 @@
+*{
+  margin: 0px;
+  padding: 0px;  
+}
+.firstsection {
+  width: 1200px;
+  display: flex;
+  justify-content: center;
+}
+.header {
+  width: 1200px;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: black;
+  color: white;
+}
+.basic {
+  width: 150px;
+}
+.basic h1 {
+  margin-top: 10px;
+}
+.basic p {
+  font-size: 8px;
+}
+div#nav {
+  width: 680px;
+  margin-top: 20px;
+}
+#nav ul {
+  list-style-type: none;
+  font-size: 10px;
+}
+#nav ul li {
+  display: inline;
+  margin-right: 10px;
+}

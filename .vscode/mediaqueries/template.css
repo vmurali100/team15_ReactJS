@@ -1,0 +1,14 @@
+.firstsection {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.child1 p {
+    font-size: 14px;
+}
+.para p {
+    font-size: 14px;
+    background-color: red;
+    color: white;
+}
+.

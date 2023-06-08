@@ -4,10 +4,10 @@
 }
 div#first {
     width: 300px;
-    height: 300px;
+    height: 422px;
     background: aqua;
     margin: auto;
-    border-radius: 51px;
+    border-radius: 10px;
 }
 .image img {
     width: 50px;
@@ -39,4 +39,43 @@ div#second {
     justify-content: space-between;
     position: relative;
     left: 40px;
+}
+.one h4 {
+    margin: auto;
+    position: relative;
+    right: 20px;
+}
+.second h4 {
+    margin: auto;
+    position: relative;
+    right: 17px;
+}
+.third h4 {
+    margin: auto;
+    position: relative;
+    right: 14px;
+}
+marquee img {
+    width: 24px;
+}
+article img {
+    width: 115px;
+    height: 90px;
+}
+section img {
+    width: 115px;
+    height: 100px;
+}
+aside {
+    float: right;
+    position: relative;
+    bottom: 158px;
+}
+article {
+    width: 115px;
+    height: 90px;
+}
+section {
+    width: 115px;
+    height: 100px;
 }
