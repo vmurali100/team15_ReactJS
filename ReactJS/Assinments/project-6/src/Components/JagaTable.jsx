@@ -49,10 +49,10 @@ const JagaTable = () => {
                 <td>{usr.name}</td>
                 <td>{usr.username}</td>
                 <td>{usr.email}</td>
-                {/* <td>{usr.address}</td> */}
+               
                 <td>{usr.phone}</td>
                 <td>{usr.website}</td>
-                {/* <td>{usr.company}</td> */}
+               
                 <td>{formatAddress(usr.address)}</td>
                 <td>{formatCompany(usr.company)}</td>
                 <td>
