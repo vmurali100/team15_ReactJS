@@ -63,7 +63,7 @@ const Prince = () => {
     setIsEdit(false);
   };
   return (
-    <div className="main">
+    <div >
       <PrinceContextProvider
        value=
         {{
