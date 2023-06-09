@@ -24,9 +24,7 @@ const UsersTable = () => {
     );
   }
   return<DilliContextConsumer>
-      {(value) => (
-      
-        
+      {(value) => ( 
         <table border={1}>
           <thead>
             <tr>
