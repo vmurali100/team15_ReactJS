@@ -1,0 +1,172 @@
+ 
+.container {
+    width: 600px;
+    height: 400px;
+    background: beige;
+    /* display: flex; */
+    /* justify-content: space-evenly; */
+    /* align-items: center; */
+    margin: auto;
+}
+.heading {
+    width: 600px;
+    height: 200px;
+    margin-left: 180px;
+    padding: 10px;
+}
+.heading h4 {
+    font-size: 20px;
+    padding-bottom: 0px;
+}
+.heading p {
+    font-size: 11px;
+    position: relative;
+    bottom: 20px;
+    margin-left: 8px;
+}
+.box {
+    width: 340px;
+    height: 215px;
+    background: white;
+    margin: auto;
+    position: relative;
+    bottom: 90px;
+}
+div#firstdiv {
+    width: 340px;
+    /* display: flex; */
+    /* margin: auto; */
+    height: 120px;
+}
+.section1 {
+    width: 300px;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+.section1 p {
+    width: 125px;
+    font-size: 11px;
+    /* margin-left: 250px; */
+    height: 10px;
+}
+aside {
+    font-size: 13px;
+    /* margin-left: 120px; */
+    padding-top: 10px;
+    width: 85px;
+}
+
+.section2 {
+    margin-left: 96px;
+    padding-top: 10px;
+}
+input[type="range"] {
+    width: 230px;
+    position: relative;
+    right: 45px;
+}
+.section3 {
+    width: 250px;
+    height: 200px;
+    /* display: flex; */
+    margin: auto;
+    padding: 0px;
+}
+.billing {
+    display: flex;
+    justify-content: space-evenly;
+    width: 430px;
+}
+.monthlybilling {
+    width: 112px;
+    display: flex;
+    justify-content: revert;
+    height: 42px;
+}
+input[type="button"] {
+    width: 20px;
+    height: 15px;
+    margin-top: 25px;
+    margin-left: 5px;
+}
+.yearlybilling {
+    display: flex;
+    width: 315px;
+    justify-content: revert;
+    height: 42px;
+}
+.yearlybilling input {
+    width: 57px;
+    height: 7px;
+    margin-top: 26px;
+    font-size: 10px;
+    margin-left: 3px;
+    background: orangered;
+    border-radius: 6px;
+}
+hr {
+    width: 335px;
+    position: relative;
+    right: 42px;
+}
+div#seconddiv {
+    height: 102px;
+    width: 340px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.second {
+    justify-content: space-evenly;
+    display: flex;
+    width: 180px;
+    position: relative;
+    bottom: 11px;
+}
+.first {
+    display: flex;
+    justify-content: space-evenly;
+    width: 180px;
+    height: 30px;
+    /* position: relative; */
+    /* top: 14px; */
+}
+.first img {
+    width: 16px;
+}
+.first p {
+    position: relative;
+    bottom: 10px;
+}
+.second img {
+    position: relative;
+    left: 4px;
+}
+.second p {
+    position: relative;
+    left: 8px;
+}
+.third {
+    display: flex;
+    justify-content: space-evenly;
+    width: 126px;
+    position: relative;
+    bottom: 35px;
+}
+.third img {
+    position: relative;
+    left: 5px;
+}
+.third p {
+    position: relative;
+    left: 10px;
+}
+.button {
+    margin-top: 35px;
+}
+button {
+    background: black;
+    color: white;
+    border-radius: 10px;
+}
