@@ -1,0 +1,135 @@
+.container {
+    width: 450px;
+    height: 350px;
+    margin: auto;
+}
+.first {
+    width: 450px;
+    height: 180px;
+    margin-top: 50px;
+}
+.first h4 {
+    margin-left: 160px;
+}
+.first h5 {
+    position: relative;
+    bottom: 22px;
+    font-size: 16px;
+    color: dodgerblue;
+    margin-left: 167px;
+}
+.first p {
+    position: relative;
+    bottom: 45px;
+    font-size: 12px;
+    margin-left: 130px;
+    width: 267px;
+}
+span {
+    margin-left: 15px;
+}
+.one {
+    height: 108px;
+    width: 146px;
+    background-color: aqua;
+}
+.one h6 {
+    width: 55px;
+}
+.one p {
+    position: relative;
+    bottom: 20px;
+    right: 0px;
+    font-size: 9px;
+    width: 129px;
+}
+.img img {
+    right: 16px;
+    margin-left: 126px;
+    position: relative;
+    bottom: 15px;
+}
+.two {
+    width: 152px;
+    height: 100px;
+    background-color: blue;
+}
+.two h6 {
+    width: 95px;
+}
+.two p {
+    position: relative;
+    bottom: 20px;
+    right: 0px;
+    font-size: 9px;
+}
+.two img {
+    /* position: relative; */
+    position: relative;
+    left: 106px;
+    bottom: 22px;
+}
+.three {
+    width: 152px;
+    height: 94px;
+    position: relative;
+    bottom: 182px;
+    left: 168px;
+    background-color: blueviolet;
+}
+.three h6 {
+    width: 55px;
+}
+.three p {
+    right: 0px;
+    position: relative;
+    bottom: 16px;
+    width: 190px;
+    font-size: 9px;
+}
+.three img {
+    bottom: 13px;
+    margin-left: 129px;
+    position: relative;
+    right: 30px;
+}
+.four {
+    left: 176px;
+    width: 149px;
+    height: 100px;
+    position: relative;
+    bottom: 192px;
+    background: darkorange;
+}
+.four h6 {
+    width: 40px;
+}
+
+.four img {
+    margin-left: 135px;
+}
+div#second {
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+}
+.four {
+    left: 170px;
+    width: 150px;
+    height: 90px;
+    position: relative;
+    bottom: 199px;
+}
+.four p {
+    position: relative;
+    bottom: 15px;
+    right: 0px;
+    width: 160px;
+    font-size: 9px;
+}
+.four img {
+    right: 32px;
+    margin-left: 135px;
+    position: relative;
+    bottom: 11px;
+}
