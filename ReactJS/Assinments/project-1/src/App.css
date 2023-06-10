@@ -36,3 +36,38 @@
     transform: rotate(360deg);
   }
 }
+label {
+ width: 100px;
+font-weight: bold;
+}
+button#id {
+  border-radius: 13px;
+  background: aqua;
+  font-weight: bold;
+}
+button#id:hover{
+  border-radius: 13px;
+font-weight: bold;
+    background: rgb(240, 97, 97);
+}
+button#di1 {
+  border-radius: 12px;
+  background: rgb(52, 163, 237);
+  width: 51px;
+  font-weight: bold;
+}
+button#id2 {
+  border-radius: 12px;
+  font-weight: bold;
+  background: rgb(232, 38, 38);
+}
+form{
+ width: 400px;
+ margin: auto;
+  font-weight: bold;
+  background: lightskyblue;
+  margin-top: 15px;
+}
+input[type="text"] {
+  font-weight: bold;
+}

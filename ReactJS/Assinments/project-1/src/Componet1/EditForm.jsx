@@ -8,7 +8,7 @@ export const DilliForm = () => {
       <DilliContextConsumer>
         {(value) => {
           return (
-            <form>
+            <form >
               <label htmlFor="userId">UserId</label>
               <input
                 type="text"
@@ -16,7 +16,9 @@ export const DilliForm = () => {
                 value={value.users.userId}
                 onChange={value.handleChange}
               />
-              <br></br>
+              <br>
+              </br>
+             <br />
               <label htmlFor="id">ID</label>
               <input
                 type="text"
@@ -24,7 +26,7 @@ export const DilliForm = () => {
                 value={value.users.id}
                 onChange={value.handleChange}
               />
-              <br></br>
+              <br></br><br />
               <label htmlFor="title">Title</label>
               <input
                 type="text"
@@ -32,7 +34,7 @@ export const DilliForm = () => {
                 value={value.users.title}
                 onChange={value.handleChange}
               />
-              <br></br>
+              <br></br><br />
               <label htmlFor="body">Body</label>
               <input
                 type="text"
@@ -40,13 +42,13 @@ export const DilliForm = () => {
                 value={value.users.body}
                 onChange={value.handleChange}
               />
-              <br></br>
+              <br></br><br />
               {value.isEdit ? (
-                <button type="button" onClick={value.Updateuser}>
+                <button type="button" onClick={value.Updateuser} id="id">
                   UpdateUser
                 </button>
               ) : (
-                <button type="button" onClick={value.Adduser}>
+                <button type="button" onClick={value.Adduser} id="id">
                   AddUser
                 </button>
               )}

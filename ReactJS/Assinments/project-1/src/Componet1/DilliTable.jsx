@@ -42,7 +42,7 @@ export const DilliTable = () => {
                           onClick={() => {
                             value.handleEdit(usr, i);
                           }}
-                        >
+                       id="di1" >
                           Edit
                         </button>
                       </td>
@@ -51,7 +51,7 @@ export const DilliTable = () => {
                           onClick={() => {
                             value.handleDelete(usr, i);
                           }}
-                        >
+                       id="id2" >
                           Delete
                         </button>
                       </td>
