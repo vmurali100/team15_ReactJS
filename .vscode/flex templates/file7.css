@@ -1,0 +1,139 @@
+.container {
+    width: 600px;
+    height: 500px;
+    background: antiquewhite;
+    margin: auto;
+}
+h6 {
+    margin-left: 260px;
+    padding-top: 40px;
+}
+.box {
+    background: aliceblue;
+    margin: auto;
+    width: 475px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    height: 330px;
+}
+.firstdiv {
+    width: 200px;
+    height: 330px;
+}
+h4 {
+    margin-left: 15px;
+    padding-top: 20px;
+}
+.one {
+    width: 140px;
+    height: 25px;
+    background: azure;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10px;
+}
+.one h3 {
+    padding: 0px;
+    margin: 3px;
+}
+.one h4 {
+    padding: 0px;
+    margin: 5px;
+}
+.one h4 img {
+    border-radius: 5px;
+}
+h5 {
+    margin-left: 11px;
+}
+.two {
+    width: 175px;
+    height: 80px;
+    margin-left: 10px;
+}
+.two p {
+    width: 35px;
+    background: darkgreen;
+    padding-left: 11px;
+}
+.two {
+    /* grid-template-rows: inherit; */
+    width: 175px;
+    height: 84px;
+    margin-left: 10px;
+    display: grid;
+    grid-template-columns: 52px 56px 0;
+}
+h2 {
+    margin-left: 10px;
+    font-size: 20px;
+}
+.three {
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+    height: 20px;
+    background: azure;
+    margin-left: 10px;
+}
+.three img {
+    width: 13px;
+    margin-left: 10px;
+}
+.three img {
+    width: 13px;
+    margin-left: 10px;
+}
+.seconddiv {
+    width: 240px;
+    height: 284px;
+    background: darkgrey;
+    margin-top: 21px;
+    margin-right: 15px;
+}
+.four {
+    /* position: relative; */
+    /* right: 60px; */
+    display: flex;
+    justify-content: space-evenly;
+}
+.four h6 {
+    width: 71px;
+    margin-left: 0px;
+    position: relative;
+    bottom: 11px;
+}
+.four h5 {
+    margin-top: 53px;
+}
+.five {
+    justify-content: space-evenly;
+    display: flex;
+    width: 246px;
+}
+.five h6 {
+    /* margin-left: 331px; */
+    position: relative;
+    bottom: 53px;
+    width: 30px;
+    right: 175px;
+}
+.five h5 {
+    position: relative;
+    right: 85px;
+    bottom: 14px;
+}
+input[type="text"] {
+    margin-left: 60px;
+    background: cornflowerblue;
+    border-radius: 4px;
+    width: 138px;
+}
+span {
+    color: beige;
+}
+#three p {
+    background: beige;
+    width: 50px;
+}
