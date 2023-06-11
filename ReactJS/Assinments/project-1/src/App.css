@@ -70,4 +70,8 @@ form{
 }
 input[type="text"] {
   font-weight: bold;
+  margin-top: 18px;
+  }
+table.table.table-dark.table-striped {
+  margin-top: 20px;
 }
