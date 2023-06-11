@@ -54,7 +54,7 @@ const Dilli = () => {
     axios.get("https://jsonplaceholder.typicode.com/users").then((res) => {
       console.log(res.data);
       setUsers(res.data);
-    });
+    });  
   }, []);
   const handleEdit = (usr, i) => {
     setUser(usr);
