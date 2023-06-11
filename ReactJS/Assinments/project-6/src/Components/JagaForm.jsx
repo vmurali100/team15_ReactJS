@@ -86,7 +86,7 @@ export const JagaForm = () => {
               <br />
 
               <br></br>
-              <label htmlFor=""><b>Geo</b></label><br />
+              {/* <label htmlFor=""><b>Geo</b></label><br />
               <label htmlFor="lat">Lat:</label>
               <input
                 type="text"
@@ -109,7 +109,7 @@ export const JagaForm = () => {
                   value.handlechange(e);
                 }}
               />
-              <br />
+              <br /> */}
               <label htmlFor="">Phone</label>
               <input
                 type="text"

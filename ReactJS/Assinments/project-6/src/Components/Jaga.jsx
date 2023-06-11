@@ -6,7 +6,7 @@ import { JagaContextProvider } from "./JagaContext";
 import JagaTable from "./JagaTable";
 import { JagaForm } from "./JagaForm";
 
-export  const Jaga = () => {
+export const Jaga = () => {
   const [Users, setUsers] = useState([]);
   const [Index, setIndex] = useState(0);
   const [IsEdit, setIsEdit] = useState(false);
@@ -34,19 +34,19 @@ export  const Jaga = () => {
     },
   });
 
-const handlechange = (e) => {
-  const newUser = { ...User };
-  if (e.target.name.indexOf("address") > -1) {
-    newUser.address[e.target.name.split(".")[1]] = e.target.value;
-  } else if (e.target.name.indexOf("geo") > -1) {
-    newUser.address["geo"][e.target.name.split(".")[1]] = e.target.value;
-    if (e.target.name.indexOf("company") > -1) {
-      newUser.company[e.target.name.split(".")[1]] = e.target.value;
-    } else {
-      newUser[e.target.name] = e.target.value;
+  const handlechange = (e) => {
+    const newUser = { ...User };
+    if (e.target.name.indexOf("address") > -1) {
+      newUser.address[e.target.name.split(".")[1]] = e.target.value;
+    } 
+      if (e.target.name.indexOf("company") > -1) {
+        newUser.company[e.target.name.split(".")[1]] = e.target.value;
+      } else {
+        newUser[e.target.name] = e.target.value;
+      }
+      setUsers(newUser);
     }
-    setUsers(newUser);
-  }
+  
   const ClearForm = () => {
     setUser({
       id: 1,
@@ -121,5 +121,4 @@ const handlechange = (e) => {
       </JagaContextProvider>
     </div>
   );
-};
 };

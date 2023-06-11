@@ -9,9 +9,9 @@ const JagaTable = () => {
             <p>{address.suite}</p>
             <p>{address.city}</p>
             <p>{address.zipcode}</p>
-            <p><b>Geo-</b></p>
+            {/* <p><b>Geo-</b></p>
             <p>Lat-{address.geo.lat}</p>
-            <p>Lan-{address.geo.lat}</p>
+            <p>Lan-{address.geo.lat}</p> */}
         </div>
 
     }

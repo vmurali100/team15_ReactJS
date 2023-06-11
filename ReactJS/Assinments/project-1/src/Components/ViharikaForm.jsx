@@ -38,7 +38,7 @@ export const ViharikaForm = () => {
           <br />
           <label htmlFor="password">Password:</label>
           <input
-            type="text"
+            type="password"
             name="password"
             value={value.user.password}
             onChange={value.handleChange}
