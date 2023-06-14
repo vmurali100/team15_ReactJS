@@ -1,0 +1,241 @@
+/* body {
+    background: aliceblue;
+    padding-top: 10px;
+    color: white;
+    
+} */
+.container {
+    width: 100%;
+    background: aliceblue;
+    display: flex;
+    justify-content: space-evenly;
+    height: 420px;
+    margin-top: 20px;
+}
+.leftdiv {
+    width: 66%;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+.topdiv {
+    width: 500px;
+    height: 300px;
+    /* background: violet; */
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+.first {
+    background: violet;
+    width: 390px;
+    height: 175px;
+    /* padding-left: 10px; */
+    /* padding-top: 1px; */
+    border-radius: 5px;
+}
+.img {
+    margin-left: 10px;
+    padding-top: 5px;
+}
+.img img {
+    width: 20px;
+    float: left;
+    border-radius: 10px;
+}
+.first h2 {
+    font-size: 11px;
+    margin-top: 0px;
+    margin-left: 26px;
+    padding-bottom: 0px;
+    color: white;
+}
+.img h3 {
+    font-size: 9px;
+    margin-left: 26px;
+    position: relative;
+    bottom: 8px;
+    color: antiquewhite;
+}
+.first h1 {
+    font-size: 13px;
+    margin-left: 20px;
+    color: white;
+}
+.first p {
+    font-size: 10px;
+    margin-left: 13px;
+    color: antiquewhite;
+}
+.second {
+    width: 160px;
+    background: cadetblue;
+    height: 175px;
+    border-radius: 5px;
+}
+.img {
+    margin-left: 10px;
+    padding-top: 5px;
+}
+.img img {
+    width: 20px;
+    float: left;
+    border-radius: 10px;
+}
+.second h2 {
+    margin-top: 0px;
+    font-size: 10px;
+    margin-left: 28px;
+}
+.second h3 {
+    font-size: 8px;
+    margin-left: 28px;
+}
+.second h1 {
+    font-size: 13px;
+    margin-left: 9px;
+}
+.second p {
+    font-size: 9px;
+    margin-left: 7px;
+}
+#bottomdiv {
+    width: 500px;
+    height: 300px;
+    /* background: violet; */
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.third {
+    width: 160px;
+    background: white;
+    height: 175px;
+    border-radius: 5px;
+    position: relative;
+    bottom: 105px;
+}
+.img {
+    margin-left: 10px;
+    padding-top: 5px;
+}
+.img img {
+    width: 20px;
+    float: left;
+    border-radius: 10px;
+}
+.third h2 {
+    margin-top: 0px;
+    font-size: 10px;
+    margin-left: 28px;
+    color: brown;
+}
+.third h3 {
+    font-size: 8px;
+    margin-left: 28px;
+}
+.third h1 {
+    font-size: 13px;
+    margin-left: 9px;
+    color: blueviolet;
+    margin-left: 14px;
+}
+.third p {
+    font-size: 9px;
+    margin-left: 7px;
+    color: black;
+    margin-left: 9px;
+}
+.four {
+    background: burlywood;
+    width: 390px;
+    height: 175px;
+    /* padding-left: 10px; */
+    /* padding-top: 1px; */
+    border-radius: 5px;
+    position: relative;
+    bottom: 105px;
+}
+.img {
+    margin-left: 10px;
+    padding-top: 5px;
+}
+.img img {
+    width: 20px;
+    float: left;
+    border-radius: 10px;
+}
+.four h2 {
+    font-size: 11px;
+    margin-top: 0px;
+    margin-left: 26px;
+    padding-bottom: 0px;
+    color: white;
+}
+.img h3 {
+    font-size: 9px;
+    margin-left: 26px;
+    position: relative;
+    bottom: 8px;
+    color: antiquewhite;
+}
+.four h1 {
+    font-size: 13px;
+    margin-left: 20px;
+    color: white;
+}
+.four p {
+    font-size: 10px;
+    margin-left: 13px;
+    color: antiquewhite;
+}
+.rightdiv {
+    width: 30%;
+    height: 60%;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+#first {
+    background: darkgray;
+    width: 145px;
+    height: 369px;
+    /* padding-left: 10px; */
+    /* padding-top: 1px; */
+    border-radius: 5px;
+    /* color: black; */
+}
+#img {
+    margin-left: 10px;
+    padding-top: 5px;
+}
+#img img {
+    width: 20px;
+    float: left;
+    border-radius: 10px;
+}
+#first h2 {
+    font-size: 11px;
+    margin-top: 0px;
+    margin-left: 26px;
+    padding-bottom: 0px;
+    color: white;
+}
+#img h3 {
+    font-size: 9px;
+    margin-left: 26px;
+    position: relative;
+    bottom: 8px;
+    color: antiquewhite;
+}
+#first h1 {
+    font-size: 13px;
+    margin-left: 20px;
+    color: white;
+}
+#first p {
+    font-size: 10px;
+    margin-left: 13px;
+    color: antiquewhite;
+}
+
+

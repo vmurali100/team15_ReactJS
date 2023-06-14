@@ -1,0 +1,199 @@
+.firstdiv {
+    display: flex;
+    justify-content: center;
+    background: blue;
+    width: 100%;
+    height: 40px;
+}
+.seconddiv {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.seconddiv h5 {
+    width: 134px;
+}
+.items {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+}
+.seconddiv ul {
+    list-style-type: none;
+    width: 76%;
+    margin-top: 20px;
+    margin-left: 120px;
+    font-style: italic;
+    font-weight: bold;
+}
+.seconddiv ul li {
+    display: inline;
+    font-size: 9px;
+}
+li#PRO {
+    background: blue;
+}
+div#git {
+    width: 198px;
+    display: flex;
+    justify-content: space-evenly;
+}
+#git p {
+    font-size: 8px;
+    margin-top: 26px;
+}
+#git img {
+    width: 15px;
+    margin-bottom: 2px;
+}
+hr {
+    margin-top: 0px;
+}
+.image {
+    margin-left: 350px;
+    margin-top: 35px;
+}
+.seconddiv h5 {
+    width: 106px;
+}
+.image img {
+    width: 120px;
+}
+.para {
+    margin-left: 270px;
+}
+.para h1 {
+    font-size: 25px;
+    color: blue;
+}
+.para p {
+    margin-left: 40px;
+}
+button {
+    margin-left: 60px;
+    /* background: black; */
+    color: chocolate;
+    border-radius: 5px;
+}
+.thirddiv {
+    width: 100%;
+    height: 200px;
+    background: azure;
+    margin-top: 11px;
+}
+.first {
+    display: flex;
+    justify-content: space-between;
+}
+div#two {
+    margin-right: 30px;
+    margin-top: 20px;
+    word-spacing: 20px;
+}
+.one h4 {
+    margin-left: 15px;
+}
+.three h2 {
+    font-size: 22px;
+    color: deepskyblue;
+    margin-left: 13px;
+}
+.second {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.three {
+    width: 45%;
+}
+.three h2 {
+    font-size: 20px;
+    color: deepskyblue;
+    margin-left: 13px;
+}
+.three p {
+    margin-left: 13px;
+    font-size: 11px;
+}
+.input {
+    display: flex;
+    justify-content: space-between;
+    width: 270px;
+}
+input[type="text"] {
+    padding-left: 10px;
+}
+.input button {
+    margin-left: 4px;
+    background: red;
+    border-radius: 33px;
+    color: black;
+}
+
+.four {
+    display: flex;
+    justify-content: space-evenly;
+    width: 63%;
+}
+ul#one {
+    list-style-type: none;
+    width: 95px;
+}
+#one h5 {
+    width: 95px;
+    font-size: 9px;
+}
+#one li {
+    font-size: 10px;
+}
+ul#two {
+    list-style-type: none;
+    margin-top: 15px;
+    width: 48px;
+}
+#two h5 {
+    font-size: 9px;
+}
+#two li {
+    font-size: 11px;
+}
+ul#three {
+    margin-top: 19px;
+    list-style-type: none;
+    font-size: 10px;
+}
+#three h5 {
+    font-size: 8px;
+}
+#three li {
+    font-size: 10px;
+}
+ul#four {
+    list-style-type: none;
+    font-size: 10px;
+    margin-top: 18px;
+    margin-right: 12px;
+}
+div#footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+#footer h6 {
+    margin-top: 10px;
+    margin-left: 13px;
+}
+#footer ul {
+    list-style-type: none;
+    margin-top: 10px;
+}
+#footer ul li {
+    display: inline;
+    margin-right: 10px;
+    font-size: 12px;
+    /* margin-top: 3px; */
+}
+h6 span {
+    border: 1px solid;
+    border-radius: 10px;
+}
