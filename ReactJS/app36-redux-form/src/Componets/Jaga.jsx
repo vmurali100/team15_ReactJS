@@ -31,8 +31,9 @@ const Jaga = () => {
     newusers["index"] = index;
     dispatch(updateUser(newusers));
     ClearForm();
+    setIsEdit(false);
   };
-  
+
   const handleEdit = (usr, i) => {
     setUser(usr);
     setIsEdit(true);
