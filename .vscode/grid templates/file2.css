@@ -1,0 +1,129 @@
+.container {
+    background-image: url(./lightpink\ background\ image.jpg);
+    /* width: 1200px; */
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 1200px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 500px;
+}
+div#box {
+    width: 600px;
+    background: aliceblue;
+    margin-top: 27px;
+    height: 360px;
+}
+.class1 {
+    justify-content: space-evenly;
+    display: flex;
+}
+ul {
+    list-style-type: none;
+    font-size: 13px;
+    margin-right: 115px;
+}
+ul li {
+    margin-right: 10px;
+    display: inline;
+}
+.images img {
+    padding-right: 15px;
+}
+.images {
+    margin-top: 11px;
+}
+div#imgsection {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 35px;
+}
+.img {
+    margin-top: 60px;
+}
+.img img {
+    width: 180px;
+    height: 160px;
+}
+div#para {
+    margin-top: 60px;
+    /* margin-left: 10px; */
+}
+.heading {
+    margin-right: 90px;
+}
+.heading h6 {
+    color: brown;
+    margin-bottom: 0px;
+    padding-bottom: 0PX;
+}
+.heading h1 {
+    margin-bottom: 11px;
+    FONT-SIZE: 20px;
+}
+.heading p {
+    font-size: 10px;
+}
+.heading h5 {
+    margin-top: 10px;
+}
+span {
+    background: beige;
+    color: orange;
+    margin-left: 8px;
+    font-size: 10px;
+}
+section {
+    position: relative;
+    bottom: 19px;
+    font-size: 7px;
+    color: cadetblue;
+}
+.symbols {
+    margin-left: 243px;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    bottom: 17px;
+    width: 346px;
+}
+.firstsymbol {
+    display: flex;
+    justify-content: space-evenly;
+    /* width: 80px; */
+    margin-left: 8px;
+    /* background: azure; */
+    /* height: 50px; */
+    position: relative;
+    bottom: 12px;
+    column-gap: 22px;
+    border-radius: -3px;
+}
+.button {
+    width: 100px;
+    display: flex;
+    justify-content: inherit;
+    background: orange;
+    height: 35px;
+    border-radius: 10px;
+}
+.firstsymbol h3 {
+    color: orangered;
+}
+.firstsymbol p {
+    position: relative;
+    height: 28px;
+    /* background: orange; */
+    width: 11px;
+    border-radius: 19px;
+    /* padding-left: 4px; */
+    bottom: 6px;
+    color: darkorange;
+}
+.button img {
+    width: 14px;
+}
+.button h6 {
+    margin-top: 12px;
+}
