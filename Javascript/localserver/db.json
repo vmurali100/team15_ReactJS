@@ -2,14 +2,43 @@
   "users": [
     {
       "fname": "Murali",
-      "lname": "V",
-      "email": "vmurali100@gmail.com",
-      "gender": "male",
-      "subjects": [
-        "math",
-        "science"
-      ],
+      "lname": "Krishna",
       "id": 1
+    },
+    {
+      "fname": "Ram",
+      "lname": "Krishna",
+      "id": 2
+    },
+    {
+      "fname": "Ravi",
+      "lname": "Kumar",
+      "id": 3
+    },
+    {
+      "fname": "Sam",
+      "lname": "Sundar",
+      "id": 4
+    },
+    {
+      "fname": "SSS",
+      "lname": "NNN",
+      "id": 5
+    },
+    {
+      "fname": "ABCD",
+      "lname": "FGG",
+      "id": 6
+    },
+    {
+      "fname": "AABB",
+      "lname": "KKK",
+      "id": 7
+    },
+    {
+      "fname": "JJJ",
+      "lname": "LLL",
+      "id": 8
     }
   ]
 }
