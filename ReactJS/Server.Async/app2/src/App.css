@@ -36,18 +36,3 @@
     transform: rotate(360deg);
   }
 }
-form{
-  background-color: turquoise;
-  color: orangered;
-  width: 500px;
-  margin: auto;
-}
-label {
-  float: left;
-  width: 150px;
-}
-table{
-  background-color: black;
-  color: white;
-  margin: auto;
-}

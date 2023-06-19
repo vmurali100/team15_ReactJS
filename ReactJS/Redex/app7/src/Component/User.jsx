@@ -14,65 +14,67 @@ const User = () => {
     blood: "",
     department: "",
     courses1: false,
-    courses2:false,
-    courses3:false,
-    courses4:false,
+    courses2: false,
+    courses3: false,
+    courses4: false,
+    uploads: [],
   });
   const [isEdit, setIsEdit] = useState(false);
-  const[index,setIndex]=useState(0)
-  const allusers=useSelector((state)=>state.users.users)
+  const [index, setIndex] = useState(0);
+  const allusers = useSelector((state) => state.users.users);
   const dispatch = useDispatch();
   const handlechange = (e) => {
-    const { name, value, type, checked } = e.target;
-    let newValue = value;
-    
-    if (type === "checkbox") {
-      newValue = checked;
-    }
-    
+    const { name, value, type, checked, files } = e.target;
+    let newValue =
+      type === "checkbox"
+        ? checked
+        : type === "file"
+        ? Array.from(files)
+        : value;
+
     setUser((prevUser) => ({
       ...prevUser,
       [name]: newValue,
     }));
   };
-  const clearForm=()=>{
-    setUser({
-        name: "",
-        fname: "",
-        mname: "",
-        number: "",
-        email: "",
-        gender: "",
-        dob: "",
-        address: "",
-        blood: "",
-        department: "",
-        courses1: false,
-        courses2:false,
-        courses3:false,
-        courses4:false,
-    })
 
-    
-  }
+  const clearForm = () => {
+    setUser({
+      name: "",
+      fname: "",
+      mname: "",
+      number: "",
+      email: "",
+      gender: "",
+      dob: "",
+      address: "",
+      blood: "",
+      department: "",
+      courses1: false,
+      courses2: false,
+      courses3: false,
+      courses4: false,
+      uploads: [],
+    });
+  };
   const handleAddUser = () => {
     dispatch(adduser(user));
-    clearForm()
+    clearForm();
   };
-  const handleUpdate=()=>{
-    let newuser={...user}
-    newuser["index"]=index
-    dispatch(Updatauser(newuser))
-    clearForm()
-  }
-  const handleEdit=(usr,i)=>{
-    setUser(usr)
-    setIsEdit(true)
-    setIndex(i)
-  }
-  const handleDelete=(i)=>{
-dispatch(Deleteuser(i))
-  }
+  const handleUpdate = () => {
+    let newuser = { ...user };
+    newuser["index"] = index;
+    dispatch(Updatauser(newuser));
+    clearForm();
+  };
+  const handleEdit = (usr, i) => {
+    setUser(usr);
+    setIsEdit(true);
+    setIndex(i);
+  };
+  const handleDelete = (i) => {
+    dispatch(Deleteuser(i));
+  };
 
   return (
     <div>
@@ -242,6 +244,16 @@ dispatch(Deleteuser(i))
         ReactJs
         <br />
         <br />
+        <label htmlFor="uploads"> choose img</label>
+        <input
+          type="file"
+          name="uploads"
+          id="uploads"
+          accept=".jpg, .jpeg, .svg, .gif"
+          multiple
+          onChange={(e) => handlechange(e)}
+        />
+        <br />
         {isEdit ? (
           <button onClick={handleUpdate} type="button">
             UpdateUsers
@@ -255,63 +267,73 @@ dispatch(Deleteuser(i))
       <hr />
       <br />
       <table border={1}>
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>FatherName</th>
-              <th>MotherName</th>
-              <th>PhoneNumber</th>
-              <th>Email</th>
-              <th>Gender</th>
-              <th>DOB</th>
-              <th>Address</th>
-              <th>Blood Group</th>
-              <th>Department</th>
-              <th>Courses</th>
-
-              <th>Edit</th>
-              <th>Delete</th>
-            </tr>
-          </thead>
-          <tbody>
-            {allusers.map((usr, i) => {
-              return (
-                <tr key={i}>
-                  <td>{usr.name}</td>
-                  <td>{usr.fname}</td>
-                  <td>{usr.mname}</td>
-                  <td>{usr.number}</td>
-                  <td>{usr.email}</td>
-                  <td>{usr.gender}</td>
-                  <td>{usr.dob}</td>
-                  <td>{usr.address}</td>
-                  <td>{usr.blood}</td>
-                  <td>{usr.department}</td>
-                  <td>
-                 {usr.courses1 ?"HTML":""}
-                 {usr.courses2 ? "CSS":""}
-                 {usr.courses3 ? "JAVASCPIT":""}
-                 {usr.courses4 ? "REACTJS":""}
-                 
-                  </td>
-                  <td
-                
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>FatherName</th>
+            <th>MotherName</th>
+            <th>PhoneNumber</th>
+            <th>Email</th>
+            <th>Gender</th>
+            <th>DOB</th>
+            <th>Address</th>
+            <th>Blood Group</th>
+            <th>Department</th>
+            <th>Courses</th>
+            <th>uploads</th>
+            <th>Edit</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          {allusers.map((usr, i) => {
+            return (
+              <tr key={i}>
+                <td>{usr.name}</td>
+                <td>{usr.fname}</td>
+                <td>{usr.mname}</td>
+                <td>{usr.number}</td>
+                <td>{usr.email}</td>
+                <td>{usr.gender}</td>
+                <td>{usr.dob}</td>
+                <td>{usr.address}</td>
+                <td>{usr.blood}</td>
+                <td>{usr.department}</td>
+                <td>
+                  {usr.courses1 ? "HTML" : ""}
+                  {usr.courses2 ? "CSS" : ""}
+                  {usr.courses3 ? "JAVASCPIT" : ""}
+                  {usr.courses4 ? "REACTJS" : ""}
+                </td>
+                <td>{usr.uploads.map((upload,index)=>(
+                  <img key={index}
+                  src={URL.createObjectURL(upload)}
+                  alt={`Image ${index}`}
+                  style={{width:"50px", height:"60px"}}/>
+                ))}</td>
+                <td>
+                  <button
+                    onClick={() => {
+                      handleEdit(usr, i);
+                    }}
                   >
-                   <button  onClick={() => {
-                     handleEdit(usr, i);
-                    }}>Edit</button>
-                  </td>
-                  <td
-                  >
-                    <button  onClick={() => {
+                    Edit
+                  </button>
+                </td>
+                <td>
+                  <button
+                    onClick={() => {
                       handleDelete(i);
-                    }}>Delete</button>
-                  </td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
+                    }}
+                  >
+                    Delete
+                  </button>
+                </td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
     </div>
   );
 };
