@@ -24,7 +24,7 @@ import { getUsersAsync } from '../UserSlice'
     {users.map((usr,i)=>{
 return(
     <tr key={i}>
-        <td>{usr.usersId}</td>
+        <td>{usr.userId}</td>
         <td>{usr.id}</td>
         <td>{usr.title}</td>
         <td><button>Edit</button></td>

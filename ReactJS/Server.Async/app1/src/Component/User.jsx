@@ -26,7 +26,11 @@ const User = () => {
   useEffect(() => {
     dispatch(getUsersAsync());
   }, [dispatch]);
-
+  const handleUpdate = () => {
+    dispatch(handleUpdateUserAsync(userDetails))
+    setIsEdit(false)
+    clearForm()
+  };
   const handleAddusr = () => {
     dispatch(handleAddUserAsync(userDetails));
     console.log(userDetails)
@@ -47,12 +51,7 @@ const User = () => {
     console.log(users);
   };
 
-  const handleUpdate = () => {
-    dispatch(handleUpdateUserAsync(userDetails))
-    clearForm()
-    setIsEdit(false)
-    console.log(userDetails)
-  };
+ 
   const clearForm = () => {
     setuserDetails({
       userId: "",
@@ -62,7 +61,7 @@ const User = () => {
     });
   };
   return (
-    <div>
+    <div id="reddy">
       <table border={1}>
         <thead>
           <tr>

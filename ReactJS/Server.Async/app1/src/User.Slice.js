@@ -7,11 +7,11 @@ const initialData = {
 export const getUsersAsync = createAsyncThunk(
   "users/getUsersAsync",
   async () => {
-    return getUserFormserver();
+    return getUserFormserver(); 
   }
 );
 async function getUserFormserver() {
-  const response = await fetch("https://jsonplaceholder.typicode.com/posts");
+  const response = await fetch(" http://localhost:3000/users");
   const data = await response.json();
   console.log(data);
   return data;
@@ -19,7 +19,7 @@ async function getUserFormserver() {
 export const handleAddUserAsync = createAsyncThunk(
   "users/handleAddUserAsync",
   async (user) => {
-    const response = fetch("https://jsonplaceholder.typicode.com/posts", {
+    const response = fetch(" http://localhost:3000/users", {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -28,7 +28,7 @@ export const handleAddUserAsync = createAsyncThunk(
       body: JSON.stringify(user),
     });
     const dd = await (await response).json();
-    const resp = await fetch("https://jsonplaceholder.typicode.com/posts");
+    const resp = await fetch(" http://localhost:3000/users");
     const data = await resp.json();
     return data;
    
@@ -39,13 +39,13 @@ export const deleteUserAsync = createAsyncThunk(
   "user/deleteUserAsync",
   async (user) => {
     const response = fetch(
-      "https://jsonplaceholder.typicode.com/posts/" + user.id, // Corrected URL
+      " http://localhost:3000/users/" + user.id, 
       {
         method: "DELETE",
       }
     );
     const dd = await (await response).json();
-    const resp = await fetch("https://jsonplaceholder.typicode.com/posts");
+    const resp = await fetch(" http://localhost:3000/users");
     const data = await resp.json();
     return data;
   }
@@ -54,7 +54,7 @@ export const handleUpdateUserAsync = createAsyncThunk(
   "user/handleUpdateUserAsync",
   async (user) => {
     const response = fetch(
-      "https://jsonplaceholder.typicode.com/posts" + user.id,
+      " http://localhost:3000/users/" + user.id,
       {
         method: "PUT",
         headers: {
@@ -65,7 +65,7 @@ export const handleUpdateUserAsync = createAsyncThunk(
       }
     );
     const dd = await (await response).json();
-    const resp = await fetch("https://jsonplaceholder.typicode.com/posts");
+    const resp = await fetch(" http://localhost:3000/users");
     const data = await resp.json();
     return data;
   }
