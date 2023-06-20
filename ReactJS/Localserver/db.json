@@ -1,0 +1,103 @@
+{
+  "users": [
+    {
+      "fname": "Sam Sundar",
+      "lname": "VMR",
+      "email": "vmurali100@gmail.com",
+      "gender": "male",
+      "subjects": [
+        "science",
+        "history"
+      ],
+      "id": 1
+    },
+    {
+      "fname": "Ram VV",
+      "lname": "Krishna",
+      "email": "ram@gmail.com",
+      "gender": "male",
+      "subjects": [
+        "history",
+        "english"
+      ],
+      "id": 2
+    },
+    {
+      "fname": "Sam Sundar",
+      "lname": "VMR",
+      "email": "vmurali100@gmail.com",
+      "gender": "male",
+      "subjects": [
+        "science",
+        "history"
+      ],
+      "id": 3
+    },
+    {
+      "fname": "Ram VV",
+      "lname": "Krishna",
+      "email": "ram@gmail.com",
+      "gender": "male",
+      "subjects": [
+        "history",
+        "english"
+      ],
+      "id": 4
+    },
+    {
+      "fname": "Sam Sundar",
+      "lname": "VMR",
+      "email": "vmurali100@gmail.com",
+      "gender": "male",
+      "subjects": [
+        "science",
+        "history"
+      ],
+      "id": 5
+    },
+    {
+      "fname": "Ram VV",
+      "lname": "Krishna",
+      "email": "ram@gmail.com",
+      "gender": "male",
+      "subjects": [
+        "history",
+        "english"
+      ],
+      "id": 6
+    },
+    {
+      "fname": "Sam Sundar",
+      "lname": "VMR",
+      "email": "vmurali100@gmail.com",
+      "gender": "male",
+      "subjects": [
+        "science",
+        "history"
+      ],
+      "id": 7
+    },
+    {
+      "fname": "Ram VV",
+      "lname": "Krishna",
+      "email": "ram@gmail.com",
+      "gender": "male",
+      "subjects": [
+        "history",
+        "english"
+      ],
+      "id": 8
+    },
+    {
+      "fname": "Ram VV",
+      "lname": "Krishna",
+      "email": "ram@gmail.com",
+      "gender": "male",
+      "subjects": [
+        "history",
+        "english"
+      ],
+      "id": 10
+    }
+  ]
+}
