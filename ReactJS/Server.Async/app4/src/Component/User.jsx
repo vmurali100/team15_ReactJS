@@ -10,16 +10,18 @@ import {
 import { useState } from "react";
 const User = () => {
   const [userDetails, setuserDetails] = useState({
-    userId: "",
+    albumId: "",
     id: "",
     title: "",
+    url: "",
+    thumbnailUrl: "",
   });
   const [isEdit, setIsEdit] = useState(false);
   const dispatch = useDispatch();
-  const allusers = useSelector((state) => state.users.users);
   useEffect(() => {
     dispatch(getUsersAsync());
   }, [dispatch]);
+  const Alluser = useSelector((state) => state.users.users);
   const handlechange = (e) => {
     const newuser = { ...userDetails };
     newuser[e.target.name] = e.target.value;
@@ -27,53 +29,57 @@ const User = () => {
   };
   const handleAdduser = () => {
     dispatch(handleAddUserAsync(userDetails));
-    console.log(userDetails);
-    clearForm()
+    clearForm();
+  };
+  const handeleEdit = (users) => {
+    setuserDetails(users);
+    setIsEdit(true);
   };
   const handleDelete = (usr) => {
     dispatch(deleteUserAsync(usr));
-    
-  };
-  const handleEdit = (users) => {
-    setuserDetails(users);
-    setIsEdit(true);
   };
   const handleUpdate = () => {
     dispatch(handleUpdateUserAsync(userDetails));
     setIsEdit(false);
-    clearForm()
+    clearForm();
   };
-  const clearForm=()=>{
+  const clearForm = () => {
     setuserDetails({
-        userId: "",
-        id: "",
-        title: "",
-    })
-  }
+      albumId: "",
+      id: "",
+      title: "",
+      url: "",
+      thumbnailUrl: "",
+    });
+  };
   return (
-    <div id="Reddy">
+    <div id="main">
       <table border={1}>
         <thead>
           <tr>
-            <th>USERSID</th>
+            <th>AlbumId</th>
             <th>ID</th>
             <th>TITLE</th>
+            <th>URL</th>
+            <th>ThumbnailUrl</th>
             <th>EDIT</th>
             <th>DELETE</th>
           </tr>
         </thead>
         <tbody>
-          {allusers &&
-            allusers.map((usr, i) => {
+          {Alluser &&
+            Alluser.map((usr, i) => {
               return (
                 <tr key={i}>
-                  <td>{usr.userId}</td>
+                  <td>{usr.albumId}</td>
                   <td>{usr.id}</td>
                   <td>{usr.title}</td>
+                  <td>{usr.url}</td>
+                  <td>{usr.thumbnailUrl}</td>
                   <td>
                     <button
                       onClick={() => {
-                        handleEdit(usr);
+                        handeleEdit(usr);
                       }}
                     >
                       Edit
@@ -96,19 +102,19 @@ const User = () => {
       <br />
       <hr />
       <form>
-        <label htmlFor="userId">USERID</label>
+        <label htmlFor="albumId">AlbumId</label>
         <br />
         <input
           type="text"
-          name="userId"
-          value={userDetails.userId}
+          name="albumId"
+          value={userDetails.albumId}
           onChange={(e) => {
             handlechange(e);
           }}
         />
         <br />
         <br />
-        <label htmlFor="id">ID</label>
+        <label htmlFor="id">Id</label>
         <br />
         <input
           type="text"
@@ -120,7 +126,7 @@ const User = () => {
         />
         <br />
         <br />
-        <label htmlFor="title">TITLE</label>
+        <label htmlFor="title">Title</label>
         <br />
         <input
           type="text"
@@ -132,9 +138,33 @@ const User = () => {
         />
         <br />
         <br />
+        <label htmlFor="url">URl</label>
+        <br />
+        <input
+          type="text"
+          name="url"
+          value={userDetails.url}
+          onChange={(e) => {
+            handlechange(e);
+          }}
+        />
+        <br />
+        <br />
+        <label htmlFor="thumbnailUrl">ThumbnailUrl</label>
+        <br />
+        <input
+          type="text"
+          name="thumbnailUrl"
+          value={userDetails.thumbnailUrl}
+          onChange={(e) => {
+            handlechange(e);
+          }}
+        />
+        <br />
+        <br />
         {isEdit ? (
           <button type="button" onClick={handleUpdate}>
-            Upadateuser
+            Updateuser
           </button>
         ) : (
           <button type="button" onClick={handleAdduser}>

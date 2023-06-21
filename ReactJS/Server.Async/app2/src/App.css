@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+#Reddy{
+  display: flex;
+}
+table{
+  background-color: #282c34;
+  color: yellow;
+}
+form{
+  background-color: seashell;
+  color: lightgrey;
+}

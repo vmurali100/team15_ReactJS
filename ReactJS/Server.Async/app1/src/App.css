@@ -39,3 +39,11 @@
 #reddy{
   display: flex;
 }
+table{
+  background-color: #282c34;
+  color: yellow;
+}
+form{
+  background-color:orange ;
+  color: oldlace;
+}

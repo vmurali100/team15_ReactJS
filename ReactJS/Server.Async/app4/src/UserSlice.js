@@ -10,7 +10,7 @@ export const getUsersAsync = createAsyncThunk(
   }
 );
 async function getUserFormserver() {
-  const response = await fetch("http://localhost:3002/Users");
+  const response = await fetch("http://localhost:3003/users");
   const data = await response.json();
   console.log(data);
   return data;
@@ -18,7 +18,7 @@ async function getUserFormserver() {
 export const handleAddUserAsync = createAsyncThunk(
   "users/handleAddUserAsync",
   async (user) => {
-    const response = fetch(" http://localhost:3002/Users", {
+    const response = fetch("http://localhost:3003/users", {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -26,39 +26,42 @@ export const handleAddUserAsync = createAsyncThunk(
       },
       body: JSON.stringify(user),
     });
-    const resp = await fetch(" http://localhost:3002/Users");
+    const resp = await fetch("http://localhost:3003/users");
     const data = await resp.json();
     return data;
   }
 );
-
 export const deleteUserAsync = createAsyncThunk(
   "users/deleteUserAsync",
   async (user) => {
-    const response = fetch(" http://localhost:3002/Users/" + user.id, {
+    const response = fetch("http://localhost:3003/users/" + user.id, {
       method: "DELETE",
     });
-    const resp = await fetch(" http://localhost:3002/Users");
+    const resp = await fetch("http://localhost:3003/users");
     const data = await resp.json();
     return data;
   }
 );
-export const handleUpdateUserAsync = createAsyncThunk(
-  "users/handleUpdateUserAsync",
-  async (user) => {
-    const response = fetch("http://localhost:3002/Users/" + user.id, {
-      method: "PUT",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(user),
-    });
-    const resp = await fetch(" http://localhost:3002/Users");
-    const data = await resp.json();
-    return data;
-  }
-);
+export const handleUpdateUserAsync=createAsyncThunk(
+    "users/handleUpdateUserAsync",
+    async (user) => {
+        const response = fetch(
+          "http://localhost:3003/users/" + user.id,
+          {
+            method: "PUT",
+            headers: {
+              Accept: "application/json",
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(user),
+          }
+        );
+        
+        const resp = await fetch("http://localhost:3003/users");
+        const data = await resp.json();
+        return data;
+      }
+)
 const UserSlice = createSlice({
   name: "users",
   initialState: initialData,
@@ -67,19 +70,16 @@ const UserSlice = createSlice({
       state.users = action.payload;
     },
   },
-  extraReducers: (Sekhar) => {
-    Sekhar.addCase(getUsersAsync.fulfilled, (state, action) => {
+  extraReducers: (Guna) => {
+    Guna.addCase(getUsersAsync.fulfilled, (state, action) => {
       state.users = action.payload;
     });
-    Sekhar.addCase(handleAddUserAsync.fulfilled, (state, action) => {
+    Guna.addCase(handleAddUserAsync.fulfilled, (state, action) => {
       state.users = action.payload;
     });
-    Sekhar.addCase(deleteUserAsync.fulfilled, (state, action) => {
+    Guna.addCase(deleteUserAsync.fulfilled, (state, action) => {
       state.users = action.payload;
     });
-    Sekhar.addCase(handleUpdateUserAsync.fulfilled,(state,action)=>{
-      state.users=action.payload
-    })
   },
 });
 export default UserSlice.reducer;
