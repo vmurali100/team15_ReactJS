@@ -49,7 +49,7 @@ export const deleteUserAsync = createAsyncThunk(
 export const handleUpdateAsync = createAsyncThunk(
   "users/handleUpdateAsync",
   async (user) => {
-    const response = fetch("http://localhost:3000/users/"+ user.id, {
+    const response = fetch("http://localhost:3000/users/" + user.id, {
       method: "PUT",
       headers: {
         Accept: "application/json",
@@ -83,9 +83,9 @@ export const UsersSlice = createSlice({
     builder.addCase(deleteUserAsync.fulfilled, (state, actions) => {
       state.users = actions.payload;
     });
-    builder.addCase(handleUpdateAsync.fulfilled,(state,actions)=>{
-        state.users=actions.payload
-    })
+    builder.addCase(handleUpdateAsync.fulfilled, (state, actions) => {
+      state.users = actions.payload;
+    });
   },
 });
 export default UsersSlice.reducer;
