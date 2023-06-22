@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/img-redundant-alt */
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addUser, deleteUser, updateUser } from "../User.slice";
@@ -5,15 +6,16 @@ import { addUser, deleteUser, updateUser } from "../User.slice";
 const StudentDetails = () => {
     
   const [user, setUser] = useState({
-      name: "",
-      username: "",
-      email: "",
-      password: "",
-      confrimpassword: "",
-      gender: "",
+    name: "",
+    username: "",
+    email: "",
+    password: "",
+    confrimpassword: "",
+    gender: "",
+    uploads: [],
   });
  
-
+  
   const [isEdit, setIsEdit] = useState(false);
   const [index, setIndex] = useState(0);
 
@@ -23,16 +25,22 @@ const StudentDetails = () => {
     dispatch(addUser(user));
     clearForm();
   };
+
+
   const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
-    const newValue = type === "checkbox" ? checked : value;
+    const { name, value, type, checked, files } = e.target;
+    const newValue =
+      type === "checkbox"
+        ? checked
+        : type === "file"
+        ? Array.from(files) // Convert FileList to an array
+        : value;
 
     setUser((prevUser) => ({
       ...prevUser,
       [name]: newValue,
     }));
   };
-
 
   const clearForm = () => {
     setUser({
@@ -42,6 +50,7 @@ const StudentDetails = () => {
       password: "",
       confirmpassword: "",
       gender: "",
+      uploads: [],
     });
   };
   const handleEdit = (usr, i) => {
@@ -72,6 +81,7 @@ const StudentDetails = () => {
           }}
         />{" "}
         <br />
+        <br />
         <label htmlFor="username">User Name : </label>
         <input
           type="text"
@@ -81,7 +91,7 @@ const StudentDetails = () => {
             handleChange(e);
           }}
         />{" "}
-        <br />
+        <br /> <br />
         <label htmlFor="email">Email: </label>
         <input
           type="email"
@@ -91,7 +101,7 @@ const StudentDetails = () => {
             handleChange(e);
           }}
         />{" "}
-        <br />
+        <br /> <br />
         <label htmlFor="password">Password : </label>
         <input
           type="password"
@@ -101,7 +111,7 @@ const StudentDetails = () => {
             handleChange(e);
           }}
         />{" "}
-        <br />
+        <br /> <br />
         <label htmlFor="confirmpassword">Confirm password : </label>
         <input
           type="confirmpassword"
@@ -112,8 +122,6 @@ const StudentDetails = () => {
           }}
         />{" "}
         <br />
-       
-        
         <br />
         <label htmlFor="gender">Gender:</label>
         <input
@@ -141,6 +149,18 @@ const StudentDetails = () => {
         />{" "}
         other
         <br />
+        <br/>
+        <label htmlFor="uploads"> Choose the images : </label>
+        <input
+          type="file"
+          id="uploads"
+          name="uploads"
+          accept=".jpg, .jpeg, .png, .svg, .gif"
+          multiple
+          onChange={handleChange}
+        />
+        <br />
+        <br/>
         {isEdit ? (
           <button onClick={handleUpdate} type="button">
             Edit Users
@@ -152,15 +172,22 @@ const StudentDetails = () => {
         )}
       </form>
       <hr />
-      <table border={1}>
-        <thead>
+      <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+        crossorigin="anonymous"
+      ></link>
+      <table className="table table-dark table-striped">
+        <thead style={{ background: "#212529" }}>
           <tr>
             <th> Name </th>
-            <th>User Name</th>          
-            <th>Email</th>        
+            <th>User Name</th>
+            <th>Email</th>
             <th>Password</th>
-            <th>Confirm Password</th>         
+            <th>Confirm Password</th>
             <th>Gender</th>
+            <th>Images</th>
             <th>Edit</th>
             <th>Delete</th>
           </tr>
@@ -176,10 +203,21 @@ const StudentDetails = () => {
                 <td>{usr.confirmpassword}</td>
                 <td>{usr.gender}</td>
                 <td>
+                  {usr.uploads.map((upload, index) => (
+                    <img
+                      key={index}
+                      src={URL.createObjectURL(upload)}
+                      alt={`Image ${index}`}
+                      style={{ width: "60px", height: "60px" }}
+                    />
+                  ))}
+                </td>
+                <td>
                   <button
                     onClick={() => {
                       handleEdit(usr, i);
                     }}
+                    id="edit"
                   >
                     Edit
                   </button>
@@ -189,6 +227,7 @@ const StudentDetails = () => {
                     onClick={() => {
                       handleDelete(i);
                     }}
+                    id="delete"
                   >
                     Delete
                   </button>
@@ -198,7 +237,6 @@ const StudentDetails = () => {
           })}
         </tbody>
       </table>
-      
     </div>
   );
 };

@@ -1,37 +1,3 @@
 {
-  "users": [
-    {
-      "fname": "dilli",
-      "lname": "t",
-      "email": "dilli@gmail.com",
-      "gender": "male",
-      "subjects": [
-        "math",
-        "science"
-      ],
-      "id": 1
-    },
-    {
-      "fname": "guna",
-      "lname": "p",
-      "email": "guna@gmail.com",
-      "gender": "male",
-      "subjects": [
-        "science",
-        "history"
-      ],
-      "id": 2
-    },
-    {
-      "fname": "jyothi",
-      "lname": "p",
-      "email": "iyothi@gmail.com",
-      "gender": "male",
-      "subjects": [
-        "history",
-        "english"
-      ],
-      "id": 3
-    }
-  ]
+  "users": []
 }

@@ -1,12 +1,5 @@
 {
     "student":[
-      {
-        "fname": "Murali",
-        "lname": "V",
-        "email": "vmurali100@gmail.com",
-        "gender": "male",
-        "subjects": ["math", "science"],
-        "id": 1
-      }
+      
     ]
 }
