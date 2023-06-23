@@ -5,7 +5,7 @@ const initialState = {
 export const getUsersAsync = createAsyncThunk(
   "users/getUsersAsync",
   async () => {
-    getDataServer();
+    return getDataServer();
   }
 );
 

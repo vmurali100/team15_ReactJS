@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
+ 
   deleteUserAsync,
   getUsersAsync,
   handleAddUserAsync,
@@ -14,10 +15,9 @@ const Userdetails = () => {
   const dispatch = useDispatch();
   const allUsers = useSelector((state) => state.users);
   console.log(",allUsers", allUsers);
-  useState(() => {
-    dispatch(getUsersAsync);
-  }, []);
-
+  useEffect(()=>{
+    dispatch(getUsersAsync())
+  },[])
   const handleChange = (e) => {
     const Details = { ...Data };
     Details[e.target.name] = e.target.value;
@@ -27,18 +27,19 @@ const Userdetails = () => {
     dispatch(handleAddUserAsync(Data));
     clearData();
   };
-
+ const handleDelete=(usr)=>{
+  dispatch(deleteUserAsync(usr))
+ }
   const handleUpdate = () => {
-    dispatch(handleUpdateAsync(Data))
-    clearData()
-    setisEdit(false)
+    dispatch(handleUpdateAsync(Data));
+    
+    setisEdit(false);
+    clearData();
   };
 
-  const handleDelete = (usr) => {
-    dispatch(deleteUserAsync(usr));
-  };
-  const handleEdit = (user) => {
-    setData(user);
+ 
+  const handleEdit = (users) => {
+    setData(users);
     setisEdit(true);
   };
 
@@ -97,9 +98,8 @@ const Userdetails = () => {
         <br />
         {isEdit ? (
           <button onClick={handleUpdate} type="button">
-          updateUser
-        </button>
-          
+            updateUser
+          </button>
         ) : (
           <button onClick={addUser} type="button">
             Add user
