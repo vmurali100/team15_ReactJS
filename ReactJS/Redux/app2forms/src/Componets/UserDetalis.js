@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addUser, deleteUser, updateUser } from "../User.slice";
@@ -14,13 +15,16 @@ const UsersDetails = () => {
   });
   const [isEdit, setIsEdit] = useState(false);
   const [index, setIndex] = useState(0);
+  const [searchQuery, setSearchQuery] = useState("");
 
   const allUsers = useSelector((state) => state.users.users);
   const dispatch = useDispatch();
+
   const handleAddUser = () => {
     dispatch(addUser(user));
     clearForm();
   };
+
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     const newValue = type === "checkbox" ? checked : value;
@@ -42,11 +46,13 @@ const UsersDetails = () => {
       gender: "",
     });
   };
+
   const handleEdit = (usr, i) => {
     setUser(usr);
     setIsEdit(true);
     setIndex(i);
   };
+
   const handleUpdate = () => {
     let newUser = { ...user };
     newUser["index"] = index;
@@ -54,13 +60,24 @@ const UsersDetails = () => {
     clearForm();
     setIsEdit(false);
   };
+
   const handleDelete = (i) => {
     dispatch(deleteUser(i));
   };
+
+  const handleSearch = (e) => {
+    setSearchQuery(e.target.value);
+  };
+
+  const filteredUsers = allUsers.filter((usr) =>
+    usr.fname.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   return (
     <div>
       <form>
-        <label htmlFor="fname">First Name : </label>
+       
+        <label htmlFor="fname">First Name :</label>
         <input
           type="text"
           name="fname"
@@ -68,9 +85,9 @@ const UsersDetails = () => {
           onChange={(e) => {
             handleChange(e);
           }}
-        />{" "}
+        />
         <br />
-        <label htmlFor="lname">Last Name : </label>
+        <label htmlFor="lname">Last Name :</label>
         <input
           type="text"
           name="lname"
@@ -78,7 +95,8 @@ const UsersDetails = () => {
           onChange={(e) => {
             handleChange(e);
           }}
-        />{" "}
+        />
+        <br />
         <br />
         <label htmlFor="dob">date of borth : </label>
         <input
