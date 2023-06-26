@@ -1,0 +1,67 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  flex-direction: column;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.blog-container {
+  background-color: wheat;
+  width: 100%;
+}
+
+/* Code for Left Div tag */
+.App-leftdiv {
+  display: flex;
+  color: #000;
+  width: 75%;
+  height: auto;
+  background-color: white;
+  float: left;
+  padding-top: 15px;
+}
+
+/* Code for Right Div tag */
+.App-rightdiv {
+  display: flex;
+  color: white;
+  width: 25%;
+  height: auto;
+  background-color: white;
+  flex-direction: column;
+}
+
+.App-footer {
+  background-color: #282c34;
+  color: white;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  font-size: calc(10px + 2vmin);
+  height: auto;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.links {
+  display: flex;
+  justify-content: space-around;
+}
+
+.links a {
+  text-decoration: none;
+  color: white;
+}
+
+.links a:hover {
+  color: yellow;
+}
