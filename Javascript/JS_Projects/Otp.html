@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>OTP Generation</title>
+</head>
+<body>
+  <h1>OTP Generation Example</h1>
+
+  <label for="numberInput">Enter a number:</label>
+  <input type="number" id="numberInput">
+  <button onclick="generateAndDisplayOTP()">Generate OTP</button>
+
+  <div id="otp"></div>
+
+  <script>
+   /* eslint-disable no-undef */
+const twilio = require("twilio");
+
+const accountSid = "YOUR_TWILIO_ACCOUNT_SID";
+const authToken = "YOUR_TWILIO_AUTH_TOKEN";
+const client = twilio(accountSid, authToken);
+
+function sendSMS(otp, recipientNumber) {
+  const messageBody = `Your OTP is: ${otp}`;
+
+  client.messages
+    .create({
+      body: messageBody,
+      from: "YOUR_TWILIO_PHONE_NUMBER",
+      to: recipientNumber,
+    })
+    .then((message) => console.log("SMS sent:", message.sid))
+    .catch((error) => console.error("Error sending SMS:", error));
+}
+
+const otp = generateOTP(6); // Assuming you have a function to generate the OTP
+
+const recipientNumber = "RECIPIENT_MOBILE_NUMBER"; // Provide the recipient's actual mobile number
+sendSMS(otp, recipientNumber);
+
+  </script>
+</body>
+</html>

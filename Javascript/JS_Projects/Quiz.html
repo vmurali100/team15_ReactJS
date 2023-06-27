@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz App</title>
+    <style>
+        /* Add your CSS styling here */
+    </style>
+</head>
+<body>
+    <h1>Quiz App</h1>
+    <div id="quiz-container">
+        <h2 id="question"></h2>
+        <ul id="options"></ul>
+        <button id="submit-btn">Submit</button>
+    </div>
+    <div id="result-container">
+        <h2 id="score"></h2>
+    </div>
+
+    <script>
+        // Define your quiz questions as an array of objects
+        var questions = [
+            {
+                question: "What is the capital of France?",
+                options: ["London", "Paris", "Berlin", "Madrid"],
+                answer: 1
+            },
+            {
+                question: "Which planet is known as the Red Planet?",
+                options: ["Mars", "Jupiter", "Venus", "Saturn"],
+                answer: 0
+            },
+            // Add more questions here...
+        ];
+
+        var currentQuestion = 0;
+        var score = 0;
+
+        var questionElement = document.getElementById("question");
+        var optionsElement = document.getElementById("options");
+        var submitButton = document.getElementById("submit-btn");
+        var resultContainer = document.getElementById("result-container");
+        var scoreElement = document.getElementById("score");
+
+        function displayQuestion() {
+            var question = questions[currentQuestion];
+            questionElement.textContent = question.question;
+
+            optionsElement.innerHTML = "";
+            for (var i = 0; i < question.options.length; i++) {
+                var option = document.createElement("li");
+                option.textContent = question.options[i];
+                option.setAttribute("data-index", i);
+                option.addEventListener("click", selectOption);
+                optionsElement.appendChild(option);
+            }
+        }
+
+        function selectOption(event) {
+            var selectedOption = event.target;
+            var selectedAnswer = parseInt(selectedOption.getAttribute("data-index"));
+
+            if (selectedAnswer === questions[currentQuestion].answer) {
+                score++;
+            }
+
+            currentQuestion++;
+
+            if (currentQuestion === questions.length) {
+                showResult();
+            } else {
+                displayQuestion();
+            }
+        }
+
+        function showResult() {
+            quizContainer.style.display = "none";
+            resultContainer.style.display = "block";
+            scoreElement.textContent = "Your score: " + score + " out of " + questions.length;
+        }
+
+        submitButton.addEventListener("click", displayQuestion);
+    </script>
+</body>
+</html>
