@@ -1,0 +1,40 @@
+{
+  "User": [
+    {
+      "id": 3,
+      "name": "guna123",
+      "age": "88",
+      "email": "rowdy4749@gmail.com"
+    },
+    {
+      "name": "jaga",
+      "age": "22",
+      "email": "donoci1670@ekcsoft.com",
+      "id": 4
+    },
+    {
+      "name": "hello",
+      "age": "12",
+      "email": "ponnakeerthireddy3@gmail.com",
+      "id": 5
+    },
+    {
+      "name": "Rowdy",
+      "age": "22",
+      "email": "babyrowdy4259@gmail.com",
+      "id": 6
+    },
+    {
+      "name": "jj",
+      "age": "20",
+      "email": "jaga@gmail.com",
+      "id": 7
+    },
+    {
+      "name": "guna",
+      "age": "22",
+      "email": "donoci1670@ekcsoft.com",
+      "id": 8
+    }
+  ]
+}
