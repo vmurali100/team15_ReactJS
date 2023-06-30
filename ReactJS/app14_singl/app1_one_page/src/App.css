@@ -65,3 +65,80 @@
 .links a:hover {
   color: yellow;
 }
+a.navbar-brand {
+ 
+  text-decoration: none;
+  border: 1px solid gray;
+  border-radius: 11px;
+  width: 100px;
+  position: relative;
+  top: 20px;
+  background: beige;
+  height: 23px;
+  color: #00b4ff;
+    font-weight: bold;
+}
+a.nav-link {
+  text-decoration: none;
+  border: 1px solid gray;
+  border-radius: 11px;
+  width: 100px;
+  background: beige;
+  height: 23px;
+  position: relative;
+  top: 7px;
+  color: #00b4ff;
+    font-weight: bold;
+}
+a.navbar-brand:hover{
+  background-color: crimson;
+  color: #000;
+}
+a.nav-link:hover{
+  background-color: crimson;
+  color: #000;
+}
+thead {
+  border: 1px solid gray;
+  background: aqua;
+}
+tbody {
+  background-color: coral;
+}
+button.btn.btn-warning {
+  border-radius: 8px;
+  font-weight: bold;
+  background: lightskyblue;
+}
+button.btn.btn-danger {
+  border-radius: 8px;
+  font-weight: bold;
+  background: red;
+}
+button.btn.btn-warning:hover{
+  background-color: rgb(228, 21, 21);
+  color: rgb(53, 53, 226);
+}
+button.btn.btn-danger:hover{
+  background-color: aqua;
+  color: red;
+  
+}
+.container-fluid {
+  background-color: #282c34;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  /* flex-direction: column; */
+  /* font-size: calc(10px + 2vmin); */
+  color: white;
+}
+a:hover{
+  color: aqua;
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+  color: wheat;
+}
+

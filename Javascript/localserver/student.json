@@ -1,5 +1,22 @@
 {
-    "student":[
-      
-    ]
+  "student": [
+    {
+      "name": "Dilli Babu",
+      "age": "19",
+      "email": "dillibabu9177158@gmail.com",
+      "id": 1
+    },
+    {
+      "name": "yhid",
+      "age": "aegjnrjl",
+      "email": "dillibabu9177158@gmail.com",
+      "id": 2
+    },
+    {
+      "name": "John",
+      "age": "12",
+      "email": "dillibabu9177158@gmail.com",
+      "id": 3
+    }
+  ]
 }
