@@ -2,43 +2,15 @@
   "users": [
     {
       "fname": "Murali",
-      "lname": "Krishna",
+      "lname": "V",
+      "email": "vmurali100@gmail.com",
       "id": 1
     },
     {
       "fname": "Ram",
-      "lname": "Krishna",
+      "lname": "infotech",
+      "email": "vmrinfotech25@gmail.com",
       "id": 2
-    },
-    {
-      "fname": "Ravi",
-      "lname": "Kumar",
-      "id": 3
-    },
-    {
-      "fname": "Sam",
-      "lname": "Sundar",
-      "id": 4
-    },
-    {
-      "fname": "SSS",
-      "lname": "NNN",
-      "id": 5
-    },
-    {
-      "fname": "ABCD",
-      "lname": "FGG",
-      "id": 6
-    },
-    {
-      "fname": "AABB",
-      "lname": "KKK",
-      "id": 7
-    },
-    {
-      "fname": "JJJ",
-      "lname": "LLL",
-      "id": 8
     }
   ]
 }
