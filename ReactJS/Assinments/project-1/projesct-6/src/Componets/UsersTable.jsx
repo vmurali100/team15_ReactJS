@@ -6,43 +6,39 @@ const UsersTable = () => {
     return (
       <div>
         <p>
-          {address.number} , {address.street}
+          {address.street}, {address.suite}, {address.city}, {address.zipcode}
         </p>
-        <p>{address.city}</p>
-        <p>{address.zipcode}</p>
-       
-        
-    
+        <p>Geo</p>
+        {address.geo && (
+          <p>
+            Lat {address.geo.lat}<br/> Lon {address.geo.lng}
+          </p>
+        )}
       </div>
     );
   };
-  const formatCompany =(company)=>{
-    return(
-         <p>{company.name},
-         {company.catchPhrase},{company.bs}
-         </p>
-    );
-  }
-  return<DilliContextConsumer>
-      {(value) => ( 
+
+  return (
+    <DilliContextConsumer>
+      {(value) => (
         <table border={1}>
           <thead>
             <tr>
               <th>Id</th>
-              <th> Name</th>
+              <th>Name</th>
               <th>Username</th>
               <th>Email</th>
               <th>Address</th>
               <th>Phone</th>
-              <th>website</th>
-              <th>company</th>
+              <th>Website</th>
+              <th>Company</th>
               <th>Edit</th>
               <th>Delete</th>
             </tr>
           </thead>
           <tbody>
             {value.users.map((usr, i) => (
-              <tr>
+              <tr key={usr.id}>
                 <td>{usr.id}</td>
                 <td>{usr.name}</td>
                 <td>{usr.username}</td>
@@ -50,7 +46,14 @@ const UsersTable = () => {
                 <td>{formatAddress(usr.address)}</td>
                 <td>{usr.phone}</td>
                 <td>{usr.website}</td>
-                <td>{formatCompany(usr.company)}</td>
+                <td>
+                  {usr.company && (
+                    <p>
+                      {usr.company.name}, {usr.company.catchPhrase},{" "}
+                      {usr.company.bs}
+                    </p>
+                  )}
+                </td>
                 <td>
                   <button
                     onClick={() => {
@@ -75,7 +78,7 @@ const UsersTable = () => {
         </table>
       )}
     </DilliContextConsumer>
-  
+  );
 };
 
 export default UsersTable;

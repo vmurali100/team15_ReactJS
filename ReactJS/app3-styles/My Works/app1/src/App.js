@@ -1,11 +1,13 @@
 
 import './App.css';
-import Users from './Component/Users';
+import Prince from './Component/Prince';
+
+
 
 function App() {
   return (
     <div className="App">
-     <Users/>
+<Prince/>
     </div>
   );
 }

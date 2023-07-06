@@ -1,28 +1,33 @@
+/* eslint-disable no-unused-vars */
+import logo from "./logo.svg";
 import "./App.css";
-import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
-import { Dilli } from "./Componets/Dilli";
-import { Main } from "./Componets/Main";
-import { User } from "./Componets/User";
+import Navbar from "./Components/Navbar";
+import {
+  BrowserRouter,
+  Route,
+  Routes,
+  Link,
+  useLocation,
+} from "react-router-dom";
+import Create from "./Components/Create";
+import Edit from "./Components/Edit";
+import Delete from "./Components/Delete";
+import Layout from "./Components/Layout";
+import { Users } from "./Components/Users";
+import { Users1 } from "./Components/Users1";
 function App() {
   return (
     <div className="App">
-      <h2>Welcome to App Application !!</h2>
       <BrowserRouter>
-        <ul>
-          <li>
-            <Link to={"/"}>Dilli</Link>
-          </li>
-          <li>
-            <Link to={"/about"}>Main</Link>
-          </li>
-          <li>
-            <Link to={"/contact"}>User</Link>
-          </li>
-        </ul>
+        <Navbar />
         <Routes>
-          <Route path="/" index element={<Dilli />} />
-          <Route path="/about" element={<Main />} />
-          <Route path="/contact" element={<User />} />
+          <Route path="/" element={<Layout />} />
+          <Route path="/createUser" element={<Create />} />
+          <Route path="/editUser" element={<Edit />} />
+          <Route path="/deleteUser" element={<Delete />} />
+          <Route path="/users" element={<Users />}>
+            <Route path=":/id" element={<Users1 />} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </div>
