@@ -1,22 +1,28 @@
 {
   "student": [
     {
-      "name": "Dilli Babu",
-      "age": "19",
-      "email": "dillibabu9177158@gmail.com",
-      "id": 1
-    },
-    {
-      "name": "yhid",
-      "age": "aegjnrjl",
-      "email": "dillibabu9177158@gmail.com",
-      "id": 2
-    },
-    {
-      "name": "John",
-      "age": "12",
+      "fname": "Dilli",
+      "lname": "Babu",
       "email": "dillibabu9177158@gmail.com",
       "id": 3
+    },
+    {
+      "fname": "Raju",
+      "lname": "sanju",
+      "email": "dillibabu9177158@gmail.com",
+      "id": 4
+    },
+    {
+      "fname": "Dilli",
+      "lname": "Babu",
+      "email": "dillibabu9177158@gmail.com",
+      "id": 5
+    },
+    {
+      "fname": "Dilli",
+      "lname": "Babu",
+      "email": "dillibabu9177158@gmail.com",
+      "id": 6
     }
   ]
 }
