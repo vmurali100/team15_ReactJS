@@ -30,6 +30,7 @@ const Delete = () => {
         <li>First Name : {user.fname}</li>
         <li>Last Name : {user.lname}</li>
         <li>Email : {user.email}</li>
+        <li>Phone : {user.phone}</li>
       </ul>
 
       <h2 style={{ color: "red" }}>Are you Sure to Delete This User... ?</h2>

@@ -34,6 +34,16 @@ const UserForm = ({ handleSubmit, isEdit, userDetails, handleChange }) => {
           }}
         />{" "}
         <br />
+        <label htmlFor="phone">Phone : </label>
+        <input
+          type="text"
+          name="phone"
+          value={userDetails.phone}
+          onChange={(e) => {
+            handleChange(e);
+          }}
+        />{" "}
+        <br />
         {isEdit ? (
           <button
             onClick={handleSubmit}

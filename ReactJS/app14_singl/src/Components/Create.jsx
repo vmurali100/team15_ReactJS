@@ -10,6 +10,7 @@ const Create = () => {
     fname: "",
     lname: "",
     email: "",
+    phone:"",
   });
   const navigate = useNavigate();
   const handleSubmit = async () => {

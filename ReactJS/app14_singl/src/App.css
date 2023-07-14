@@ -210,3 +210,9 @@ svg.icon.github:hover{
    border-radius: 70px;
    background: #282c34;
 }
+img {
+  width: 171px;
+  height: 148px;
+  border: 4px solid black;
+  border-radius: 74px;
+}

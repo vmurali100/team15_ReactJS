@@ -11,9 +11,13 @@ export const Users = () => {
   return (
     <div>
       <h1>hellow form dilli</h1>
-        
+
       <br />
       <br />
+      <img
+        src="https://scontent.fhyd11-2.fna.fbcdn.net/v/t1.6435-9/81876394_756473424856616_5923412594479071232_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=Ny-RFNgm0F4AX-olBZH&_nc_ht=scontent.fhyd11-2.fna&oh=00_AfDrURZTpWlDeFtrnOozVWSn2uP0U4JrKFAke_SRlWlAXw&oe=64D2EF31"
+        alt="" width={{120:"px"}}
+      />
       <h2>Welcome To My Resturant</h2>
       <br />
       <p>
@@ -45,9 +49,7 @@ export const Users = () => {
         deleniti illo autem!
       </p>
       <footer>
-        <FaYoutube className="icon youtube" 
-        A
-        />
+        <FaYoutube className="icon youtube" A />
         <FaTwitter className="icon twitter" />
         <FaCartPlus className="icon cartplus" />
         <FaGithub className="icon github" />b

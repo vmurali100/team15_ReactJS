@@ -35,19 +35,23 @@ const Layout = () => {
       <table className="table">
         <thead>
           <tr>
+           
             <th>#</th>
             <th>First</th>
             <th>Last</th>
             <th>Handle</th>
+            <th>Phone</th>
           </tr>
         </thead>
         <tbody>
           {users.length > 0 &&
             users.map((usr, i) => (
               <tr key={i}>
+
                 <td>{usr.fname}</td>
                 <td>{usr.lname}</td>
                 <td>{usr.email}</td>
+                <td>{usr.phone}</td>
                 <td>
                   <button
                     className="btn btn-warning"
