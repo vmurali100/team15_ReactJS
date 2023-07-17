@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var myAge = Number(prompt("Please Enter Your Age !!!"));
+      var myCase = null;
+
+      if (myAge <= 19) {
+        myCase = 1;
+      } else if (myAge > 20 && myAge < 55) {
+        myCase = 2;
+      } else {
+        myCase = 3;
+      }
+
+      switch (myCase) {
+        case 1:
+          document.write("You Are a Teenager !!");
+          break
+        case 2:
+          document.write("You Are an Adult !!");
+          break
+        case 3:
+          document.write("You Are a Senior Citizen !!");
+
+      }
+    </script>
+  </body>
+</html>

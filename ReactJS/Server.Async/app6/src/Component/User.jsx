@@ -13,10 +13,23 @@ const User = () => {
     name: "",
     username: "",
     email: "",
-    address: "",
+    address: {
+      street: "",
+      suite: "",
+      city: "",
+      zipcode: "",
+      geo: {
+        lat: "",
+        lng: "",
+      },
+    },
     phone: "",
     website: "",
-    company: "",
+    company: {
+      name: "",
+      catchPhrase: "",
+      bs: "",
+    },
   });
   const [isEdit, setIsEdit] = useState(false);
   const fromatAddress = (address) => {
@@ -30,7 +43,7 @@ const User = () => {
           <b>Geo-</b>
         </p>
         {/* <p>lat-{address.geo.lat}</p>
-        <p>lng-{address.geo.lng}</p> */}
+        <p>lng-{address.geo.lng}</p>  */}
       </div>
     );
   };
@@ -51,20 +64,25 @@ const User = () => {
     dispatch(deleteUserAsync(usr));
   };
   const handlechange = (e) => {
-    const newuser = { ...userDetails };
+   const newUser = { ...userDetails };
+    if (e.target.name.indexOf("company") > -1) {
+      newUser.company[e.target.name.split(".")] = e.target.value;
+    }
     if (e.target.name.indexOf("address") > -1) {
-        newuser.address[e.target.name.split(".")[1]] = e.target.value;
-      } else if ((e.target.name.indexOf("geo") > -1)) {
-        newuser.address["geo"][e.target.name.split(".")[1]] =
-          e.target.value;
-      } else {
-        newuser[e.target.name] = e.target.value;
-  }
-    setuserDetails(newuser);
+      console.log(newUser.address);
+      console.log(e.target.name.split(".")[1]);
+      let prop = e.target.name.split(".")[1];
+      newUser.address[prop] = e.target.value;
+    } else if (e.target.name.indexOf("geo") > -1) {
+      newUser.address["geo"][e.target.name.split(".")[1]] = e.target.value;
+    } else {
+      newUser[e.target.name] = e.target.value;
+    }
+    setuserDetails(newUser);
   };
   const handleadduser = () => {
     dispatch(handleAddUserAsync(userDetails));
-    clearForm()
+    clearForm();
   };
   const handleEdit = (usr) => {
     setuserDetails(usr);
@@ -72,24 +90,37 @@ const User = () => {
   };
   const updateUser = () => {
     dispatch(handleUpdateUserAsync());
-    setIsEdit(false)
-    clearForm()
+    setIsEdit(false);
+    clearForm();
   };
-  const clearForm=()=>{
+  const clearForm = () => {
     setuserDetails({
-        id: "",
+      id: "",
+      name: "",
+      username: "",
+      email: "",
+      address: {
+        street: "",
+        suite: "",
+        city: "",
+        zipcode: "",
+        geo: {
+          lat: "",
+          lng: "",
+        },
+      },
+      phone: "",
+      website: "",
+      company: {
         name: "",
-        username: "",
-        email: "",
-        address: "",
-        phone: "",
-        website: "",
-        company: "",
-    })
-  }
+        catchPhrase: "",
+        bs: "",
+      },
+    });
+  };
   const Alluser = useSelector((state) => state.users.users);
   return (
-    <div>
+    <div id="Reddy">
       <h1>My dear frnd</h1>
       <table border={1}>
         <thead>
@@ -225,7 +256,7 @@ const User = () => {
           <b>Geo</b>
         </label>
         <br />
-        {/* <label htmlFor="lat">Lat:</label>
+        <label htmlFor="lat">Lat:</label>
         <input
           type="text"
           name="geo.lat"
@@ -245,7 +276,7 @@ const User = () => {
           onChange={(e) => {
             handlechange(e);
           }}
-        /> */}
+        />
         <br />
         <label htmlFor="">Phone</label>
         <input
@@ -285,7 +316,7 @@ const User = () => {
         <label htmlFor="">CatchPhrase:</label>
         <input
           type="text"
-          name="company.nacatchPhraseme"
+          name="company.catchPhrase"
           value={userDetails.company.catchPhrase}
           onChange={(e) => {
             handlechange(e);

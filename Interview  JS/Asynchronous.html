@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Asynchronous function to add two numbers
+      function addAsync(a, b, callback) {
+        setTimeout(() => {
+          const result = a + b;
+          callback(result);
+        }, 1000); // Simulating a time-consuming operation using setTimeout
+      }
+
+      // Asynchronous code with callback
+      console.log("Start");
+
+      addAsync(3, 5, (result) => {
+        console.log("Result:", result);
+      });
+
+      console.log("End");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "Rowdy": [
+    {
+      "name": "guna",
+      "phone": "3689542",
+      "email": "guna@gmail.com",
+      "password": "reddy",
+      "id": 1
+    },
+    {
+      "name": "guna",
+      "phone": "3689542",
+      "email": "guna@gmail.com",
+      "password": "reddy",
+      "id": 2
+    },
+    {
+      "name": "guna",
+      "phone": "3689542",
+      "email": "guna@gmail.com",
+      "password": "reddy",
+      "id": 3
+    }
+  ]
+}
