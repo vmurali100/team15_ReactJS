@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahesh Babu Movie</title>
+</head>
+<body>
+
+    <table border="1">
+        <thead>
+             <tr>
+                <th colspan="6">Mahesh Babu Movies List</th>
+            </tr>
+            <tr>
+                <td>Id</td>
+                <td>Title</td>
+                <td>Director</td>
+                <td>Content</td>
+                <td>Pic</td>
+                <td>Delete</td> 
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script>
+var MaheshBabuMovies = [
+        {
+            id:1,
+      title: "Movie_Name: Raja Kumarudu",
+      director: "Director:Raghavendra Rao",
+      content: " Raja Kumarudu is a romantic drama film where Mahesh Babu plays the role of a young man who falls in love with a girl while on a trip to a village.",
+      pic: "https://tse1.mm.bing.net/th?id=OIP.FPTq2bEweu2TbuaXEyoWeQHaEK&pid=Api&P=0&h=180"
+    },
+    {
+        id:2,
+      title: "Movie_Name:Yuvaraju",
+      director: "Director:YVS Chowdary",
+      content: "Yuvaraju is a family drama film where Mahesh Babu portrays the role of a young man who becomes the guardian of his niece and nephew after a tragedy.",
+      pic: "https://tse2.explicit.bing.net/th?id=OIP.wGNd-fyDaS9MAc4dZOCVRAAAAA&pid=Api&P=0&h=180"
+    },
+    {
+        id:3,
+      title: "Movie_Name:Vamsi",
+      director: "Director:B. Gopal",
+      content: "Vamsi is an action-packed film where Mahesh Babu plays the role of a photographer who seeks revenge for the murder of his parents.",
+      pic: "https://tse3.mm.bing.net/th?id=OIP.ljwcF5lCbNpb---T_jRdLAHaEK&pid=Api&P=0&h=180"
+    },
+    {
+        id:4,
+      title: "Movie_Name:Murari",
+      director: "Director:Krishna Vamsi",
+      content: "Murari is a fantasy film where Mahesh Babu portrays the character of a man blessed with the ability to heal people and faces a family curse.",
+      pic: "https://tse1.mm.bing.net/th?id=OIP.fxbSXsjfXieRmNSFyUhD0gHaOG&pid=Api&P=0&h=180"
+    },
+    {
+        id:4,
+      title: "Movie_Name:Takkari Donga",
+      director: "Director:Jayant Paranji",
+      content: "Takkari Donga is an adventurous film where Mahesh Babu plays the role of a cowboy who embarks on a treasure hunt in Africa.",
+      pic: "https://tse2.mm.bing.net/th?id=OIP.3UmpxAWORbxhflPHOTu2jAAAAA&pid=Api&P=0&h=180"
+    },
+    {
+        id:5,
+      title: "Movie_Name:Bobby",
+      director: "Director:Vijaya Bhaskar",
+      content: "Bobby is a romantic comedy film where Mahesh Babu portrays the character of a young man who is caught in a love triangle.",
+      pic: "https://tse1.mm.bing.net/th?id=OIP.7bwB29nzi3RMzej1Jc4WowAAAA&pid=Api&P=0&h=180"
+    },
+    {
+        id:6,
+      title: "Movie_Name:Okkadu",
+      director: "Director:Gunasekhar",
+      content: "Okkadu is an action-packed film where Mahesh Babu plays the role of a Kabaddi player who saves a girl from a dangerous faction leader.",
+      pic: "https://tse2.mm.bing.net/th?id=OIP.up_z8YbIXKBsJAXx8OI4HwHaFj&pid=Api&P=0&h=180"
+    },
+    {
+        id:7,
+      title: "Movie_Name:Nijam",
+      director: "Director:Teja",
+      content: "Nijam is a crime drama film where Mahesh Babu portrays the character of a man who takes law into his hands to fight corruption.",
+      pic: "https://tse3.mm.bing.net/th?id=OIP.1mDj5E4xe2CrMmcFZuyMeQHaHa&pid=Api&P=0&h=180"
+    },
+    {
+        id:8,
+      title: "Movie_Name:Naani",
+      director: "Director:S. J. Surya",
+      content: "Naani is a heartwarming film where Mahesh Babu plays the role of a single father trying to raise his infant daughter.",
+      pic: "https://tse1.mm.bing.net/th?id=OIP.w2XEh9x2m0ptbFWMq__pSgHaFj&pid=Api&P=0&h=180"
+    },
+    {
+        id:9,
+      title: "Movie_Name:Arjun",
+      director: "Director:Gunasekhar",
+      content: "Arjun is a romantic drama film where Mahesh Babu portrays the role of a young man who fights for the rights of the villagers against a cruel landlord.",
+      pic: "https://tse1.mm.bing.net/th?id=OIP.Twq8fa4fjaTVT8f0sXKQMQHaEW&pid=Api&P=0&h=180"
+    },
+    {
+        id:10,
+      title: "Movie_Name:Athadu",
+      director: "Director:Trivikram Srinivas",
+      content: "Athadu is an action thriller film where Mahesh Babu plays the role of a professional assassin who gets entangled in a mistaken identity.",
+      pic: "https://tse4.mm.bing.net/th?id=OIP.n4LvmiR5fYfIPuvq8r3WdQHaJ4&pid=Api&P=0&h=180"
+    },
+    {
+        id:11,
+      title: "Movie_Name:Pokiri",
+      director: "Director:Puri Jagannadh",
+      content: "Pokiri is an action-packed film where Mahesh Babu portrays the character of a fearless undercover police officer on a mission to dismantle the mafia.",
+      pic: "https://tse2.mm.bing.net/th?id=OIP.I4G7e2HAV5nJLcPPg2zPoAHaLH&pid=Api&P=0&h=180"
+    },
+    {
+        id:12,
+      title: "Movie_Name:Sainikudu",
+      director: "Director:Gunasekhar",
+      content: "Sainikudu is a political drama film where Mahesh Babu plays the role of an NRI who returns to India to address social issues.",
+      pic: "https://tse2.mm.bing.net/th?id=OIP.zCQVR0hSoVyGxVSbD8_nHAHaHa&pid=Api&P=0&h=180"
+    },
+    {
+        id:13,
+      title: "Movie_Name:Athidi",
+      director: "Director:Surender Reddy",
+      content: "Athidi is an action film where Mahesh Babu portrays the character of an orphan who seeks to avenge the death of a family he was close to.",
+      pic: "https://tse2.mm.bing.net/th?id=OIP.rXX0OiHp6Vhz4cX3hotjegHaHa&pid=Api&P=0&h=180"
+    },
+    {
+        id:14,
+      title: "Movie_Name:Khaleja",
+      director: "Director:Trivikram Srinivas",
+      content: "Khaleja is an action-comedy film where Mahesh Babu plays the role of a taxi driver who gets involved in a mission with unexpected twists.",
+      pic: "https://tse1.mm.bing.net/th?id=OIP.lB6wMAeXtTQyT_RoXDDKTAAAAA&pid=Api&P=0&h=180"
+    },
+    {
+        id:15,
+      title: "Movie_Name:Dookudu",
+      director: "Director:Srinu Vaitla",
+      content: "Dookudu is an action-comedy film where Mahesh Babu portrays the role of a police officer who investigates a criminal conspiracy.",
+      pic: "https://tse1.mm.bing.net/th?id=OIP.KPxExOuQv5-NkAdhSpwlswHaKM&pid=Api&P=0&h=180"
+    },
+    {
+        id:16,
+      title: "Movie_Name:Businessman",
+      director: "Director:Puri Jagannadh",
+      content: "Businessman is a crime drama film where Mahesh Babu plays the role of a young man who rises to power in the mafia underworld.",
+      pic: "https://tse1.mm.bing.net/th?id=OIP.AteaccXRLmDLAvqjR4TNsAHaKX&pid=Api&P=0&h=180"
+    },
+    {
+        id:17,
+      title: "Movie_Name:Seethamma Vakitlo Sirimalle Chettu",
+      director: "Director:Srikanth Addala",
+      content: "Seethamma Vakitlo Sirimalle Chettu is a family drama film where Mahesh Babu portrays the character of a responsible elder brother.",
+      pic: "https://tse2.mm.bing.net/th?id=OIP.hywlUWGvdmsvI2XtY24msgHaKY&pid=Api&P=0&h=180"
+    },
+    {
+        id:18,
+      title: "Movie_Name:1: Nenokkadine",
+      director: "Director:Sukumar",
+      content: "1: Nenokkadine is a psychological thriller film where Mahesh Babu plays the role of a rock musician seeking to uncover his mysterious past.",
+      pic: "https://tse3.mm.bing.net/th?id=OIP.Gq_DVJtnNEJqqcpKnNHggQHaEc&pid=Api&P=0&h=180"
+    },
+    {
+        id:19,
+      title: "Movie_Name:Aagadu",
+      director: "Director:Srinu Vaitla",
+      content: "Aagadu is an action-comedy film where Mahesh Babu portrays the role of a police officer who takes on a dangerous criminal.",
+      pic: "https://tse2.mm.bing.net/th?id=OIP.sUC9DQNSHejeeACyUM7uyAHaJ4&pid=Api&P=0&h=180"
+    },
+    {
+        id:20,
+      title: "Movie_Name:bramhosvam",
+      director: "Director:Srikanth Addala",
+      content: "Brahmotsavam (transl. Festival of Brahma/Grand Celebration) is a 2016 Indian Telugu-language family melodrama film written and directed by Srikanth Addala. The film was co-produced by",
+      pic: "https://tse4.mm.bing.net/th?id=OIP.YWHPTdWIBZ8cMPu0u8p4nAHaI4&pid=Api&P=0&h=180"
+    },
+    {
+        id:21,
+      title: "Movie_Name:spyder",
+      director: "Director:s.j surya",
+      content: "Plot Shiva is an IB officer who develops a program to spy on people's calls and messages in order to help them. On the night of 16 March, Shiva listens to Charlie (Shalini in the Tamil version)",
+      pic: "https://tse2.mm.bing.net/th?id=OIP.n5J5j-nFkNZ1nVAZNnJzyAHaKe&pid=Api&P=0&h=180"
+    },
+    {
+        id:22,
+      title: "Movie_Name:bharat ane nenu",
+      director: "Director:Koratala Siva",
+      content: "Bharath Ane Nenu: Directed by Koratala Siva. With Mahesh Babu, Kiara Advani, Prakash Raj, R. Sarathkumar. Bharat, a young graduate who becomes the C.M of Andhra Pradesh",
+      pic: "https://tse4.explicit.bing.net/th?id=OIP.lKh-_wr2gMz25Ryz9XcHPQHaKf&pid=Api&P=0&h=180"
+    },
+    {
+        id:23,
+      title: "Movie_Name:Aagadu",
+      director: "Director: Srinu Vaitla",
+      content: "Aagadu is an action-comedy film where Mahesh Babu portrays the role of a police officer who takes on a dangerous criminal.",
+      pic:"https://tse2.mm.bing.net/th?id=OIP.sUC9DQNSHejeeACyUM7uyAHaJ4&pid=Api&P=0&h=180"
+    }
+      ];
+       function displayUsers(MaheshBabuMovies){
+        MaheshBabuMovies.forEach((std, index) => {
+            var myTr = document.createElement("tr");
+            for(a in std){
+                var myTd= document.createElement("td");
+                if (a === "pic") {
+                    var myImg = document.createElement("img");
+                    myImg.src = std[a];
+                    myImg.alt = std.title;
+                    myImg.width = 180; 
+                    myTd.appendChild(myImg);
+                } else {
+                    myTd.innerHTML = std[a];
+                }
+                myTr.appendChild(myTd)
+            }
+
+            var deleteButtonTd = document.createElement("td");
+            var deleteButton = document.createElement("button");
+            deleteButton.textContent = "Delete";
+            deleteButton.addEventListener("click", function() {
+                deleteMovie(index);
+            });
+            deleteButtonTd.appendChild(deleteButton);
+            myTr.appendChild(deleteButtonTd);
+
+            document.querySelector("tbody").appendChild(myTr)
+        });
+      }
+
+      function deleteMovie(index) {  
+        MaheshBabuMovies.splice(index, 1);
+        var tableBody = document.querySelector("tbody");
+        tableBody.innerHTML = "";
+        displayUsers(MaheshBabuMovies);
+      }
+
+      displayUsers(MaheshBabuMovies);
+    </script>
+</body>
+</html>

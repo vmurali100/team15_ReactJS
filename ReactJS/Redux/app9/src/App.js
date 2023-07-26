@@ -1,18 +1,16 @@
 /* eslint-disable no-unused-vars */
 
 import "./App.css";
-import { useDispatch } from "react-redux";
-import MyComponent from "./Componets/User";
+import Dilli from "./Componets/Table";
+
 
 
 
 
 function App() {
-  const dispatch = useDispatch();
- 
   return (
     <div className="App">
-<MyComponent/>
+<Dilli/>
     </div>
   );
 }
