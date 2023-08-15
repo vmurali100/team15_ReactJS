@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <label for="id">Id :</label>
+      <input type="text" id="id" name="" /><br />
+      <label for="user">User :</label>
+      <input type="text" id="user" name="" /><br />
+      <label for="password">Password :</label>
+      <input type="text" id="password" name="" /><br />
+      <label for="admin">Admin :</label>
+      <input type="radio" id="admin" name="role" value="No" />No
+      <input type="radio" id="user" name="role" value="Yes" />Yes
+      <br />
+      <label for="permission1">Programs</label>
+      <input type="checkbox" id="permission1" name="permissions" value="html" />
+     
+      <input type="checkbox" id="permission2" name="permissions" value="css" />
+     
+      <input type="checkbox" id="permission3" name="permissions" value="java script" />
+      <br />
+      <button type="button" onclick="adduser()">add User</button>
+      <button onclick="updateUser()" type="button">Update User</button>
+    </form>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>User</th>
+          <th>Password</th>
+          <th>Admin</th>
+          <th>Programs</th>
+          <th>Edit</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <script>
+      var users = [];
+
+      function adduser() {
+        var user = {
+          id: document.getElementById("id").value,
+          user: document.getElementById("user").value,
+          password: document.getElementById("password").value,
+          role: document.querySelector('input[name="role"]:checked').value,
+           permissions: [], // Initialize an empty array for permissions
+        };
+        var checkboxes = document.querySelectorAll('input[name="permissions"]:checked');
+  checkboxes.forEach(function (checkbox) {
+    user.permissions.push(checkbox.value);
+  });
+        
+        users.push(user);
+        localStorage.setItem("users", JSON.stringify(users));
+
+        displayUsers();
+      }
+
+      function displayUsers() {
+        users = JSON.parse(localStorage.getItem("users"));
+        if (users == null) {
+          users = [];
+        }
+        document.querySelector("tbody").innerHTML = "";
+        users.forEach(function (usr, i) {
+          var myTr = document.createElement("tr");
+          for (a in usr) {
+            var myTd = document.createElement("td");
+            myTd.innerHTML = usr[a];
+            myTr.appendChild(myTd);
+          }
+          var ediTd = document.createElement("td");
+          var delTd = document.createElement("td");
+
+          var editBtn = document.createElement("button");
+          editBtn.innerHTML = "Edit";
+          editBtn.setAttribute("onclick", "editUser(" + i + ")");
+          var deleteBtn = document.createElement("button");
+          deleteBtn.innerHTML = "Delete";
+          deleteBtn.setAttribute("onclick", "deleteUser(" + i + ")");
+
+          ediTd.appendChild(editBtn);
+          delTd.appendChild(deleteBtn);
+
+          myTr.appendChild(ediTd);
+          myTr.appendChild(delTd);
+          document.querySelector("tbody").appendChild(myTr);
+        });
+        clearForm();
+        console.log(users);
+      }
+      function clearForm() {
+        document.getElementById("id").value = "";
+        document.getElementById("user").value = "";
+        document.getElementById("password").value = "";
+        document.querySelector('input[name="role"][value="user"]').checked = true;
+        var checkboxes = document.querySelectorAll('input[name="permissions"]:checked');
+        checkboxes.forEach(function (checkbox) {
+          checkbox.checked = false;
+        });
+      }
+      function editUser(i) {
+        gIndex = i;
+        console.log(users[i]);
+        document.getElementById("id").value = users[i].id;
+        document.getElementById("user").value = users[i].user;
+        document.getElementById("password").value = users[i].user;
+        role = document.querySelector('input[name="role"]:checked').value;
+      }
+      function deleteUser(i) {
+        users = users.filter((usr, index) => {
+          // Use lowercase 'i' and fix the variable name 'index'
+          return i != index;
+        });
+        localStorage.setItem("users", JSON.stringify(users));
+        displayUsers();
+      }
+      displayUsers();
+      gIndex = null;
+      function updateUser() {
+        var user = {
+          fname: document.getElementById("id").value,
+          lname: document.getElementById("user").value,
+          email: document.getElementById("password").value,
+          role: document.querySelector('input[name="role"]:checked').value,
+         permissions: [], // Initialize an empty array for permissions
+        };
+        var checkboxes = document.querySelectorAll('input[name="permissions"]:checked');
+  checkboxes.forEach(function (checkbox) {
+    user.permissions.push(checkbox.value);
+  });
+        users[gIndex] = user;
+        localStorage.setItem("users", JSON.stringify(users));
+
+        displayUsers();
+      }
+    </script>
+  </body>
+</html>
