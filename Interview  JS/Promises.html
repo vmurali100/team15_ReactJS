@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const fetchData = new Promise((resolve, reject) => {
+  // Simulating an asynchronous operation (e.g., making an HTTP request)
+  setTimeout(() => {
+    const data = { message: "Promise example data" };
+    // Simulate a successful response
+    // Resolve the promise with the data
+    resolve(data);
+    // OR simulate an error
+    // reject(new Error("Failed to fetch data"));
+  }, 2000); // Simulating a 2-second delay
+});
+
+// Handling the promise result using then() and catch()
+fetchData
+  .then((result) => {
+    console.log("Promise fulfilled:", result);
+  })
+  .catch((error) => {
+    console.error("Promise rejected:", error);
+  });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Style for the image container */
+#image-container {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* Style for the image slider */
+#image-slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Style for individual images */
+.image {
+  width: 100%;
+  display: none;
+}
+
+/* Style for slide dots container */
+.dot-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+/* Style for individual slide dots */
+.dot {
+  height: 10px;
+  width: 10px;
+  background-color: #bbb;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+/* Active dot style */
+.dot.active {
+  background-color: #717171;
+}
+
+/* Style for previous and next buttons */
+#prev-btn,
+#next-btn {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+}
+
+#prev-btn {
+  left: 10px;
+}
+
+#next-btn {
+  right: 10px;
+}
+
+  </style>
+</head>
+<body>
+  <div id="image-container">
+    <div id="image-slider">
+      <img class="image" src="https://www.quirkybyte.com/wp-content/uploads/2019/04/2-2.jpeg" alt="Image 1" />
+      <img class="image" src="https://th.bing.com/th/id/OIP.BX9mLjhBE8WeMQ_CKB0pvgHaEK?pid=ImgDet&rs=1" alt="Image 2" />
+      <img class="image" src="https://i.ytimg.com/vi/Mj08QfHpl-Q/maxresdefault.jpg" alt="Image 3" />
+      <img class="image" src="https://th.bing.com/th/id/R.689672371f9b445b6fbcab9cbae9f27c?rik=dcATeKRJu88%2fIg&riu=http%3a%2f%2fwww.cinejosh.com%2fnewsimg%2fnewsmainimg%2fjanasena-first-list-of-mlas-released_b_1403190652.jpg&ehk=kTYHKDeOGvjZt4aZnw%2bOheIntSEWcVk7nAuXvWTl6L0%3d&risl=&pid=ImgRaw&r=0" alt="Image 4" />
+    </div>
+    <div id="slide-dots" class="dot-container">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+    <div id="prev-btn">&#10094;</div>
+    <div id="next-btn">&#10095;</div>
+  </div>
+
+  <script>
+    const images = document.querySelectorAll('.image');
+    const dots = document.querySelectorAll('.dot');
+    const prevButton = document.getElementById('prev-btn');
+    const nextButton = document.getElementById('next-btn');
+    const intervalTime = 3000; // Change this value to adjust the interval time in milliseconds
+    let currentIndex = 0;
+    let interval;
+
+    function showImage(index) {
+      images.forEach(image => {
+        image.style.display = 'none';
+      });
+
+      dots.forEach(dot => {
+        dot.classList.remove('active');
+      });
+
+      images[index].style.display = 'block';
+      dots[index].classList.add('active');
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % images.length;
+      showImage(currentIndex);
+    }
+
+    function startAutoSlide() {
+      interval = setInterval(nextSlide, intervalTime);
+    }
+
+    function stopAutoSlide() {
+      clearInterval(interval);
+    }
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        showImage(index);
+        currentIndex = index;
+        stopAutoSlide();
+      });
+    });
+
+    prevButton.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      showImage(currentIndex);
+      stopAutoSlide();
+    });
+
+    nextButton.addEventListener('click', () => {
+      nextSlide();
+      stopAutoSlide();
+    });
+
+    showImage(currentIndex);
+    startAutoSlide();
+  </script>
+</body>
+</html>

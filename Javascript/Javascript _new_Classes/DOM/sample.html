@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      form {
+        margin: auto;
+        width: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <label for="name">Name</label><br />
+      <input type="text" name="" id="name" /><br /><br />
+      <label for="email">Email</label><br />
+      <input type="email" name="" id="email" /><br /><br />
+      <label for="password">Password</label><br />
+      <input type="password" name="" id="password" /><br /><br />
+      <label for="cpassword">Confim Password</label><br />
+      <input type="password" name="" id="cpassword" /><br /><br />
+      <button onclick="submit()" type="button">Submit</button><br /><br />
+    </form>
+    <hr />
+    <hr />
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Password</th>
+          <th>Confim Password</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <script>
+      var allusers = [];
+      function submit() {
+        var name = document.getElementById("name").value;
+        console.log(name)
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+        var cpassword = document.getElementById("cpassword").value;
+
+        // var person = {
+        //   name: name,
+        //   email: email,
+        //   password: password,
+        //   cpassword: cpassword,
+        // };
+        // allusers.push(person);
+
+        // console.log(allusers);
+      }
+    </script>
+  </body>
+</html>

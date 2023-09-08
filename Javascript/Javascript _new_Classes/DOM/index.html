@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    
+     
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+
+      /* .star-rating {
+        display: inline-block;
+      }
+
+      .star-rating > input {
+        display: none;
+      }
+
+      .star-rating > label {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        cursor: pointer;
+        font-size: 24px;
+      }
+
+      .star-rating > label:before {
+        content: "★";
+      }
+
+      .star-rating > input:checked ~ label:before {
+        content: "★";
+        color: gold;
+      } */
+      form {
+        background-image: url("https://cdn.pixabay.com/photo/2021/07/16/15/29/hellebore-6471156_640.jpg");
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <label for="name">Leader Name</label><br />
+      <input
+        type="text"
+        name=""
+        id="name"
+        placeholder="Leader Name"
+      /><br /><br />
+      <label for="roal">Roal</label><br />
+      <input type="text" name="" id="roal" placeholder="Roal" /><br /><br />
+      <label for="address">Addree</label><br />
+      <input
+        type="address"
+        name=""
+        id="address"
+        placeholder="Addree"
+      /><br /><br />
+      <label for="age">Age</label><br />
+      <input type="date" name="" id="age" /><br />
+      <label for="gender">Gender</label><br />
+      <input type="radio" name="gender" value="male" />male
+      <input type="radio" name="gender" value="female" />Female <br /><br />
+      <label for="year">Strating year</label><br />
+      <input type="year" name="" id="year" /><br /><br />
+      <label for="end">Ending Year</label><br />
+      <input type="year" name="" id="end" /><br /><br />
+      <label for="total">Total Years</label><br />
+      <input type="text" name="" id="total" /><br /><br />
+      <label for="review">Review</label><br />
+      <textarea name="" id="review" cols="30" rows="5"></textarea><br /><br />
+      <!-- <label for="rating">star-rating:</label><br />
+      <div class="star-rating">
+        <br />
+
+        <input type="checkbox" name="rating" value="star5" />
+        <label for="star5"></label>
+        <input type="checkbox" name="rating" value="star4" />
+        <label for="star4"></label>
+        <input type="checkbox" name="rating" value="star3" />
+        <label for="star3"></label>
+        <input type="checkbox" name="rating" value="star2" />
+        <label for="star2"></label>
+        <input type="checkbox" name="rating" value="star1" />
+        <label for="star1"></label>
+      </div> -->
+      <br /><br />
+      <button type="button" onclick="adduser()">Submit</button>
+    </form>
+    <br />
+    <hr />
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Role</th>
+          <th>Address</th>
+          <th>Age</th>
+          <th>Gender</th>
+          <th>Year</th>
+          <th>End</th>
+          <th>Total</th>
+          <th>Review</th>
+          <th>Edit</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <script>
+      var allradiobtn = document.getElementsByName("gender");
+      allusers = [];
+      function adduser() {
+        name = document.getElementById("name").value;
+        console.log(name);
+        var users = {
+          name: "",
+          roal: "",
+          address: "",
+          age: "",
+          gender: "",
+          year: "",
+          end: "",
+          total: "",
+          review: "",
+        };
+        for (a in users) {
+          if (a !== "gender") {
+            users[a] = document.getElementById(a).value;
+            console.log(users);
+          } else if (a == "gender") {
+            allradiobtn.forEach((rb) => {
+              if (rb.checked) {
+                users.gender = rb.value;
+              }
+            });
+          }
+        }
+        allusers.push(users);
+        displayUsers(allusers);
+        clearForm();
+      }
+      function displayUsers() {
+        document.querySelector("tbody").innerHTML = "";
+        allusers.forEach((usr) => {
+          var myTr = document.createElement("tr");
+          for (a in usr) {
+            var myTd = document.createElement("td");
+            myTd.innerHTML = usr[a];
+            myTr.appendChild(myTd);
+          }
+          document.querySelector("tbody").appendChild(myTr);
+        });
+        
+      }
+      function clearForm() {
+        var users = {
+          name: "",
+          roal: "",
+          address: "",
+          age: "",
+          gender: "",
+          year: "",
+          end: "",
+          total: "",
+          review: "",
+        };
+        for (a in users) {
+          if (a != "gender") {
+            document.getElementById(a).value = "";
+          } else if ((a = "gender")) {
+            allradiobtn.forEach((rb) => {
+              rb.checked = false;
+            });
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

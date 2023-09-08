@@ -39,24 +39,22 @@
       </tr>
     </table>
     <script>
-        var users = []
+      var users = [];
       function addUser() {
+        var person = {
+          fname: "",
+          lname: "",
+          email: "",
+          password: "",
+          confirmpass: "",
+          dob: "",
+        };
 
-
-        var person={
-            fname:"",
-            lname:"",
-            email:"",
-            password:"",
-            confirmpass:"",
-            dob:""
+        for (a in person) {
+          person[a] = document.getElementById(a).value;
         }
-
-        for (a in person){
-            person[a]=document.getElementById(a).value
-        }
-        console.log(person)
-        users.push(person)
+        console.log(person);
+        users.push(person);
         // var fname = document.getElementById("fname").value;
         // var lname = document.getElementById("lname").value;
         // var email = document.getElementById("email").value;

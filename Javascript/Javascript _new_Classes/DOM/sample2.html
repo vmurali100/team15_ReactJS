@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    #updateUserBtn {
+      display: none;
+    }
+    #addUserBtn {
+      display: block;
+    }
+  </style>
+  <body>
+    <form>
+      <label for="name">Name</label><br />
+      <input type="text" name="" id="name" /><br /><br />
+      <label for="email">Email</label><br />
+      <input type="email" name="" id="email" /><br /><br />
+      <label for="password">Password</label><br />
+      <input type="password" name="" id="password" /><br /><br />
+      <label for="cpass">Confirm Password</label><br />
+      <input type="password" name="" id="cpass" /><br /><br />
+      <label for="gender">Gender</label>
+      <input type="radio" name="gender" value="Male" />Male
+      <input type="radio" name="gender" value="Female" />Female
+      <input type="radio" name="gender" value="Other" />Other <br /><br />
+      <label for="course">Course</label>
+      <input type="checkbox" name="course" value="HTML" />HTML
+      <input type="checkbox" name="course" value="CSS" />CSS
+      <input type="checkbox" name="course" value="JAVASCRIPT" />JAVASCRIPT
+      <input type="checkbox" name="course" value="REACTJS" />REACTJS
+      <input type="checkbox" name="course" value="GIT" />GIT <br /><br />
+      <label for="rule">Rules</label>
+      <select name="" id="rule">
+        <option value="">...</option>
+        <option value="ul">UI</option>
+        <option value="ux">UX</option>
+        <option value="other">Other</option></select
+      ><br /><br />
+      <button onclick="addUser()" type="button" id="addUserBtn">AddUser</button>
+      <button onclick="updataUser()" type="button" id="updateUserBtn">
+        Update User
+      </button>
+    </form>
+    <br /><br />
+    <hr />
+    <table border="3">
+      <thead>
+        <tr>
+          <th>NAME</th>
+          <th>EMAIL</th>
+          <th>Password</th>
+          <th>Confirm Password</th>
+          <th>Gender</th>
+          <th>Course</th>
+          <th>Rules</th>
+          <th>EDIT</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <script>
+      var users = [];
+      var allradiobtns = document.getElementsByName("gender");
+      var allcheckboxs = document.getElementsByName("course");
+
+      function addUser() {
+        var user = {
+          name: "",
+          email: "",
+          password: "",
+          cpass: "",
+          gender: "",
+          course: [],
+          rule: "",
+        };
+        for (a in user) {
+          if (a !== "gender" && a !== "course") {
+            user[a] = document.getElementById(a).value;
+            console.log(user);
+          } else if (a == "gender") {
+            allradiobtns.forEach((rb) => {
+              if (rb.checked) {
+                user.gender = rb.value;
+              }
+            });
+          } else if (a == "course") {
+            allcheckboxs.forEach((ck) => {
+              if (ck.checked) {
+                user.course.push(ck.value);
+              }
+            });
+          }
+        }
+        users.push(user);
+        displayUsers(users);
+        clearForm();
+      }
+      function displayUsers() {
+        document.querySelector("tbody").innerHTML = "";
+        users.forEach((usr, i) => {
+          var myTr = document.createElement("tr");
+          for (b in usr) {
+            var mytd = document.createElement("td");
+            mytd.innerHTML = usr[b];
+            myTr.appendChild(mytd);
+          }
+
+          var EditTd = document.createElement("td");
+          var editbtn = document.createElement("button");
+          editbtn.innerHTML = "EDIT";
+          editbtn.setAttribute("onclick", "edituser(" + i + ")");
+          EditTd.appendChild(editbtn);
+          myTr.appendChild(EditTd);
+
+          var deteletd = document.createElement("td");
+          var deteleBtn = document.createElement("button");
+          deteleBtn.innerHTML = "DELETE";
+          deteleBtn.setAttribute("onclick", "deleteuser(" + i + ")");
+          deteletd.appendChild(deteleBtn);
+          myTr.appendChild(deteletd);
+          document.querySelector("tbody").appendChild(myTr);
+        });
+      }
+      function clearForm() {
+        var user = {
+          name: "",
+          email: "",
+          password: "",
+          cpass: "",
+          gender: "",
+          course: [],
+          rule: "",
+        };
+        for (a in user) {
+          if (a !== "gender" && a !== "course") {
+            document.getElementById(a).value = "";
+            allradiobtns.forEach((rb) => {
+              rb.checked = false;
+            });
+            allcheckboxs.forEach((ck) => {
+              ck.checked = false;
+            });
+          }
+        }
+      }
+      function deleteuser(i) {
+        users = users.filter((usr, index) => {
+          return i !== index;
+        });
+        displayUsers();
+      }
+
+      function edituser(i) {
+        gIndex = i;
+        for (a in users[i]) {
+          if (a !== "gender" && a !== "course") {
+            document.getElementById(a).value = users[i][a];
+            allradiobtns.forEach((rb) => {
+              if (rb.value == users[i].gender) {
+                rb.checked = true;
+              }
+            });
+          } else if (a == "course") {
+            allcheckboxs.forEach((ck) => {
+              users[i][a].forEach((val) => {
+                if (val == ck.value) {
+                  ck.checked = true;
+                }
+              });
+            });
+          }
+        }
+        document.getElementById("updateUserBtn").style.display = "block";
+        document.getElementById("addUserBtn").style.display = "none";
+      }
+
+      function updataUser() {
+        document.getElementById("updateUserBtn").style.display = "none";
+        document.getElementById("addUserBtn").style.display = "block";
+        var user = {
+          name: "",
+          email: "",
+          password: "",
+          cpass: "",
+          gender: "",
+          course: [],
+          rule: "",
+        };
+        for (a in user) {
+          if (a !== "gender" && a !== "course") {
+            user[a] = document.getElementById(a).value;
+          } else if (a == "gender") {
+            allradiobtns.forEach((rb) => {
+              if (rb.checked) {
+                user.gender = rb.value;
+              }
+            });
+          } else if (a == "course") {
+            allcheckboxs.forEach((ck) => {
+              if (ck.checked) {
+                user.course.push(ck.value);
+              }
+            });
+          }
+        }
+        users[gIndex] = user;
+        displayUsers();
+        clearForm();
+      }
+    </script>
+  </body>
+</html>

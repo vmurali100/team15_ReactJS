@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Register</h2>
+
+    <form>
+      <label for="">User Name : </label> <br />
+      <input type="text" name="" id="username" /> <br />
+      <label for="email">Email : </label> <br />
+      <input type="email" name="" id="email" /> <br />
+      <label for="Password">Password : </label> <br />
+      <input type="password" name="" id="password" /> <br />
+      <label for="cpass">Confirm Password </label> <br />
+      <input type="password" name="" id="cpass" /> <br /><br>
+      <button type="button" onclick="registerUser()">Register</button>
+    </form>
+    <br><br>
+    <table border="5">
+        <thead>
+            <tr>
+                <th>User Name</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>Confirm Password</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <script>
+      var users = [];
+      function registerUser() {
+        var myUsername = document.getElementById("username").value;
+        var myEmail = document.getElementById("email").value;
+        var myPassword = document.getElementById("password").value;
+        var myConfirmPass = document.getElementById("cpass").value;
+
+       
+
+        var user = {
+          username: myUsername,
+          email: myEmail,
+          password: myPassword,
+          cpass: myConfirmPass,
+        };
+       
+
+        users.push(user);
+        displayUsers()
+      }
+
+      function displayUsers (){
+        document.querySelector("tbody").innerHTML = ""
+        users.forEach(function (usr){
+            var myTr = document.createElement("tr")
+            for(a in usr){
+                var myTd = document.createElement("td")
+                myTd.innerHTML = usr[a]
+                myTr.appendChild(myTd)
+            }
+            document.querySelector("tbody").appendChild(myTr)
+        })
+        clearForm()
+      }
+
+      function clearForm(){
+        document.getElementById("username").value="";
+        document.getElementById("email").value="";
+        document.getElementById("password").value="";
+        document.getElementById("cpass").value=""
+      }
+    </script>
+  </body>
+</html>

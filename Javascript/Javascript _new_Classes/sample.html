@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* div {
+        border: 2px solid rgb(14, 17, 18);
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 10px;
+        width: 700px;
+        margin: auto;
+        margin-top: 10px;
+        background-color: rgb(165, 239, 241);
+      } */
+table{
+  background-color: rgb(38, 13, 197);
+  margin: auto;
+
+}
+      img {
+        width: 100%;
+      }
+      tbody{
+        font-size: 20px;
+        background-color: rgba(0, 255, 238, 0.413);
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="color: royalblue; text-align: center">
+      Hello welcome to Our Movie Detials
+    </h1>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Movie</th>
+          <th>Hero</th>
+          <th>Director</th>
+          <th>Year</th>
+          <th>image_url</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <script>
+      users = [
+        {
+          movie: "Tides of Destiny",
+          hero: "Oliver Stone",
+          director: "Isabella Cruz",
+          year: 2021,
+         image:
+            "https://th.bing.com/th/id/OIP.M3NyZ77B3Cj4uIh5uUzhtwHaEK?w=309&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7",
+        },
+        {
+          movie: "The Abyssal Knight",
+          hero: "Ethan Reed",
+          director: "Zoe Harrison",
+          year: 2023,
+         image:
+            "https://th.bing.com/th/id/OIP.1GhAinTg2POv8y2g8_z6KgHaHa?pid=ImgDet&rs=1",
+        },
+        {
+          movie: "Lost in the Depths",
+          hero: "Amelia Thompson",
+          director: "Lucas Daniels",
+          year: 2018,
+         image:
+            "https://th.bing.com/th/id/OIP.3rEuVAeo-jJ4-XIOK5WVwAHaDo?w=330&h=171&c=7&r=0&o=5&dpr=1.3&pid=1.7",
+        },
+        {
+          movie: "Halibut Chronicles",
+          hero: "Benjamin Foster",
+          director: "Emily Roberts",
+          year: 2020,
+         image:
+            "https://th.bing.com/th/id/OIP.dp-tJuNCRs9KzBEzw5ZEgAHaMf?w=115&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7",
+        },
+        {
+          movie: "Marine's Melody",
+          hero: "Isabella Green",
+          director: "Jack Cooper",
+          year: 2022,
+         image:
+            "https://th.bing.com/th/id/OIP.Eju-9NSfRfnspvb-8TxIbwAAAA?w=304&h=190&c=7&r=0&o=5&dpr=1.3&pid=1.7",
+        },
+        {
+          movie: "Fisherman's Fortune",
+          hero: "Henry Mitchell",
+          director: "Samantha Wright",
+          year: 2019,
+         image:
+            "https://th.bing.com/th/id/OIP.0UFKB43pv3WGjMNAm-VPbgHaEK?w=324&h=182&c=7&r=0&o=5&dpr=1.3&pid=1.7",
+        },
+        {
+          movie: "Secrets of the Seabed",
+          hero: "Grace Turner",
+          director: "Michael Evans",
+          year: 2021,
+         image:
+            "https://th.bing.com/th/id/OIP.N7jTh2EZwtRox9DkYLXvpwHaD7?w=311&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7",
+        },
+        {
+          movie: "The Halibut Heist",
+          hero: "Ryan Parker",
+          director: "Jessica Morgan",
+          year: 2023,
+         image:
+            "https://th.bing.com/th/id/OIP.4iPfbWR2ZzEx8xqFhOAqDgHaLK?w=182&h=274&c=7&r=0&o=5&dpr=1.3&pid=1.7",
+        },
+        {
+          movie: "Deep Blue Destiny",
+          hero: "Olivia Brooks",
+          director: "Nicholas King",
+          year: 2020,
+         image:
+            "https://pre00.deviantart.net/3180/th/pre/i/2016/232/5/1/guyver_by_sancient-daem688.jpg",
+        },
+        {
+          movie: "Halibut's Harmony",
+          hero: "Lucas James",
+          director: "Lily Martinez",
+          year: 2019,
+         image:
+            "https://pre00.deviantart.net/3180/th/pre/i/2016/232/5/1/guyver_by_sancient-daem688.jpg",
+        },
+        {
+          movie: "Beneath the Surface",
+          hero: "Chloe Adams",
+          director: "Patrick Roberts",
+          year: 2022,
+         image:
+            "https://pre00.deviantart.net/3180/th/pre/i/2016/232/5/1/guyver_by_sancient-daem688.jpg",
+        },
+        {
+          movie: "Halibut Horizons",
+          hero: "Samuel Johnson",
+          director: "Hannah White",
+          year: 2021,
+         image:
+            "https://pre00.deviantart.net/3180/th/pre/i/2016/232/5/1/guyver_by_sancient-daem688.jpg",
+        },
+        {
+          movie: "Dive into Destiny",
+          hero: "Ava Thompson",
+          director: "Ethan Miller",
+          year: 2023,
+         image:
+            "https://pre00.deviantart.net/3180/th/pre/i/2016/232/5/1/guyver_by_sancient-daem688.jpg",
+        },
+        {
+          movie: "Journey to the Deep",
+          hero: "Noah Turner",
+          director: "Emily Davis",
+          year: 2020,
+         image:
+            "https://pre00.deviantart.net/3180/th/pre/i/2016/232/5/1/guyver_by_sancient-daem688.jpg",
+        },
+        {
+          movie: "Halibut Odyssey",
+          hero: "Mia Carter",
+          director: "Ryan Hayes",
+          year: 2019,
+         image:
+            "https://pre00.deviantart.net/3180/th/pre/i/2016/232/5/1/guyver_by_sancient-daem688.jpg",
+        },
+        {
+          movie: "Sirens of the Sea",
+          hero: "William Mitchell",
+          director: "Isabella Allen",
+          year: 2022,
+         image:
+            "https://th.bing.com/th/id/OIP.l0sCG2b4kcpjgEGvNf8buQHaHa?pid=ImgDet&w=800&h=800&rs=1",
+        },
+        {
+          movie: "Into the Abyss",
+          hero: "Lily Foster",
+          director: "Benjamin Cooper",
+          year: 2021,
+         image:
+            "https://th.bing.com/th/id/OIP.l0sCG2b4kcpjgEGvNf8buQHaHa?pid=ImgDet&w=800&h=800&rs=1",
+        },
+        {
+          movie: "Halibut Haven",
+          hero: "Daniel Wilson",
+          director: "Grace Murphy",
+          year: 2023,
+         image:
+            "https://th.bing.com/th/id/OIP.l0sCG2b4kcpjgEGvNf8buQHaHa?pid=ImgDet&w=800&h=800&rs=1",
+        },
+        {
+          movie: "The Deepwater Guardian",
+          hero: "Ava Johnson",
+          director: "Ethan Reed",
+          year: 2020,
+         image:
+            "https://th.bing.com/th/id/OIP.l0sCG2b4kcpjgEGvNf8buQHaHa?pid=ImgDet&w=800&h=800&rs=1",
+        },
+      ];
+
+      // movies.forEach(function (movi) {
+      //   var myDiv = document.createElement("div");
+      //   document.body.appendChild(myDiv);
+
+      //   var mymovie = document.createElement("p");
+      //   mymovie.innerHTML ="Movie:"+ movi.movie;
+      //   myDiv.appendChild(mymovie);
+
+      //   var myhero = document.createElement("h4");
+      //   myhero.innerHTML ="Hero:"+ movi.hero;
+      //   myDiv.appendChild(myhero);
+
+      //   var mydirect = document.createElement("h5");
+      //   mydirect.innerHTML ="Director:"+ movi.director;
+      //   myDiv.appendChild(mydirect);
+
+      //   var year = document.createElement("h6");
+      //   year.innerHTML ="Year:"+ movi.year;
+      //   myDiv.appendChild(year);
+
+      //   var myimg = document.createElement("img");
+      //   myimg.setAttribute( "src", movi.image_url);
+      //   myDiv.appendChild(myimg);
+      // });
+
+      users.forEach((usr) => {
+        var myTr = document.createElement("tr");
+        for (a in usr) {
+          if (a != "image") {
+            var myTd = document.createElement("td");
+            myTd.innerHTML = usr[a];
+            myTr.appendChild(myTd);
+          } else if (a == "image") {
+            var imgTd = document.createElement("id");
+            var myimg = document.createElement("img");
+            myimg.setAttribute("src", usr[a]);
+            imgTd.appendChild(myimg);
+            myTr.appendChild(imgTd);
+          }
+        }
+        document.querySelector("tbody").appendChild(myTr);
+      });
+    </script>
+  </body>
+</html>
