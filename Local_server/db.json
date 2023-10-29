@@ -1,0 +1,79 @@
+{
+  "Users": [
+    {
+      "name": "Murali",
+      "email": "murali@gmail.com",
+      "password": "4+65+65",
+      "gender": "Female",
+      "courses": [
+        "JavaScript",
+        "ReactJs"
+      ],
+      "study": "Degree",
+      "id": 1
+    },
+    {
+      "name": "kjbdse",
+      "email": "vmurali@gmsil.vomq",
+      "password": "123654789",
+      "gender": "Male",
+      "courses": [
+        "JavaScript",
+        "CSS",
+        "HTML",
+        "ReactJs"
+      ],
+      "study": "B.Tech",
+      "id": 2
+    },
+    {
+      "name": "Murali",
+      "email": "murali@gmail.com",
+      "password": "gunsareddy",
+      "gender": "Male",
+      "courses": [
+        "JavaScript",
+        "ReactJs"
+      ],
+      "study": "Degree",
+      "id": 3
+    },
+    {
+      "name": "Murali",
+      "email": "murali@gmail.com",
+      "password": "gunareddy",
+      "gender": "Male",
+      "courses": [
+        "JavaScript",
+        "ReactJs"
+      ],
+      "study": "Degree",
+      "id": 4
+    },
+    {
+      "name": "k123",
+      "email": "vmurali@gmsil.vomq",
+      "password": "1234",
+      "gender": "Female",
+      "courses": [
+        "JavaScript",
+        "ReactJs",
+        "HTML"
+      ],
+      "study": "Degree",
+      "id": 6
+    },
+    {
+      "name": "k;",
+      "email": "reddy@gmail.com",
+      "password": "564986",
+      "gender": "Male",
+      "courses": [
+        "JavaScript",
+        "ReactJs"
+      ],
+      "study": "Degree",
+      "id": 7
+    }
+  ]
+}

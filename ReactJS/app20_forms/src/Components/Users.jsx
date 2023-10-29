@@ -1,8 +1,8 @@
 import { Component } from "react";
 
 export default class Users extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       user: {
         name: "",
