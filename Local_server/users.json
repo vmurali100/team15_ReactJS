@@ -1,0 +1,46 @@
+{
+  "Users": [
+    {
+      "name": "Guna",
+      "email": "reddy@gamil.com",
+      "password": "klnviok",
+      "gender": "male",
+      "contact": "5448754",
+      "degree": "mnl,",
+      "engineering": "klnkkl",
+      "hobbies": [],
+      "address": "sfo;ih",
+      "resume": "C:\\fakepath\\sunil macha resume.docx",
+      "id": 3
+    },
+    {
+      "name": "Guna",
+      "email": "ammu@gamil.com",
+      "password": "123654789",
+      "gender": "male",
+      "contact": "5448754",
+      "degree": "collage",
+      "engineering": "klnkkl",
+      "hobbies": [
+        "playing_chess",
+        "reading_books"
+      ],
+      "address": "Guna Reddy",
+      "resume": "C:\\fakepath\\Guna_FrontendDeveloper (1).pdf",
+      "id": 5
+    },
+    {
+      "name": "",
+      "email": "",
+      "password": "",
+      "gender": "",
+      "contact": "",
+      "degree": "",
+      "engineering": "",
+      "hobbies": [],
+      "address": "",
+      "resume": "",
+      "id": 6
+    }
+  ]
+}
