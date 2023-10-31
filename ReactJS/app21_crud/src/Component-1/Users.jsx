@@ -41,6 +41,7 @@ export default class Users extends Component {
     this.setState({ user: newperson });
   };
   handleEdit = (std) => {
+    console.log(std);
     this.setState({ user: std, isEdit: true });
   };
   adduser = () => {
@@ -53,6 +54,14 @@ export default class Users extends Component {
         console.log("raising For the some errors");
       });
     this.clearForm();
+  };
+  handleupdata = () => {
+    axios
+      .put("http://localhost:3001/Users/" + this.state.user.id, this.state.user)
+      .then(() => {
+        this.getDataFromserver();
+        this.clearForm();
+      });
   };
   getDataFromserver = () => {
     axios.get("http://localhost:3001/Users").then((res) => {
@@ -231,9 +240,15 @@ export default class Users extends Component {
           />
           <br />
           <br />
-          <button type="button" onClick={this.adduser}>
-            submit
-          </button>
+          {this.state.isEdit ? (
+            <button type="button" onClick={this.handleupdata}>
+              Updata
+            </button>
+          ) : (
+            <button type="button" onClick={this.adduser}>
+              submit
+            </button>
+          )}
         </form>
         <br />
         <hr />
