@@ -28,6 +28,34 @@
       "address": "Guna Reddy",
       "resume": "C:\\fakepath\\Guna_FrontendDeveloper (1).pdf",
       "id": 5
+    },
+    {
+      "name": "Pulichera Guna Reddy",
+      "email": "babyrowdy4259@gmail.com",
+      "password": "guna reddy",
+      "gender": "male",
+      "contact": "9391969561",
+      "degree": "b.com",
+      "engineering": "no",
+      "hobbies": [
+        "playing_chess"
+      ],
+      "address": "chittor",
+      "resume": "C:\\fakepath\\icmr_16232450 (1).pdf",
+      "id": 6
+    },
+    {
+      "name": "",
+      "email": "",
+      "password": "",
+      "gender": "",
+      "contact": "",
+      "degree": "",
+      "engineering": "",
+      "hobbies": [],
+      "address": "",
+      "resume": "",
+      "id": 7
     }
   ]
 }

@@ -67,7 +67,9 @@ export default class Users extends Component {
     axios.get("http://localhost:3001/Users").then((res) => {
       console.log(res.data);
       this.setState({ allUsers: res.data });
-    });
+    }).catch(()=>{
+      console.log("getDataFrom Server is some issue")
+    })
   };
   getdata = () => {
     axios.get("http://localhost:3001/Users", this.state.user).then((res) => {
@@ -160,7 +162,7 @@ export default class Users extends Component {
 
           <label for="contact">Contact:</label>
           <input
-            type="text"
+            type="number"
             id="contact"
             name="contact"
             value={this.state.user.textarea}
