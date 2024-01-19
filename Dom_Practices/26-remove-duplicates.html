@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // remove string duplicates
+
+        var array=["oppo","vivo","relme","vivo","apple","samsung","vivo"]
+
+        function removeduplicates(arr){
+
+            return arr.filter((item,index)=>
+            arr.indexOf(item) === index
+            )
+        
+        };
+        console.log(removeduplicates(array)) 
+
+
+        //remove array dupicates
+
+
+        var array=[2,3,4,3,6,7,4,5]
+        function removeDuplicates(arr){
+            return arr.filter((value,index)=>
+            arr.indexOf(value) ===index
+            )
+        };
+        console.log(removeDuplicates(array))
+
+
+    </script>
+
+</body>
+</html>
