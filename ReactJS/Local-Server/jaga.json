@@ -1,0 +1,45 @@
+{
+  "jagu": [
+    {
+      "name": "jagakk",
+      "age": "88",
+      "email": "mallelajagadeesh7524@gmail.com",
+      "gender": "male",
+      "qualification": [
+        "graduation",
+        "10"
+      ],
+      "id": 1
+    },
+    {
+      "name": "jaga",
+      "age": "22",
+      "email": "luhp9y",
+      "gender": "male",
+      "qualification": [
+        "graduation"
+      ],
+      "id": 2
+    },
+    {
+      "name": "Leanne Graham",
+      "age": "",
+      "email": "ouhh",
+      "gender": "male",
+      "qualification": [
+        "inter"
+      ],
+      "id": 3
+    },
+    {
+      "name": "",
+      "age": "",
+      "email": "",
+      "gender": "",
+      "qualification": [
+        "postgraduation"
+      ],
+      "id": 4
+    }
+  ]
+}

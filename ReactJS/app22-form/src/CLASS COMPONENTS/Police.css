@@ -1,0 +1,41 @@
+form {
+  margin: auto;
+  font-size: 20px;
+  /* border: 2px solid; */
+  background-color: aqua;
+  width: 600px;
+  border-radius: 10px;
+}
+h1 {
+  border: 1px solid;
+  background-color: chartreuse;
+  font-size: 30px;
+  color: navy;
+}
+label {
+  float: left;
+  margin: 10px;
+  background-color: #0b00ff;
+  width: 118px;
+  color: violet;
+}
+input {
+  color: magenta;
+  background-color: white;
+}
+button {
+  color: red;
+  background-color: ghostwhite;
+  border-radius: 16px;
+}
+table {
+  margin: auto;
+  background-color: deeppink;
+  color: orange;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 10px;
+}
+div {
+  background: url(https://i0.wp.com/wordzz.com/wp-content/uploads/2017/05/lord-shiva-on-mountain.gif?resize=623%2C543&ssl=1);
+}
